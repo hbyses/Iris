@@ -1,17 +1,16 @@
 <p align="center"><img width="300" src="https://i.imgur.com/GeVd9bS.png"></p>
 
-<p align="center">
-<table>
-<tr>
-<td>PRODUCTION</td><tr>STAGING</tr>
-</tr>
-<tr>
-<td><a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120256.svg" alt="Deployment status from DeployBot"></a></td><tr><a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120916.svg" alt="Deployment status from DeployBot"></a></tr>
-</tr>
-</table>
-
-
-</p>
+<div align="center">
+    <table style="text=align: center:">
+        <tr>
+            <td><strong>PRODUCTION</strong></td><tr><strong>STAGING</strong></tr>
+        </tr>
+        <tr>
+            <td<a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120256.svg" alt="Deployment status from DeployBot"></a></td>
+            <td><a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120916.svg" alt="Deployment status from DeployBot"></a></td>
+        </tr>
+    </table>
+</div>
 
 
 ## About Iris
