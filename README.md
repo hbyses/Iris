@@ -1,5 +1,11 @@
 <p align="center"><img width="300" src="https://i.imgur.com/GeVd9bS.png"></p>
 
+<p align="center">
+Production - [![Deployment status from DeployBot](https://hbyses.deploybot.com/badge/77558060128880/120256.svg)](http://deploybot.com)
+Staging - [![Deployment status from DeployBot](https://hbyses.deploybot.com/badge/77558060128880/120916.svg)](http://deploybot.com)
+</p>
+
+
 ## About Iris
 
 Iris is a web application for managing unit level operations (in a non rescue context). Iris has three main focus areas:
