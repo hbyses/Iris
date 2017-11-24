@@ -1,7 +1,7 @@
 <p align="center"><img width="300" src="https://i.imgur.com/GeVd9bS.png"></p>
 
 <div align="center">
-    <table style="text=align: center; border: 0px;">
+    <table style="text-align: center; border: 0px;">
         <tr>
             <td><strong>PRODUCTION</strong></td><td><strong>STAGING</strong></td>
         </tr>
