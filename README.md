@@ -6,7 +6,7 @@
             <td><strong>PRODUCTION</strong></td><tr><strong>STAGING</strong></tr>
         </tr>
         <tr>
-            <td<a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120256.svg" alt="Deployment status from DeployBot"></a></td>
+            <td><a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120256.svg" alt="Deployment status from DeployBot"></a></td>
             <td><a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120916.svg" alt="Deployment status from DeployBot"></a></td>
         </tr>
     </table>
