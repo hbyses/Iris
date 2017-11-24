@@ -1,9 +1,9 @@
 <p align="center"><img width="300" src="https://i.imgur.com/GeVd9bS.png"></p>
 
 <div align="center">
-    <table style="text=align: center:">
+    <table style="text=align: center; border: 0px;">
         <tr>
-            <td><strong>PRODUCTION</strong></td><tr><strong>STAGING</strong></tr>
+            <td><strong>PRODUCTION</strong></td><td><strong>STAGING</strong></td>
         </tr>
         <tr>
             <td><a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120256.svg" alt="Deployment status from DeployBot"></a></td>
