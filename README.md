@@ -23,7 +23,11 @@ Iris is a web application for managing unit level operations (in a non rescue co
 
 ## Using Iris
 
-Iris is not currently released for general usage.  
+Iris is not currently available for general usage.
+
+Previews of the current development of iris can be viewed on the staging and production URLs.
+- [**Production**](http://iris.hornsbyses.org)
+- [**Staging**](http://staging.iris.hornsbyses.org)
 
 If you wish to use the development version of Iris, it is recommended you are familiar with the setup and management of web server and database. Iris is built on the [Laravel](https://laravel.com/) framework and can be installed to any standard PHP capable webserver and MySQL(style) database. To use the dev version of Iris follow these instructions[Instructions](Local Development Environment.md):
 
