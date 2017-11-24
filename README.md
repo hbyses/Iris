@@ -1,8 +1,8 @@
 <p align="center"><img width="300" src="https://i.imgur.com/GeVd9bS.png"></p>
 
 <p align="center">
-**Production** - <a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120256.svg" alt="Deployment status from DeployBot"></a>
-**Staging** - <a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120916.svg" alt="Deployment status from DeployBot"></a>
+<strong>Production</strong> - <a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120256.svg" alt="Deployment status from DeployBot"></a>
+<strong>Staging</strong> - <a href="http://deploybot.com"><img src="https://hbyses.deploybot.com/badge/77558060128880/120916.svg" alt="Deployment status from DeployBot"></a>
 </p>
 
 
