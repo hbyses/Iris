@@ -1,13 +1,6 @@
-<!doctype html>
-<html lang="{{ app()->getLocale() }}">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>{{config('app.name', 'Iris')}}</title>
-    </head>
-    <body>
+@extends('layouts.app')
 
-
-    </body>
-</html>
+@section('content')
+<h1>Welcome to {{config('app.name', 'Iris')}}</h1>
+<p>This is a unit management system</p>
+@endsection
