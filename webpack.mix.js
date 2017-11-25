@@ -12,4 +12,7 @@ let mix = require('laravel-mix');
  */
 
 mix.js('resources/assets/js/app.js', 'public/js')
-   .sass('resources/assets/sass/app.scss', 'public/css');
+    .js('resources/assets/js/meteor.js', 'public/js')
+    .scripts('resources/assets/js/pages/*.js', 'public/js/resources.js')
+    .sass('resources/assets/sass/app.scss', 'public/css')
+    .styles('resources/assets/css/meteor.css', 'public/css/meteor.css');
