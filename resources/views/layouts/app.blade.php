@@ -8,6 +8,9 @@
         <title>{{config('app.name', 'Iris')}}</title>
     </head>
     <body>
-        @yield('content')
+        @include('inc.navbar')
+        <div class="container">
+            @yield('content')
+        </div>
     </body>
 </html>
