@@ -65,7 +65,7 @@ return [
     |
     */
 
-    'timezone' => 'UTC',
+    'timezone' => 'Australia/Sydney',
 
     /*
     |--------------------------------------------------------------------------
@@ -171,11 +171,11 @@ return [
         /*
          * Application Service Providers...
          */
-        App\Providers\AppServiceProvider::class,
-        App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
-        App\Providers\EventServiceProvider::class,
-        App\Providers\RouteServiceProvider::class,
+        Iris\Providers\AppServiceProvider::class,
+        Iris\Providers\AuthServiceProvider::class,
+        // Iris\Providers\BroadcastServiceProvider::class,
+        Iris\Providers\EventServiceProvider::class,
+        Iris\Providers\RouteServiceProvider::class,
 
     ],
 
