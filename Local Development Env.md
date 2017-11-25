@@ -2,7 +2,8 @@
 
  - Install XAMPP
  - Confirm PHP has been added to PATH
- - Install composer
+ - Install [Composer](https://getcomposer.org/)
+ - Install [Node.js](https://nodejs.org/)
  - Remove default xampp files from `htdocs/`
  - branch and Clone git:hbyses/iris into `_xamppinstalldir_/htdocs/iris`
  - Copy `.env.example` to `.env`
