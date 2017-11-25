@@ -11,9 +11,11 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 /*
 Route::get('/hello', function () {
@@ -25,10 +27,16 @@ Route::get('/about', function () {
     return view('pages.about');
 });
 
+/*
 Route::get('/users/{id}', function ($id) {
     return 'This is user '.$id;
 });
+*/
 
+/*
 Route::get('/users/{id}/{name}', function ($id, $name) {
     return 'This is user '.$name.' with an ID of '.$id;
 });
+*/
+
+Route::get('/', 'PagesController@index');
