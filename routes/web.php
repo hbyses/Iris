@@ -46,5 +46,5 @@ Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
-Route::get('/forgotten', 'AuthController@forgotpw');
+Route::get('/forgotten', 'AuthController@resetpw');
 Route::get('/lock', 'AuthController@lock');
