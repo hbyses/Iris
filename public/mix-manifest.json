@@ -1,7 +1,9 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css",
+    "/js/jquery.js": "/js/jquery.js",
     "/js/meteor.js": "/js/meteor.js",
     "/js/resources.js": "/js/resources.js",
-    "/css/meteor.css": "/css/meteor.css"
+    "/js/extra-body.js": "/js/extra-body.js",
+    "/js/extra-head.js": "/js/extra-head.js",
+    "/css/meteor.css": "/css/meteor.css",
+    "/css/extra.css": "/css/extra.css"
 }
