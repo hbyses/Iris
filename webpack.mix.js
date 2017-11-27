@@ -61,5 +61,5 @@ mix
             'resources/assets/plugins/waves/waves.js', //static
             'resources/assets/plugins/offcanvasmenueffects/js/snap.svg-min.js', //static
             'resources/assets/js/pages/*.js'
-        ], 'public/js/app.js'
+        ], 'public/js/app-auth.js'
     )

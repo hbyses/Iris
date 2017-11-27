@@ -9,7 +9,7 @@ class PagesController extends Controller
     public function index(){
         $title = 'Welcome to Iris!';
         //return view('pages.index', compact('title'));
-        return view('pages.index')->with('title', $title);
+        return view('pages.main.index')->with('title', $title);
     }
 
     public function about(){

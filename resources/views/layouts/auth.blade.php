@@ -26,7 +26,7 @@
             @yield('content')
         </div>
 
-    <script src="{{asset('js/app.js')}}"></script>
+    <script src="{{asset('js/app-auth.js')}}"></script>
     <script>$(window).on('load', function(){this.$ = jQuery;});</script>
     </body>
     
