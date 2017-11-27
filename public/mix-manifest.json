@@ -9,5 +9,5 @@
     "/css/switchery.css": "/css/switchery.css",
     "/css/meteor.css": "/css/meteor.css",
     "/css/style.css": "/css/style.css",
-    "/js/app.js": "/js/app.js"
+    "/js/app-auth.js": "/js/app-auth.js"
 }
