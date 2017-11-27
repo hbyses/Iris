@@ -33,6 +33,8 @@ If you wish to use the development version of Iris, it is recommended you are fa
 
 ## Contributing
 
+Developers wishing to contribute to Iris are reccomended to view this [youtube getting started series](https://www.youtube.com/watch?v=EU7PRmCpx-0&list=PLillGF-RfqbYhQsN5WMXy6VsDMKGadrJ-) on Laravel.
+
 Thank you for considering contributing to the Iris! Feel free to fork the project in Github or to join the discussion, send us an email at ross.wallace@memeber.ses.nsw.gov.au.
 
 ## Security Vulnerabilities
