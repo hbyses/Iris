@@ -32,6 +32,7 @@
         "nnnick/chartjs": "^2.7",
         "select2/select2": "^4.0",
         "shutterstock/rickshaw": "dev-master",
+        "spatie/laravel-permission": "^2.7",
         "summernote/summernote": "^0.8.8",
         "twbs/bootstrap": "3.3.7",
         "vakata/jstree": "^3.3",

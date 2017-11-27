@@ -1202,7 +1202,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-success {
     color: #fff;
-    background-color: #30B19B!important;
+    background-color: #30B19B;
     border-color: transparent;
 }
 
@@ -5320,15 +5320,11 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
 
 /* Login and Register */
 
-.page-login .page-inner {
+.page-login .page-inner,
+.page-register .page-inner,
+.page-forgot .page-inner,
+.page-lock-screen .page-inner {
     background: url("../images/login-bg.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.page-register .page-inner {
-    background: url("../images/register-bg.png");
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -5339,13 +5335,6 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
 .page-forgot #main-wrapper,
 .page-lock-screen #main-wrapper {
     margin: 5%;
-}
-
-.page-lock-screen .page-inner {
-    background: url("../images/login-bg.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
 }
 
 .login-box,

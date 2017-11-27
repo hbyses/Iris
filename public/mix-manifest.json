@@ -1,4 +1,14 @@
 {
-    "/css/style.css": "/css/style.css",
+    "/css/pace.css": "/css/pace.css",
+    "/css/uniform.css": "/css/uniform.css",
+    "/css/bootstrap.css": "/css/bootstrap.css",
+    "/css/font-awesome.css": "/css/font-awesome.css",
+    "/css/line-icons.css": "/css/line-icons.css",
+    "/css/menu_cornerbox.css": "/css/menu_cornerbox.css",
+    "/css/waves.css": "/css/waves.css",
+    "/css/switchery.css": "/css/switchery.css",
+    "/css/meteor.css": "/css/meteor.css",
+    "/css/colors.css": "/css/colors.css",
+    "/css/custom.css": "/css/custom.css",
     "/js/app.js": "/js/app.js"
 }
