@@ -11,7 +11,7 @@
                                 <div class="panel panel-white" id="js-alerts">
                                     <div class="panel-body">
                                         <div class="register-box">
-                                            <a href="index.html" style="text-transform: uppercase;" class="logo-name text-lg text-center m-t-xs">{{config('app.name', 'Iris')}}</a>
+                                            <a href="index.html" style="text-transform: uppercase;" class="logo-name text-lg text-center m-t-xs"><img width="130px" src="{{ asset('img/logo.png') }}" /></a>
                                             <p class="text-center m-t-md">Create an account.</p>
                                             <form class="m-t-md" action="login.html">
                                                 <div class="form-group">
@@ -23,9 +23,6 @@
                                                 <div class="form-group">
                                                     <input type="password" name="password" class="password form-control" placeholder="Password" required>
                                                 </div>
-                                                <label>
-                                                    <input type="checkbox"> Agree the terms and policy
-                                                </label>
                                                 <button type="submit" class="btn btn-success btn-block m-t-xs">Submit</button>
                                                 <p class="text-center m-t-xs text-sm">Already have an account?</p>
                                                 <a href="login.html" class="btn btn-default btn-block m-t-xs">Login</a>

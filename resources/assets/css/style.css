@@ -8,6 +8,7 @@
     /* Variabes */
     --bgcolor: var(--black);
     --primary-button-color: var(--dark-blue);
+    --primary-button-hover-color: var(--light-blue);
 }
 
 
@@ -181,6 +182,24 @@ body:not(fixed-sidebar) .small-sidebar .horizontal-bar .accordion-menu>li>ul {
     color: var(--light-blue);
 }
 
+.btn-success:hover,
+.btn-success.hover,
+.btn-success:active,
+.btn-success.active,
+.btn-success:focus,
+.btn-success.focus,
+.btn-success:active:hover,
+.btn-success.active:hover,
+.open>.dropdown-toggle.btn-success:hover,
+.btn-success:active:focus,
+.btn-success.active:focus,
+.open>.dropdown-toggle.btn-success:focus,
+.btn-success:active.focus,
+.btn-success.active.focus,
+.open>.dropdown-toggle.btn-success.focus {
+    background-color: var(--primary-button-hover-color) !important;
+}
+
 
 /* Media Queries */
 
@@ -208,4 +227,16 @@ body:not(fixed-sidebar) .small-sidebar .horizontal-bar .accordion-menu>li>ul {
 .page-content {
     box-shadow: none;
     -webkit-box-shadow: none;
+}
+
+.login-box {
+    max-height: 550px !important;
+}
+
+.register-box {
+    max-height: 580px !important;
+}
+
+.forgotten-box {
+    max-height: 460px !important;
 }

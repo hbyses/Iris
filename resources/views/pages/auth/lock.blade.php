@@ -10,7 +10,7 @@
                             <div class="col-md-3 center">
                                 <div class="panel panel-white" id="js-alerts">
                                     <div class="panel-body">
-                                <div class="login-box">
+                                <div class="forgotten-box">
                                     <div class="user-box m-t-md row">
                                         <div class="col-md-12 m-b-md">
                                             <img src="assets/images/avatar1.png" class="img-circle m-t-xxs" alt="">
