@@ -16,7 +16,8 @@
         <!--<link rel="stylesheet" href="{{asset('css/line-icons.css')}}"> Using a cdn for now-->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
         <link rel="stylesheet" href="{{asset('css/menu_cornerbox.css')}}">
-        <link rel="stylesheet" href="{{asset('css/waves.css')}}">
+        <!--<link rel="stylesheet" href="{{asset('css/waves.css')}}"> using a cdn for now-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.css">
         <link rel="stylesheet" href="{{asset('css/switchery.css')}}">
         <link rel="stylesheet" href="{{asset('css/meteor.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
