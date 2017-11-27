@@ -11,6 +11,40 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
+
+/*
+Route::get('/hello', function () {
+    return 'hello world';
+});
+*/
+
+/*
+Route::get('/about', function () {
+    return view('pages.about');
+});
+*/
+
+/*
+Route::get('/users/{id}', function ($id) {
+    return 'This is user '.$id;
+});
+*/
+
+/*
+Route::get('/users/{id}/{name}', function ($id, $name) {
+    return 'This is user '.$name.' with an ID of '.$id;
+});
+*/
+
+Route::get('/', 'PagesController@index');
+Route::get('/about', 'PagesController@about');
+Route::get('/services', 'PagesController@services');
+Route::get('/login', 'AuthController@login');
+Route::get('/register', 'AuthController@register');
+Route::get('/forgotten', 'AuthController@resetpw');
+Route::get('/lock', 'AuthController@lock');
