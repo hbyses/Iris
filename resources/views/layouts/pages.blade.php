@@ -113,38 +113,32 @@
                     <li><a href="/dashboards" class="waves-effect waves-button"><span class="menu-icon icon-envelope-open"></span><p>Dashboards</p></a></li>
                     <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-puzzle"></span><p>Equipment</p><span class="arrow"></span></a>
                         <ul class="sub-menu">
-                            <li><a href="/equipment/">Equipment List</a></li>
-                            <li><a href="/equipment/groups/">Groups</a></li>
-                            <li><a href="/equipment/locations/">Locations</a></li>
-                            <li><a href="/equipment/suppliers/">Suppliers</a></li>
+                            <li><a href="/equipment">Equipment List</a></li>
+                            <li><a href="/equipment/groups">Groups</a></li>
+                            <li><a href="/equipment/locations">Locations</a></li>
+                            <li><a href="/equipment/suppliers">Suppliers</a></li>
                             <li><a href="/reports?subject=equipment">Reports</a></li>
                             <li><a href="/dashboards?subject=equipment">Dashboard</a></li>
                         </ul>
                     </li>
                     <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-layers"></span><p>Fleet</p><span class="arrow"></span></a>
                         <ul class="sub-menu">
-                            <li><a href="/vehicles/">Vehicles</a></li>
-                            <li><a href="/vehicles/vel/">Equipment Lists</a></li>
-                            <li><a href="/vehicles/bookings/">Bookings</a></li>
+                            <li><a href="/vehicles">Vehicles</a></li>
+                            <li><a href="/vehicles/vel">Equipment Lists</a></li>
+                            <li><a href="/vehicles/bookings">Bookings</a></li>
                             <li><a href="/calendar?filter=fleet">Calendar</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Tables</p><span class="arrow"></span></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Calendar</p><span class="arrow"></span></a>
                         <ul class="sub-menu">
-                            <li><a href="table-static.html">Static Tables</a></li>
-                            <li><a href="table-responsive.html">Responsive Tables</a></li>
-                            <li><a href="table-data.html">Data Tables</a></li>
+                            <li><a href="/calendar">Calendar</a></li>
+                            <li><a href="/calendar/events">Event List</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Forms</p><span class="arrow"></span></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Administration</p><span class="arrow"></span></a>
                         <ul class="sub-menu">
-                            <li><a href="form-elements.html">Form Elements</a></li>
-                            <li><a href="form-wizard.html">Form Wizard</a></li>
-                            <li><a href="form-upload.html">File Upload</a></li>
-                            <li><a href="form-image-crop.html">Image Crop</a></li>
-                            <li><a href="form-image-zoom.html">Image Zoom</a></li>
-                            <li><a href="form-select2.html">Select2</a></li>
-                            <li><a href="form-x-editable.html">X-editable</a></li>
+                            <li><a href="/admin/users">Users</a></li>
+                            <li><a href="/admin/settings">Settings</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -167,7 +161,7 @@
                 </div>
             </div><!-- Main Wrapper -->
             <div class="page-footer">
-                <p class="no-s">Made with <i class="fa fa-heart"></i> by Hornsby SES</p>
+                <p class="no-s">IRIS - NSWSES Hornsby</p>
             </div>
         </div><!-- Page Inner -->
     </main><!-- Page Content -->
