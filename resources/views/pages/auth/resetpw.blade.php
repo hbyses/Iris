@@ -10,8 +10,8 @@
                         <div class="col-md-3 center">
                             <div class="panel panel-white" id="js-alerts">
                                 <div class="panel-body">
-                                    <div class="login-box">
-                                        <a href="index.html" class="logo-name text-lg text-center m-t-xs">METEOR</a>
+                                    <div class="forgotten-box">
+                                        <a href="index.html" class="logo-name text-lg text-center m-t-xs"><img width="130px" src="{{ asset('img/logo.png') }}" /></a>
                                         <p class="text-center m-t-md">Enter your email address below to reset your password</p>
                                         <form class="m-t-md">
                                             <div class="form-group">

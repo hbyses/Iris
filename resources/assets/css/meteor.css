@@ -1202,7 +1202,7 @@ fieldset[disabled] .btn-primary.active {
 
 .btn-success {
     color: #fff;
-    background-color: #30B19B!important;
+    background-color: #30B19B;
     border-color: transparent;
 }
 
@@ -1276,7 +1276,7 @@ fieldset[disabled] .btn-success.active {
 
 .btn-info {
     color: #fff;
-    background-color: #14a2bb!important;
+    background-color: #14a2bb;
     border-color: transparent;
 }
 
@@ -1350,7 +1350,7 @@ fieldset[disabled] .btn-info.active {
 
 .btn-warning {
     color: #fff;
-    background-color: #dfba47!important;
+    background-color: #dfba47;
     border-color: transparent;
 }
 
@@ -1424,7 +1424,7 @@ fieldset[disabled] .btn-warning.active {
 
 .btn-danger {
     color: #fff;
-    background-color: #DE4D4D!important;
+    background-color: #DE4D4D;
     border-color: transparent;
 }
 
@@ -5320,15 +5320,11 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
 
 /* Login and Register */
 
-.page-login .page-inner {
+.page-login .page-inner,
+.page-register .page-inner,
+.page-forgot .page-inner,
+.page-lock-screen .page-inner {
     background: url("../images/login-bg.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
-.page-register .page-inner {
-    background: url("../images/register-bg.png");
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -5341,19 +5337,14 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
     margin: 5%;
 }
 
-.page-lock-screen .page-inner {
-    background: url("../images/login-bg.png");
-    background-size: cover;
-    width: 100%;
-    height: 100%;
-}
-
+.forgotten-box,
 .login-box,
 .register-box {
     margin: auto;
     max-width: 400px;
 }
 
+.forgotten-box .logo-name,
 .login-box .logo-name,
 .register-box .logo-name {
     display: block;
@@ -5362,6 +5353,7 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
     color: #8491a6;
 }
 
+.forgotten-box .uxer-box,
 .login-box .user-box,
 .register-box .user-box {
     display: block;
@@ -5369,6 +5361,7 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
     overflow: hidden;
 }
 
+.forgotten-box .user-box img,
 .login-box .user-box img,
 .register-box .user-box img {
     width: 60px;
@@ -5377,17 +5370,20 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
     margin: 0 auto;
 }
 
+.forgotten-box .user-box form,
 .login-box .user-box form,
 .register-box .user-box form {
     overflow: hidden;
 }
 
+.forgotten-box .panel-body,
 .login-box .panel-body,
 .register-box .panel-body {
     overflow: auto;
     height: 100%;
 }
 
+.forgotten-box .login-footer,
 .login-box .login-footer,
 .register-box .register-footer {
     position: absolute;
@@ -5482,7 +5478,7 @@ body.small-sidebar.page-horizontal-bar.page-sidebar-fixed .accordion-menu>li>ul 
 .chat .chat-item {
     display: block;
     padding: 7px;
-    15px;
+    /*15px;*/
     width: 100%;
     overflow: hidden;
 }
