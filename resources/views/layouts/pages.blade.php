@@ -205,11 +205,18 @@
     <script src="https://cdn.jsdelivr.net/npm/flot.curvedlines@1.1.1/curvedLines.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
     <script src="{{asset('js/meteor.js')}}"></script>
-    <script src="{{asset('js/resources.js')}}"></script>
+    <!--<script src="{{asset('js/resources.js')}}"></script>-->
+    <!--<script src="{{asset('js/datatable-defs.js')}}"></script>-->
     <script>
         $(document).ready(function () {
             //Override the default menu scroll height of 250px from slimscroll.js
             $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto');
+            //See if the table works here?
+            $('#equipment-list').DataTable( {
+                "paging": true,
+                "ordering": true,
+                "searching": true
+            });
         });
     </script>
     <script>$(window).on('load', function(){this.$ = jQuery;});</script>
