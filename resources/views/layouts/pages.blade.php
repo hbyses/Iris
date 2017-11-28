@@ -124,7 +124,7 @@
                     <li class="active"><a href="/" class="waves-effect waves-button"><span class="menu-icon icon-home"></span><p>Home</p><span class="active-page"></span></a></li>
                     <li><a href="/equipment" class="waves-effect waves-button"><span class="menu-icon icon-user"></span><p>Tasks</p></a></li>
                     <li><a href="/dashboards" class="waves-effect waves-button"><span class="menu-icon icon-envelope-open"></span><p>Dashboards</p></a></li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-puzzle"></span><p>Equipment</p><span class="arrow"></span></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-puzzle"></span><p>Equipment</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         <ul class="sub-menu">
                             <li><a href="/equipment">Equipment List</a></li>
                             <li><a href="/equipment/groups">Groups</a></li>
@@ -134,7 +134,7 @@
                             <li><a href="/dashboards?subject=equipment">Dashboard</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-layers"></span><p>Fleet</p><span class="arrow"></span></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-layers"></span><p>Fleet</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
                         <ul class="sub-menu">
                             <li><a href="/vehicles">Vehicles</a></li>
                             <li><a href="/vehicles/vel">Equipment Lists</a></li>
@@ -142,13 +142,13 @@
                             <li><a href="/calendar?filter=fleet">Calendar</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Calendar</p><span class="arrow"></span></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Calendar</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
                         <ul class="sub-menu">
                             <li><a href="/calendar">Calendar</a></li>
                             <li><a href="/calendar/events">Event List</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Administration</p><span class="arrow"></span></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Administration</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
                         <ul class="sub-menu">
                             <li><a href="/admin/users">Users</a></li>
                             <li><a href="/admin/settings">Settings</a></li>
