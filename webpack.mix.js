@@ -32,21 +32,21 @@ mix
 
 /* This is the version that puts Each css into its own asset css file in the public folder. Use this for debugging and identifiying where stles come from. For production use the above. */
 mix
-    .styles('resources/assets/plugins/pace-master/themes/blue/pace-theme-flash.css', 'public/css/pace.css')
-    .styles('resources/assets/plugins/uniform/css/default.css', 'public/css/uniform.css')
-    .styles('vendor/components/bootstrap/css/bootstrap.css', 'public/css/bootstrap.css') //composer - changes wont be reflected after composer update commands
-    .styles('vendor/fortawesome/font-awesome/css/font-awesome.css', 'public/css/font-awesome.css') //composer - changes wont be reflected after composer update commands
-    .styles('resources/assets/plugins/line-icons/simple-line-icons.css', 'public/css/line-icons.css')
+//.styles('resources/assets/plugins/pace-master/themes/blue/pace-theme-flash.css', 'public/css/pace.css')
+//.styles('resources/assets/plugins/uniform/css/default.css', 'public/css/uniform.css')
+//.styles('vendor/components/bootstrap/css/bootstrap.css', 'public/css/bootstrap.css') //composer - changes wont be reflected after composer update commands
+//.styles('vendor/fortawesome/font-awesome/css/font-awesome.css', 'public/css/font-awesome.css') //composer - changes wont be reflected after composer update commands
+//.styles('resources/assets/plugins/line-icons/simple-line-icons.css', 'public/css/line-icons.css')
     .styles('resources/assets/plugins/offcanvasmenueffects/css/menu_cornerbox.css', 'public/css/menu_cornerbox.css')
-    .styles('resources/assets/plugins/waves/waves.css', 'public/css/waves.css')
-    .styles('resources/assets/plugins/switchery/switchery.css', 'public/css/switchery.css')
+    //.styles('resources/assets/plugins/waves/waves.css', 'public/css/waves.css')
+    //.styles('resources/assets/plugins/switchery/switchery.css', 'public/css/switchery.css')
     .styles('resources/assets/css/meteor.css', 'public/css/meteor.css')
     .styles('resources/assets/css/style.css', 'public/css/style.css');
 
 
 //JS Files
-mix
-    .scripts(
+/* mix
+    .scripts( //For auth controller
         [
             'resources/assets/js/app.js', //static
             'resources/assets/js/meteor.js', //static
@@ -62,4 +62,30 @@ mix
             'resources/assets/plugins/offcanvasmenueffects/js/snap.svg-min.js', //static
             'resources/assets/js/pages/*.js'
         ], 'public/js/app-auth.js'
-    )
+    );
+*/
+
+/* mix
+    .scripts( //For main controller
+        [
+            'resources/assets/js/app.js', //static
+            'resources/assets/js/meteor.js', //static
+            'vendor/components/jqueryui/jquery-ui.js', //composer
+            'resources/assets/plugins/pace-master/pace.js', //static
+            'resources/assets/plugins/jquery-blockui/jquery.blockui.js', //static
+            'vendor/components/bootstrap/js/bootstrap.js', //composer
+            'resources/assets/plugins/jquery-slimscroll/jquery.slimscroll.js', //static
+            'resources/assets/plugins/switchery/switchery.js', //static
+            'resources/assets/plugins/uniform/js/jquery.uniform.standalone.js', //static
+            'resources/assets/plugins/offcanvasmenueffects/js/classie.js', //static
+            'resources/assets/plugins/waves/waves.js', //static
+            'resources/assets/plugins/offcanvasmenueffects/js/snap.svg-min.js', //static
+            'resources/assets/js/pages/*.js'
+        ], 'public/js/app-main.js'
+    );
+*/
+
+mix.js('resources/assets/plugins/3d-bold-navigation/js/modernizr.js', 'public/js/3d-canvas');
+mix.js('resources/assets/plugins/3d-bold-navigation/js/main.js', 'public/js/3d-canvas');
+mix.js('resources/assets/plugins/offcanvasmenueffects/js/classie.js', 'public/js');
+mix.js('resources/assets/js/meteor.js', 'public/js');

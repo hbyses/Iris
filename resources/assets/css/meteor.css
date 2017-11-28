@@ -4362,7 +4362,7 @@ body.hover-menu .menu.accordion-menu li.active a:after {
 
 .small-sidebar:not(.page-sidebar-fixed) .menu.accordion-menu {
     width: auto;
-    oveflow: visible!important;
+    overflow: visible!important;
 }
 
 .small-sidebar:not(.page-sidebar-fixed) .accordion-menu,
