@@ -157,6 +157,18 @@
                 </ul>
             </div><!-- Page Sidebar Inner -->
         </div><!-- Page Sidebar -->
+        <!-- Breadcrumbs -->
+        <div class="page-inner">
+            <div class="page-title">
+                <h3 class="breadcrumb-header">{{$title}}</h3>
+                    <div class="page-breadcrumb">
+                        <ol class="breadcrumb breadcrumb-with-header">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Tables</a></li>
+                            <li class="active">Datatables</li>
+                        </ol>
+                    </div>
+            </div>
             <div id="main-wrapper">
                 <div class="row">
                     <div class="col-md-12">
@@ -193,6 +205,7 @@
     <script src="https://cdn.jsdelivr.net/npm/flot.curvedlines@1.1.1/curvedLines.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
     <script src="{{asset('js/meteor.js')}}"></script>
+    <script src="{{asset('js/resources.js')}}"></script>
     <script>
         $(document).ready(function () {
             //Override the default menu scroll height of 250px from slimscroll.js
