@@ -48,3 +48,4 @@ Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
 Route::get('/lock', 'AuthController@lock');
+Route::get('/equipment', 'EquipmentController@index');
