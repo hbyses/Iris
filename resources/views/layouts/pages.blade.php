@@ -157,15 +157,6 @@
                 </ul>
             </div><!-- Page Sidebar Inner -->
         </div><!-- Page Sidebar -->
-        <div class="page-inner">
-            <div class="page-title">
-                <div class="page-breadcrumb">
-                    <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li class="active">Dashboard</li>
-                    </ol>
-                </div>
-            </div>
             <div id="main-wrapper">
                 <div class="row">
                     <div class="col-md-12">
