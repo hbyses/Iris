@@ -1,13 +1,9 @@
 {
-    "/css/pace.css": "/css/pace.css",
-    "/css/uniform.css": "/css/uniform.css",
-    "/css/bootstrap.css": "/css/bootstrap.css",
-    "/css/font-awesome.css": "/css/font-awesome.css",
-    "/css/line-icons.css": "/css/line-icons.css",
+    "/js/classie.js": "/js/classie.js",
+    "/js/3d-canvas/modernizr.js": "/js/3d-canvas/modernizr.js",
+    "/js/3d-canvas/main.js": "/js/3d-canvas/main.js",
+    "/js/meteor.js": "/js/meteor.js",
     "/css/menu_cornerbox.css": "/css/menu_cornerbox.css",
-    "/css/waves.css": "/css/waves.css",
-    "/css/switchery.css": "/css/switchery.css",
     "/css/meteor.css": "/css/meteor.css",
-    "/css/style.css": "/css/style.css",
-    "/js/app-auth.js": "/js/app-auth.js"
+    "/css/style.css": "/css/style.css"
 }
