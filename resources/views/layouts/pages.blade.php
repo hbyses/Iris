@@ -123,7 +123,7 @@
         <div class="page-sidebar sidebar">
             <div class="page-sidebar-inner slimscroll">
                 <ul class="menu accordion-menu">
-                    <li class="active"><a href="/" class="waves-effect waves-button"><i class="fa fa-home fa-padding" aria-hidden="true"></i><p>Home</p><span class="active-page"></span></a></li>
+                    <li><a href="/" class="waves-effect waves-button"><i class="fa fa-home fa-padding" aria-hidden="true"></i><p>Home</p></a></li>
                     <li><a href="/tasks" class="waves-effect waves-button"><i class="fa fa-tasks fa-padding" aria-hidden="true"></i></span><p>Tasks</p></a></li>
                     <li><a href="/dashboards" class="waves-effect waves-button"><i class="fa fa-tachometer fa-padding" aria-hidden="true"></i></span><p>Dashboards</p></a></li>
                     <li class="droplink"><a href="#" class="waves-effect waves-button"><i class="fa fa-th fa-padding" aria-hidden="true"></i></span><p>Equipment</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
@@ -215,6 +215,8 @@
         $(document).ready(function () { 
             //Override the default menu scroll height of 250px from slimscroll.js 
             $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto'); 
+            $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active open');
+            $('body > main > div.page-sidebar.sidebar > div > div.page-sidebar-inner.slimscroll > ul > li.droplink.active.open > ul').css("display", "");
         }); 
     </script> 
     <script>$(window).on('load', function(){this.$ = jQuery;});</script>
