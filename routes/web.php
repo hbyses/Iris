@@ -41,11 +41,17 @@ Route::get('/users/{id}/{name}', function ($id, $name) {
 });
 */
 
+// Root
 Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
+
+// Auth Pages
 Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
 Route::get('/lock', 'AuthController@lock');
-Route::get('/equipment', 'EquipmentController@index');
+
+// Equipment Pages
+Route::get('/equipment', 'EquipmentController@list');
+Route::get('/equipment/groups', 'EquipmentController@groups');
+Route::get('/equipment/locations', 'EquipmentController@locations');
+Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
