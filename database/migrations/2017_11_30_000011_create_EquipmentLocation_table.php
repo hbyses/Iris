@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateAuditlogTable extends Migration
+class CreateEquipmentlocationTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'AuditLog';
+    public $set_schema_table = 'EquipmentLocation';
     /**
      * Run the migrations.
-     * @table AuditLog
+     * @table EquipmentLocation
      *
      * @return void
      */
@@ -19,14 +19,16 @@ class CreateAuditlogTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
-            $table->string('action', 100)->nullable();
-            $table->integer('user')->nullable();
-            $table->string('auditDate', 45)->nullable();
-            $table->string('oldValue')->nullable();
-            $table->string('newValue')->nullable();
-            $table->string('sourceURL')->nullable();
+            $table->increments('Equipment_id');
+            $table->integer('Location_id');
+
+            $table->index(["Location_id"], 'fk_EquipmentLocation_Location1_idx');
+
+
+            $table->foreign('Location_id', 'fk_EquipmentLocation_Location1_idx')
+                ->references('id')->on('Location')
+                ->onDelete('no action')
+                ->onUpdate('no action');
         });
     }
 

@@ -19,7 +19,6 @@ class CreateLocationTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('parentLocation_id')->nullable();
             $table->string('name', 100)->nullable();
@@ -27,7 +26,7 @@ class CreateLocationTable extends Migration
             $table->string('Locationcol', 45)->nullable();
             $table->integer('locationManager_id');
 
-            $table->index(["locationManager_id"], 'fk_Location_User1_idx');
+            $table->index(["locationManager_id"], 'fk_Location_Users1_idx');
 
             $table->index(["parentLocation_id"], 'fk_Location_Location1_idx');
 
@@ -37,8 +36,8 @@ class CreateLocationTable extends Migration
                 ->onDelete('no action')
                 ->onUpdate('no action');
 
-            $table->foreign('locationManager_id', 'fk_Location_User1_idx')
-                ->references('id')->on('User')
+            $table->foreign('locationManager_id', 'fk_Location_Users1_idx')
+                ->references('id')->on('Users')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });

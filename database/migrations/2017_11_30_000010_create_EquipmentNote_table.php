@@ -19,7 +19,6 @@ class CreateEquipmentnoteTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('Equipment_id');
             $table->integer('User_id');
@@ -27,7 +26,7 @@ class CreateEquipmentnoteTable extends Migration
 
             $table->index(["Equipment_id"], 'fk_EquipmentNote_Equipment1_idx');
 
-            $table->index(["User_id"], 'fk_EquipmentNote_User1_idx');
+            $table->index(["User_id"], 'fk_EquipmentNote_Users1_idx');
 
 
             $table->foreign('Equipment_id', 'fk_EquipmentNote_Equipment1_idx')
@@ -35,8 +34,8 @@ class CreateEquipmentnoteTable extends Migration
                 ->onDelete('no action')
                 ->onUpdate('no action');
 
-            $table->foreign('User_id', 'fk_EquipmentNote_User1_idx')
-                ->references('id')->on('User')
+            $table->foreign('User_id', 'fk_EquipmentNote_Users1_idx')
+                ->references('id')->on('Users')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });

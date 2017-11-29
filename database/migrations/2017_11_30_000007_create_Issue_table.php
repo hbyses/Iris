@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateIssuableorderTable extends Migration
+class CreateIssueTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'IssuableOrder';
+    public $set_schema_table = 'Issue';
     /**
      * Run the migrations.
-     * @table IssuableOrder
+     * @table Issue
      *
      * @return void
      */
@@ -19,14 +19,13 @@ class CreateIssuableorderTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
-            $table->increments('id');
+            $table->increments('issueId');
             $table->integer('Issuable_id');
 
-            $table->index(["Issuable_id"], 'fk_IssuableOrder_Issuable1_idx');
+            $table->index(["Issuable_id"], 'fk_Issue_Issuable1_idx');
 
 
-            $table->foreign('Issuable_id', 'fk_IssuableOrder_Issuable1_idx')
+            $table->foreign('Issuable_id', 'fk_Issue_Issuable1_idx')
                 ->references('id')->on('Issuable')
                 ->onDelete('no action')
                 ->onUpdate('no action');

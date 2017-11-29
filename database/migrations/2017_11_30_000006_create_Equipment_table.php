@@ -19,7 +19,6 @@ class CreateEquipmentTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('quantity')->nullable();
             $table->date('last_modified')->nullable();
@@ -28,7 +27,7 @@ class CreateEquipmentTable extends Migration
             $table->string('consumable', 1)->nullable();
             $table->integer('size')->nullable();
             $table->string('brand', 45)->nullable();
-            $table->string('inService', 1)->nullable();
+            $table->tinyInteger('inService')->nullable();
             $table->string('inspectionFrequency', 45)->nullable();
             $table->string('serialNumber', 45)->nullable();
             $table->string('model', 45)->nullable();
@@ -36,6 +35,7 @@ class CreateEquipmentTable extends Migration
             $table->date('datePurchased')->nullable();
             $table->integer('assetNumber')->nullable();
             $table->integer('Supplier_id')->nullable();
+            $table->tinyInteger('bookable')->nullable();
 
             $table->index(["Supplier_id"], 'fk_Equipment_Supplier1_idx');
 

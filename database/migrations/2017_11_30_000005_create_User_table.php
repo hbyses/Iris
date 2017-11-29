@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateSupplierTable extends Migration
+class CreateUserTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'Supplier';
+    public $set_schema_table = 'User';
     /**
      * Run the migrations.
-     * @table Supplier
+     * @table User
      *
      * @return void
      */
@@ -19,16 +19,7 @@ class CreateSupplierTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('name', 45)->nullable();
-            $table->string('address', 45)->nullable();
-            $table->string('description')->nullable();
-            $table->string('phone1', 45)->nullable();
-            $table->string('phone2', 45)->nullable();
-            $table->string('email', 80)->nullable();
-            $table->string('contactName', 45)->nullable();
-            $table->string('accountNo', 45)->nullable();
         });
     }
 
