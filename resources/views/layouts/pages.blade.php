@@ -132,8 +132,8 @@
                             <li><a href="/equipment/groups">Groups</a></li>
                             <li><a href="/equipment/locations">Locations</a></li>
                             <li><a href="/equipment/suppliers">Suppliers</a></li>
-                            <li><a href="/reports?subject=equipment">Reports</a></li>
-                            <li><a href="/dashboards?subject=equipment">Dashboard</a></li>
+                            <li><a href="/reports/equipment">Reports</a></li>
+                            <li><a href="/dashboards/equipment">Dashboard</a></li>
                         </ul>
                     </li>
                     <li class="droplink"><a href="#" class="waves-effect waves-button"><i class="fa fa-truck fa-padding" aria-hidden="true"></i></span><p>Fleet</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
@@ -141,7 +141,7 @@
                             <li><a href="/vehicles">Vehicles</a></li>
                             <li><a href="/vehicles/vel">Equipment Lists</a></li>
                             <li><a href="/vehicles/bookings">Bookings</a></li>
-                            <li><a href="/calendar?filter=fleet">Calendar</a></li>
+                            <li><a href="/calendar/fleet">Calendar</a></li>
                         </ul>
                     </li>
                     <li class="droplink"><a href="#" class="waves-effect waves-button"><i class="fa fa-calendar fa-padding" aria-hidden="true"></i></span><p>Calendar</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
