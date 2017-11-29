@@ -1,8 +1,9 @@
 {
-    "/js/classie.js": "/js/classie.js",
-    "/js/3d-canvas/modernizr.js": "/js/3d-canvas/modernizr.js",
-    "/js/3d-canvas/main.js": "/js/3d-canvas/main.js",
     "/js/meteor.js": "/js/meteor.js",
+    "/js/3d-canvas/modernizr.js": "/js/3d-canvas/modernizr.js",
+    "/js/classie.js": "/js/classie.js",
+    "/js/3d-canvas/main.js": "/js/3d-canvas/main.js",
+    "/js/datatable-defs.js": "/js/datatable-defs.js",
     "/css/menu_cornerbox.css": "/css/menu_cornerbox.css",
     "/css/meteor.css": "/css/meteor.css",
     "/css/style.css": "/css/style.css"

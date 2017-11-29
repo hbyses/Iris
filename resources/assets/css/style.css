@@ -241,3 +241,10 @@ body:not(fixed-sidebar) .small-sidebar .horizontal-bar .accordion-menu>li>ul {
 .forgotten-box {
     max-height: 460px !important;
 }
+
+
+/* Font Awesome Icon menu padding */
+
+i.fa-padding {
+    padding-right: 1.5em;
+}

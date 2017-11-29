@@ -6,8 +6,23 @@ use Illuminate\Http\Request;
 
 class EquipmentController extends Controller
 {
-    public function index(){
+    public function list(){
         $title = 'Equipment';
-        return view('pages.equipment.index')->with('title', $title);
+        return view('pages.types.datatable')->with('title', $title);
+    }
+
+    public function groups(){
+        $title = 'Equipment Groups';
+        return view('pages.types.datatable')->with('title', $title);
+    }
+
+    public function locations(){
+        $title = 'Equipment Locations';
+        return view('pages.types.datatable')->with('title', $title);
+    }
+
+    public function suppliers(){
+        $title = 'Equipment Suppliers';
+        return view('pages.types.datatable')->with('title', $title);
     }
 }

@@ -17,6 +17,8 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js" />
         <link rel="stylesheet" href="{{asset('css/meteor.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <!-- END STYLESHEETS -->
@@ -34,7 +36,7 @@
             toastr-placeholder
         End old sheets -->
 
-        <script src="{{asset('js/modernizr.js')}}"></script>
+        <script src="{{asset('js/3d-canvas/modernizr.js')}}"></script>
 
     </head>
     <body>
@@ -121,10 +123,10 @@
         <div class="page-sidebar sidebar">
             <div class="page-sidebar-inner slimscroll">
                 <ul class="menu accordion-menu">
-                    <li class="active"><a href="/" class="waves-effect waves-button"><span class="menu-icon icon-home"></span><p>Home</p><span class="active-page"></span></a></li>
-                    <li><a href="/equipment" class="waves-effect waves-button"><span class="menu-icon icon-user"></span><p>Tasks</p></a></li>
-                    <li><a href="/dashboards" class="waves-effect waves-button"><span class="menu-icon icon-envelope-open"></span><p>Dashboards</p></a></li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-puzzle"></span><p>Equipment</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
+                    <li><a href="/" class="waves-effect waves-button"><i class="fa fa-home fa-padding" aria-hidden="true"></i><p>Home</p></a></li>
+                    <li><a href="/tasks" class="waves-effect waves-button"><i class="fa fa-tasks fa-padding" aria-hidden="true"></i></span><p>Tasks</p></a></li>
+                    <li><a href="/dashboards" class="waves-effect waves-button"><i class="fa fa-tachometer fa-padding" aria-hidden="true"></i></span><p>Dashboards</p></a></li>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><i class="fa fa-th fa-padding" aria-hidden="true"></i></span><p>Equipment</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a>
                         <ul class="sub-menu">
                             <li><a href="/equipment">Equipment List</a></li>
                             <li><a href="/equipment/groups">Groups</a></li>
@@ -134,7 +136,7 @@
                             <li><a href="/dashboards?subject=equipment">Dashboard</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-layers"></span><p>Fleet</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><i class="fa fa-truck fa-padding" aria-hidden="true"></i></span><p>Fleet</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
                         <ul class="sub-menu">
                             <li><a href="/vehicles">Vehicles</a></li>
                             <li><a href="/vehicles/vel">Equipment Lists</a></li>
@@ -142,13 +144,13 @@
                             <li><a href="/calendar?filter=fleet">Calendar</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-grid"></span><p>Calendar</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><i class="fa fa-calendar fa-padding" aria-hidden="true"></i></span><p>Calendar</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
                         <ul class="sub-menu">
                             <li><a href="/calendar">Calendar</a></li>
                             <li><a href="/calendar/events">Event List</a></li>
                         </ul>
                     </li>
-                    <li class="droplink"><a href="#" class="waves-effect waves-button"><span class="menu-icon icon-pencil"></span><p>Administration</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
+                    <li class="droplink"><a href="#" class="waves-effect waves-button"><i class="fa fa-cog fa-padding" aria-hidden="true"></i></span><p>Admin</p>&nbsp;&nbsp; <i class="fa fa-angle-right" aria-hidden="true"></i></a></a>
                         <ul class="sub-menu">
                             <li><a href="/admin/users">Users</a></li>
                             <li><a href="/admin/settings">Settings</a></li>
@@ -204,21 +206,19 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/flot.tooltip/0.9.0/jquery.flot.tooltip.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flot.curvedlines@1.1.1/curvedLines.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
     <script src="{{asset('js/meteor.js')}}"></script>
     <!--<script src="{{asset('js/resources.js')}}"></script>-->
-    <!--<script src="{{asset('js/datatable-defs.js')}}"></script>-->
-    <script>
-        $(document).ready(function () {
-            //Override the default menu scroll height of 250px from slimscroll.js
-            $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto');
-            //See if the table works here?
-            $('#equipment-list').DataTable( {
-                "paging": true,
-                "ordering": true,
-                "searching": true
-            });
-        });
-    </script>
+    <script src="{{asset('js/datatable-defs.js')}}"></script>
+      <script> 
+        $(document).ready(function () { 
+            //Override the default menu scroll height of 250px from slimscroll.js 
+            $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto'); 
+            $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active open');
+            $('body > main > div.page-sidebar.sidebar > div > div.page-sidebar-inner.slimscroll > ul > li.droplink.active.open > ul').css("display", "");
+        }); 
+    </script> 
     <script>$(window).on('load', function(){this.$ = jQuery;});</script>
     </body>
 </html>
