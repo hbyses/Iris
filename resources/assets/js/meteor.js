@@ -33,7 +33,8 @@ $(document).ready(function() {
     }
 
     // Waves
-    Waves.displayEffect();
+    //Waves.displayEffect(); deprecated
+    Waves.init();
 
     // tooltips
     $('[data-toggle~="tooltip"]').tooltip({

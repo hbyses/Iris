@@ -4,14 +4,15 @@ $(document).ready(function() {
 
     $('#example').dataTable();
 
-    var table = $('#equipment-list').DataTable({
+    //var table = 
+    $('#equipment-list').DataTable({
         "columnDefs": [
             { "visible": false, "targets": 2 }
         ],
         "order": [
             [2, 'asc']
         ],
-        "displayLength": 25,
+        "displayLength": 16,
     });
 
 
