@@ -14,6 +14,7 @@ $(document).ready(function() {
         "displayLength": 25,
     });
 
+
     // Order by the grouping
     $('#example2 tbody').on('click', 'tr.group', function() {
         var currentOrder = table.order()[0];
