@@ -63,3 +63,10 @@ Route::get('/vehicles/bookings', 'FleetController@bookings');
 
 // Calendar
 Route::get('/calendar/{filter?}', 'CalendarController@index');
+
+// Dashboards
+Route::get('/dashboards/{area?}', 'DashboardController@index');
+
+// User Profile / Tasks
+Route::get('/tasks/{username?}', 'ProfileController@tasks');
+Route::get('/profile', 'ProfileController@profile');
