@@ -7,10 +7,10 @@
             if (w.hasOwnProperty(c)) { if (e = [], t = w[c], t.name && (e.push(t.name.toLowerCase()), t.options && t.options.aliases && t.options.aliases.length))
                     for (n = 0; n < t.options.aliases.length; n++) e.push(t.options.aliases[n].toLowerCase()); for (a = r(t.fn, "function") ? t.fn() : t.fn, o = 0; o < e.length; o++) i = e[o], s = i.split("."), 1 === s.length ? Modernizr[s[0]] = a : (!Modernizr[s[0]] || Modernizr[s[0]] instanceof Boolean || (Modernizr[s[0]] = new Boolean(Modernizr[s[0]])), Modernizr[s[0]][s[1]] = a), T.push((a ? "" : "no-") + s.join("-")) } }
 
-    function o(e) { var t = _.className,
+    function o(e) { var t = N.className,
             n = Modernizr._config.classPrefix || ""; if (z && (t = t.baseVal), Modernizr._config.enableJSClass) { var r = new RegExp("(^|\\s)" + n + "no-js(\\s|$)");
             t = t.replace(r, "$1" + n + "js$2") }
-        Modernizr._config.enableClasses && (t += " " + n + e.join(" " + n), z ? _.className.baseVal = t : _.className = t) }
+        Modernizr._config.enableClasses && (t += " " + n + e.join(" " + n), z ? N.className.baseVal = t : N.className = t) }
 
     function i() { return "function" != typeof t.createElement ? t.createElement(arguments[0]) : z ? t.createElementNS.call(t, "http://www.w3.org/2000/svg", arguments[0]) : t.createElement.apply(t, arguments) }
 
@@ -29,7 +29,7 @@
     function u(e, n, r, a) { var o, s, c, l, u = "modernizr",
             f = i("div"),
             p = d(); if (parseInt(r, 10))
-            for (; r--;) c = i("div"), c.id = a ? a[r] : u + (r + 1), f.appendChild(c); return o = i("style"), o.type = "text/css", o.id = "s" + u, (p.fake ? p : f).appendChild(o), p.appendChild(f), o.styleSheet ? o.styleSheet.cssText = e : o.appendChild(t.createTextNode(e)), f.id = u, p.fake && (p.style.background = "", p.style.overflow = "hidden", l = _.style.overflow, _.style.overflow = "hidden", _.appendChild(p)), s = n(f, e), p.fake ? (p.parentNode.removeChild(p), _.style.overflow = l, _.offsetHeight) : f.parentNode.removeChild(f), !!s }
+            for (; r--;) c = i("div"), c.id = a ? a[r] : u + (r + 1), f.appendChild(c); return o = i("style"), o.type = "text/css", o.id = "s" + u, (p.fake ? p : f).appendChild(o), p.appendChild(f), o.styleSheet ? o.styleSheet.cssText = e : o.appendChild(t.createTextNode(e)), f.id = u, p.fake && (p.style.background = "", p.style.overflow = "hidden", l = N.style.overflow, N.style.overflow = "hidden", N.appendChild(p)), s = n(f, e), p.fake ? (p.parentNode.removeChild(p), N.style.overflow = l, N.offsetHeight) : f.parentNode.removeChild(f), !!s }
 
     function f(e, t) { return function() { return e.apply(t, arguments) } }
 
@@ -37,15 +37,15 @@
             if (e[o] in t) return n === !1 ? e[o] : (a = t[e[o]], r(a, "function") ? f(a, n || t) : a);
         return !1 }
 
-    function m(e) { return e.replace(/([A-Z])/g, function(e, t) { return "-" + t.toLowerCase() }).replace(/^ms-/, "-ms-") }
-
-    function g(t, n, r) { var a; if ("getComputedStyle" in e) { a = getComputedStyle.call(e, t, n); var o = e.console; if (null !== a) r && (a = a.getPropertyValue(r));
+    function m(t, n, r) { var a; if ("getComputedStyle" in e) { a = getComputedStyle.call(e, t, n); var o = e.console; if (null !== a) r && (a = a.getPropertyValue(r));
             else if (o) { var i = o.error ? "error" : "log";
                 o[i].call(o, "getComputedStyle returning null, its possible modernizr test results are inaccurate") } } else a = !n && t.currentStyle && t.currentStyle[r]; return a }
 
+    function g(e) { return e.replace(/([A-Z])/g, function(e, t) { return "-" + t.toLowerCase() }).replace(/^ms-/, "-ms-") }
+
     function h(t, r) { var a = t.length; if ("CSS" in e && "supports" in e.CSS) { for (; a--;)
-                if (e.CSS.supports(m(t[a]), r)) return !0;
-            return !1 } if ("CSSSupportsRule" in e) { for (var o = []; a--;) o.push("(" + m(t[a]) + ":" + r + ")"); return o = o.join(" or "), u("@supports (" + o + ") { #modernizr { position: absolute; } }", function(e) { return "absolute" == g(e, null, "position") }) } return n }
+                if (e.CSS.supports(g(t[a]), r)) return !0;
+            return !1 } if ("CSSSupportsRule" in e) { for (var o = []; a--;) o.push("(" + g(t[a]) + ":" + r + ")"); return o = o.join(" or "), u("@supports (" + o + ") { #modernizr { position: absolute; } }", function(e) { return "absolute" == m(e, null, "position") }) } return n }
 
     function v(e, t, a, o) {
         function s() { u && (delete U.style, delete U.modElem) } if (o = r(o, "undefined") ? !1 : o, !r(a, "undefined")) { var d = h(e, a); if (!r(d, "undefined")) return d } for (var u, f, p, m, g, v = ["modernizr", "tspan", "samp"]; !U.style && v.length;) u = !0, U.modElem = i(v.shift()), U.style = U.modElem.style; for (p = e.length, f = 0; p > f; f++)
@@ -53,22 +53,22 @@
         return s(), !1 }
 
     function y(e, t, n, a, o) { var i = e.charAt(0).toUpperCase() + e.slice(1),
-            s = (e + " " + D.join(i + " ") + i).split(" "); return r(t, "string") || r(t, "undefined") ? v(s, t, a, o) : (s = (e + " " + N.join(i + " ") + i).split(" "), p(s, t, n)) }
+            s = (e + " " + D.join(i + " ") + i).split(" "); return r(t, "string") || r(t, "undefined") ? v(s, t, a, o) : (s = (e + " " + P.join(i + " ") + i).split(" "), p(s, t, n)) }
 
-    function b(e, t, r) { return y(e, n, n, t, r) }
+    function b(e, t) { var n = e.deleteDatabase(t);
+        n.onsuccess = function() { s("indexeddb.deletedatabase", !0) }, n.onerror = function() { s("indexeddb.deletedatabase", !1) } }
 
-    function x(e, t) { var n = e.deleteDatabase(t);
-        n.onsuccess = function() { s("indexeddb.deletedatabase", !0) }, n.onerror = function() { s("indexeddb.deletedatabase", !1) } } var T = [],
+    function x(e, t, r) { return y(e, n, n, t, r) } var T = [],
         w = [],
         S = { _version: "3.5.0", _config: { classPrefix: "", enableClasses: !0, enableJSClass: !0, usePrefixes: !0 }, _q: [], on: function(e, t) { var n = this;
                 setTimeout(function() { t(n[e]) }, 0) }, addTest: function(e, t, n) { w.push({ name: e, fn: t, options: n }) }, addAsyncTest: function(e) { w.push({ name: null, fn: e }) } },
         Modernizr = function() {};
-    Modernizr.prototype = S, Modernizr = new Modernizr, Modernizr.addTest("applicationcache", "applicationCache" in e), Modernizr.addTest("geolocation", "geolocation" in navigator), Modernizr.addTest("history", function() { var t = navigator.userAgent; return -1 === t.indexOf("Android 2.") && -1 === t.indexOf("Android 4.0") || -1 === t.indexOf("Mobile Safari") || -1 !== t.indexOf("Chrome") || -1 !== t.indexOf("Windows Phone") || "file:" === location.protocol ? e.history && "pushState" in e.history : !1 }), Modernizr.addTest("svg", !!t.createElementNS && !!t.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect), Modernizr.addTest("postmessage", "postMessage" in e); var C = !1; try { C = "WebSocket" in e && 2 === e.WebSocket.CLOSING } catch (E) {}
+    Modernizr.prototype = S, Modernizr = new Modernizr, Modernizr.addTest("applicationcache", "applicationCache" in e), Modernizr.addTest("geolocation", "geolocation" in navigator), Modernizr.addTest("history", function() { var t = navigator.userAgent; return -1 === t.indexOf("Android 2.") && -1 === t.indexOf("Android 4.0") || -1 === t.indexOf("Mobile Safari") || -1 !== t.indexOf("Chrome") || -1 !== t.indexOf("Windows Phone") || "file:" === location.protocol ? e.history && "pushState" in e.history : !1 }), Modernizr.addTest("postmessage", "postMessage" in e), Modernizr.addTest("svg", !!t.createElementNS && !!t.createElementNS("http://www.w3.org/2000/svg", "svg").createSVGRect); var C = !1; try { C = "WebSocket" in e && 2 === e.WebSocket.CLOSING } catch (E) {}
     Modernizr.addTest("websockets", C), Modernizr.addTest("localstorage", function() { var e = "modernizr"; try { return localStorage.setItem(e, e), localStorage.removeItem(e), !0 } catch (t) { return !1 } }), Modernizr.addTest("sessionstorage", function() { var e = "modernizr"; try { return sessionStorage.setItem(e, e), sessionStorage.removeItem(e), !0 } catch (t) { return !1 } }), Modernizr.addTest("websqldatabase", "openDatabase" in e), Modernizr.addTest("webworkers", "Worker" in e); var k = S._config.usePrefixes ? " -webkit- -moz- -o- -ms- ".split(" ") : ["", ""];
-    S._prefixes = k; var _ = t.documentElement,
-        P = "Moz O ms Webkit",
-        N = S._config.usePrefixes ? P.toLowerCase().split(" ") : [];
-    S._domPrefixes = N; var z = "svg" === _.nodeName.toLowerCase();
+    S._prefixes = k; var _ = "Moz O ms Webkit",
+        P = S._config.usePrefixes ? _.toLowerCase().split(" ") : [];
+    S._domPrefixes = P; var N = t.documentElement,
+        z = "svg" === N.nodeName.toLowerCase();
     z || ! function(e, t) {
         function n(e, t) { var n = e.createElement("p"),
                 r = e.getElementsByTagName("head")[0] || e.documentElement; return n.innerHTML = "x<style>" + t + "</style>", r.insertBefore(n.lastChild, r.firstChild) }
@@ -104,35 +104,35 @@
         Modernizr._config.usePrefixes && (r += t + "-webkit-" + n); var s = i("a"),
             c = s.style; return c.cssText = r, ("" + c.backgroundImage).indexOf("gradient") > -1 }), Modernizr.addTest("multiplebgs", function() { var e = i("a").style; return e.cssText = "background:url(https://),url(https://),red url(https://)", /(url\s*\(.*?){3}/.test(e.background) }), Modernizr.addTest("opacity", function() { var e = i("a").style; return e.cssText = k.join("opacity:.55;"), /^0.55$/.test(e.opacity) }), Modernizr.addTest("rgba", function() { var e = i("a").style; return e.cssText = "background-color:rgba(150,255,150,.5)", ("" + e.backgroundColor).indexOf("rgba") > -1 }), Modernizr.addTest("inlinesvg", function() { var e = i("div"); return e.innerHTML = "<svg/>", "http://www.w3.org/2000/svg" == ("undefined" != typeof SVGRect && e.firstChild && e.firstChild.namespaceURI) }); var R;! function() { var e = {}.hasOwnProperty;
         R = r(e, "undefined") || r(e.call, "undefined") ? function(e, t) { return t in e && r(e.constructor.prototype[t], "undefined") } : function(t, n) { return e.call(t, n) } }(), S._l = {}, S.on = function(e, t) { this._l[e] || (this._l[e] = []), this._l[e].push(t), Modernizr.hasOwnProperty(e) && setTimeout(function() { Modernizr._trigger(e, Modernizr[e]) }, 0) }, S._trigger = function(e, t) { if (this._l[e]) { var n = this._l[e];
-            setTimeout(function() { var e, r; for (e = 0; e < n.length; e++)(r = n[e])(t) }, 0), delete this._l[e] } }, Modernizr._q.push(function() { S.addTest = s }); var $ = i("input"),
+            setTimeout(function() { var e, r; for (e = 0; e < n.length; e++)(r = n[e])(t) }, 0), delete this._l[e] } }, Modernizr._q.push(function() { S.addTest = s }), Modernizr.addTest("hsla", function() { var e = i("a").style; return e.cssText = "background-color:hsla(120,40%,100%,.5)", l(e.backgroundColor, "rgba") || l(e.backgroundColor, "hsla") }); var $ = i("input"),
         O = "autocomplete autofocus list placeholder max min multiple pattern required step".split(" "),
         L = {};
     Modernizr.input = function(t) { for (var n = 0, r = t.length; r > n; n++) L[t[n]] = !!(t[n] in $); return L.list && (L.list = !(!i("datalist") || !e.HTMLDataListElement)), L }(O); var B = "search tel url email datetime date month week time datetime-local number range color".split(" "),
         j = {};
-    Modernizr.inputtypes = function(e) { for (var r, a, o, i = e.length, s = "1)", c = 0; i > c; c++) $.setAttribute("type", r = e[c]), o = "text" !== $.type && "style" in $, o && ($.value = s, $.style.cssText = "position:absolute;visibility:hidden;", /^range$/.test(r) && $.style.WebkitAppearance !== n ? (_.appendChild($), a = t.defaultView, o = a.getComputedStyle && "textfield" !== a.getComputedStyle($, null).WebkitAppearance && 0 !== $.offsetHeight, _.removeChild($)) : /^(search|tel)$/.test(r) || (o = /^(url|email)$/.test(r) ? $.checkValidity && $.checkValidity() === !1 : $.value != s)), j[e[c]] = !!o; return j }(B); var M = "CSS" in e && "supports" in e.CSS,
+    Modernizr.inputtypes = function(e) { for (var r, a, o, i = e.length, s = "1)", c = 0; i > c; c++) $.setAttribute("type", r = e[c]), o = "text" !== $.type && "style" in $, o && ($.value = s, $.style.cssText = "position:absolute;visibility:hidden;", /^range$/.test(r) && $.style.WebkitAppearance !== n ? (N.appendChild($), a = t.defaultView, o = a.getComputedStyle && "textfield" !== a.getComputedStyle($, null).WebkitAppearance && 0 !== $.offsetHeight, N.removeChild($)) : /^(search|tel)$/.test(r) || (o = /^(url|email)$/.test(r) ? $.checkValidity && $.checkValidity() === !1 : $.value != s)), j[e[c]] = !!o; return j }(B); var M = "CSS" in e && "supports" in e.CSS,
         F = "supportsCSS" in e;
-    Modernizr.addTest("supports", M || F), Modernizr.addTest("hsla", function() { var e = i("a").style; return e.cssText = "background-color:hsla(120,40%,100%,.5)", l(e.backgroundColor, "rgba") || l(e.backgroundColor, "hsla") }); var I = {}.toString;
-    Modernizr.addTest("svgclippaths", function() { return !!t.createElementNS && /SVGClipPath/.test(I.call(t.createElementNS("http://www.w3.org/2000/svg", "clipPath"))) }), Modernizr.addTest("smil", function() { return !!t.createElementNS && /SVGAnimate/.test(I.call(t.createElementNS("http://www.w3.org/2000/svg", "animate"))) }); var D = S._config.usePrefixes ? P.split(" ") : [];
+    Modernizr.addTest("supports", M || F); var I = {}.toString;
+    Modernizr.addTest("svgclippaths", function() { return !!t.createElementNS && /SVGClipPath/.test(I.call(t.createElementNS("http://www.w3.org/2000/svg", "clipPath"))) }), Modernizr.addTest("smil", function() { return !!t.createElementNS && /SVGAnimate/.test(I.call(t.createElementNS("http://www.w3.org/2000/svg", "animate"))) }); var D = S._config.usePrefixes ? _.split(" ") : [];
     S._cssomPrefixes = D; var V = function(t) { var r, a = k.length,
             o = e.CSSRule; if ("undefined" == typeof o) return n; if (!t) return !1; if (t = t.replace(/^@/, ""), r = t.replace(/-/g, "_").toUpperCase() + "_RULE", r in o) return "@" + t; for (var i = 0; a > i; i++) { var s = k[i],
                 c = s.toUpperCase() + "_" + r; if (c in o) return "@-" + s.toLowerCase() + "-" + t } return !1 };
-    S.atRule = V; var W = S.testStyles = u;
-    W('#modernizr{font:0/0 a}#modernizr:after{content:":)";visibility:hidden;font:7px/1 a}', function(e) { Modernizr.addTest("generatedcontent", e.offsetHeight >= 6) }); var q = function() { var e = navigator.userAgent,
-            t = e.match(/w(eb)?osbrowser/gi),
-            n = e.match(/windows phone/gi) && e.match(/iemobile\/([0-9])+/gi) && parseFloat(RegExp.$1) >= 9; return t || n }();
+    S.atRule = V; var W = S.testStyles = u,
+        q = function() { var e = navigator.userAgent,
+                t = e.match(/w(eb)?osbrowser/gi),
+                n = e.match(/windows phone/gi) && e.match(/iemobile\/([0-9])+/gi) && parseFloat(RegExp.$1) >= 9; return t || n }();
     q ? Modernizr.addTest("fontface", !1) : W('@font-face {font-family:"font";src:url("https://")}', function(e, n) { var r = t.getElementById("smodernizr"),
             a = r.sheet || r.styleSheet,
             o = a ? a.cssRules && a.cssRules[0] ? a.cssRules[0].cssText : a.cssText || "" : "",
             i = /src/i.test(o) && 0 === o.indexOf(n.split(" ")[0]);
-        Modernizr.addTest("fontface", i) }); var H = { elem: i("modernizr") };
+        Modernizr.addTest("fontface", i) }), W('#modernizr{font:0/0 a}#modernizr:after{content:":)";visibility:hidden;font:7px/1 a}', function(e) { Modernizr.addTest("generatedcontent", e.offsetHeight >= 6) }); var H = { elem: i("modernizr") };
     Modernizr._q.push(function() { delete H.elem }); var U = { style: H.elem.style };
     Modernizr._q.unshift(function() { delete U.style }); var G = S.testProp = function(e, t, r) { return v([e], n, t, r) };
-    Modernizr.addTest("textshadow", G("textShadow", "1px 1px")), S.testAllProps = y, S.testAllProps = b, Modernizr.addTest("cssanimations", b("animationName", "a", !0)), Modernizr.addTest("borderimage", b("borderImage", "url() 1", !0)), Modernizr.addTest("backgroundsize", b("backgroundSize", "100%", !0)), Modernizr.addTest("borderradius", b("borderRadius", "0px", !0)),
-        function() { Modernizr.addTest("csscolumns", function() { var e = !1,
-                    t = b("columnCount"); try { e = !!t, e && (e = new Boolean(e)) } catch (n) {} return e }); for (var e, t, n = ["Width", "Span", "Fill", "Gap", "Rule", "RuleColor", "RuleStyle", "RuleWidth", "BreakBefore", "BreakAfter", "BreakInside"], r = 0; r < n.length; r++) e = n[r].toLowerCase(), t = b("column" + n[r]), ("breakbefore" === e || "breakafter" === e || "breakinside" == e) && (t = t || b(n[r])), Modernizr.addTest("csscolumns." + e, t) }(), Modernizr.addTest("boxshadow", b("boxShadow", "1px 1px", !0)), Modernizr.addTest("flexbox", b("flexBasis", "1px", !0)), Modernizr.addTest("cssreflections", b("boxReflect", "above", !0)), Modernizr.addTest("csstransforms", function() { return -1 === navigator.userAgent.indexOf("Android 2.") && b("transform", "scale(1)", !0) }), Modernizr.addTest("csstransforms3d", function() { var e = !!b("perspective", "1px", !0),
-                t = Modernizr._config.usePrefixes; if (e && (!t || "webkitPerspective" in _.style)) { var n, r = "#modernizr{width:0;height:0}";
-                Modernizr.supports ? n = "@supports (perspective: 1px)" : (n = "@media (transform-3d)", t && (n += ",(-webkit-transform-3d)")), n += "{#modernizr{width:7px;height:18px;margin:0;padding:0;border:0}}", W(r + n, function(t) { e = 7 === t.offsetWidth && 18 === t.offsetHeight }) } return e }), Modernizr.addTest("csstransitions", b("transition", "all", !0)); var J = S.prefixed = function(e, t, n) { return 0 === e.indexOf("@") ? V(e) : (-1 != e.indexOf("-") && (e = c(e)), t ? y(e, t, n) : y(e, "pfx")) };
+    Modernizr.addTest("textshadow", G("textShadow", "1px 1px")), S.testAllProps = y; var J = S.prefixed = function(e, t, n) { return 0 === e.indexOf("@") ? V(e) : (-1 != e.indexOf("-") && (e = c(e)), t ? y(e, t, n) : y(e, "pfx")) };
     Modernizr.addAsyncTest(function() { var t; try { t = J("indexedDB", e) } catch (n) {} if (t) { var r = "modernizr-" + Math.random(),
-                a = t.open(r);
-            a.onerror = function() { a.error && "InvalidStateError" === a.error.name ? s("indexeddb", !1) : (s("indexeddb", !0), x(t, r)) }, a.onsuccess = function() { s("indexeddb", !0), x(t, r) } } else s("indexeddb", !1) }), a(), o(T), delete S.addTest, delete S.addAsyncTest; for (var Z = 0; Z < Modernizr._q.length; Z++) Modernizr._q[Z]();
+                    a = t.open(r);
+                a.onerror = function() { a.error && "InvalidStateError" === a.error.name ? s("indexeddb", !1) : (s("indexeddb", !0), b(t, r)) }, a.onsuccess = function() { s("indexeddb", !0), b(t, r) } } else s("indexeddb", !1) }), S.testAllProps = x, Modernizr.addTest("cssanimations", x("animationName", "a", !0)), Modernizr.addTest("backgroundsize", x("backgroundSize", "100%", !0)), Modernizr.addTest("borderimage", x("borderImage", "url() 1", !0)), Modernizr.addTest("borderradius", x("borderRadius", "0px", !0)), Modernizr.addTest("boxshadow", x("boxShadow", "1px 1px", !0)),
+        function() { Modernizr.addTest("csscolumns", function() { var e = !1,
+                    t = x("columnCount"); try { e = !!t, e && (e = new Boolean(e)) } catch (n) {} return e }); for (var e, t, n = ["Width", "Span", "Fill", "Gap", "Rule", "RuleColor", "RuleStyle", "RuleWidth", "BreakBefore", "BreakAfter", "BreakInside"], r = 0; r < n.length; r++) e = n[r].toLowerCase(), t = x("column" + n[r]), ("breakbefore" === e || "breakafter" === e || "breakinside" == e) && (t = t || x(n[r])), Modernizr.addTest("csscolumns." + e, t) }(), Modernizr.addTest("flexbox", x("flexBasis", "1px", !0)), Modernizr.addTest("cssreflections", x("boxReflect", "above", !0)), Modernizr.addTest("csstransforms", function() { return -1 === navigator.userAgent.indexOf("Android 2.") && x("transform", "scale(1)", !0) }), Modernizr.addTest("csstransforms3d", function() { var e = !!x("perspective", "1px", !0),
+                t = Modernizr._config.usePrefixes; if (e && (!t || "webkitPerspective" in N.style)) { var n, r = "#modernizr{width:0;height:0}";
+                Modernizr.supports ? n = "@supports (perspective: 1px)" : (n = "@media (transform-3d)", t && (n += ",(-webkit-transform-3d)")), n += "{#modernizr{width:7px;height:18px;margin:0;padding:0;border:0}}", W(r + n, function(t) { e = 7 === t.offsetWidth && 18 === t.offsetHeight }) } return e }), Modernizr.addTest("csstransitions", x("transition", "all", !0)), a(), o(T), delete S.addTest, delete S.addAsyncTest; for (var Z = 0; Z < Modernizr._q.length; Z++) Modernizr._q[Z]();
     e.Modernizr = Modernizr }(window, document);

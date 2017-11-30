@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
-        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" />
         <link rel="stylesheet" href="{{asset('css/meteor.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <!-- END STYLESHEETS -->
@@ -213,8 +213,9 @@
     <script src="{{asset('js/datatable-defs.js')}}"></script>
       <script> 
         $(document).ready(function () { 
-            //Override the default menu scroll height of 250px from slimscroll.js 
-            $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto'); 
+            // Override the default menu scroll height of 250px from slimscroll.js 
+            $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto');
+            // Set active and open classes on sidebar menu items
             $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active open');
             $('body > main > div.page-sidebar.sidebar > div > div.page-sidebar-inner.slimscroll > ul > li.droplink.active.open > ul').css("display", "");
         }); 

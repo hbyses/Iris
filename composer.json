@@ -25,6 +25,7 @@
         "itsjavi/bootstrap-colorpicker": "^2.5",
         "jasonroman/flot": "^1.0",
         "laravel/framework": "5.5.*",
+        "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
         "mbostock/d3": "^3.5",
         "morrisjs/morris.js": "dev-master",
