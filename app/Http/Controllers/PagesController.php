@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class PagesController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index(){
         $title = 'Welcome to Iris!';
         //return view('pages.index', compact('title'));
