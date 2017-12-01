@@ -19,15 +19,15 @@ class CreateEquipmentTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
             $table->integer('quantity')->nullable();
-            $table->date('last_modified')->nullable();
             $table->string('name', 45)->nullable();
             $table->string('description', 45)->nullable();
-            $table->string('consumable', 1)->nullable();
+            $table->tinyInteger('consumableFlag')->nullable();
             $table->integer('size')->nullable();
             $table->string('brand', 45)->nullable();
-            $table->tinyInteger('inService')->nullable();
+            $table->tinyInteger('inServiceFlag')->nullable();
             $table->string('inspectionFrequency', 45)->nullable();
             $table->string('serialNumber', 45)->nullable();
             $table->string('model', 45)->nullable();
@@ -35,13 +35,20 @@ class CreateEquipmentTable extends Migration
             $table->date('datePurchased')->nullable();
             $table->integer('assetNumber')->nullable();
             $table->integer('Supplier_id')->nullable();
-            $table->tinyInteger('bookable')->nullable();
+            $table->integer('equipmentCategory_id');
+
+            $table->index(["equipmentCategory_id"], 'fk_Equipment_equipmentCategory1_idx');
 
             $table->index(["Supplier_id"], 'fk_Equipment_Supplier1_idx');
 
 
             $table->foreign('Supplier_id', 'fk_Equipment_Supplier1_idx')
                 ->references('id')->on('Supplier')
+                ->onDelete('no action')
+                ->onUpdate('no action');
+
+            $table->foreign('equipmentCategory_id', 'fk_Equipment_equipmentCategory1_idx')
+                ->references('id')->on('equipmentCategory')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });

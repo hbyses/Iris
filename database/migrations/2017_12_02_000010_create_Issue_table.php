@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateLocationTable extends Migration
+class CreateIssueTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'Location';
+    public $set_schema_table = 'Issue';
     /**
      * Run the migrations.
-     * @table Location
+     * @table Issue
      *
      * @return void
      */
@@ -19,25 +19,26 @@ class CreateLocationTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('parentLocation_id')->nullable();
-            $table->string('name', 100)->nullable();
-            $table->string('description', 100)->nullable();
-            $table->string('Locationcol', 45)->nullable();
-            $table->integer('locationManager_id');
+            $table->integer('Issuable_id');
+            $table->integer('User_id');
+            $table->dateTime('loanDate')->nullable();
+            $table->dateTime('returnDate')->nullable();
+            $table->string('Issuecol', 45)->nullable();
 
-            $table->index(["locationManager_id"], 'fk_Location_Users1_idx');
+            $table->index(["Issuable_id"], 'fk_Issue_Issuable1_idx');
 
-            $table->index(["parentLocation_id"], 'fk_Location_Location1_idx');
+            $table->index(["User_id"], 'fk_Issue_User1_idx');
 
 
-            $table->foreign('parentLocation_id', 'fk_Location_Location1_idx')
-                ->references('id')->on('Location')
+            $table->foreign('Issuable_id', 'fk_Issue_Issuable1_idx')
+                ->references('id')->on('Issuable')
                 ->onDelete('no action')
                 ->onUpdate('no action');
 
-            $table->foreign('locationManager_id', 'fk_Location_Users1_idx')
-                ->references('id')->on('Users')
+            $table->foreign('User_id', 'fk_Issue_User1_idx')
+                ->references('id')->on('User')
                 ->onDelete('no action')
                 ->onUpdate('no action');
         });
