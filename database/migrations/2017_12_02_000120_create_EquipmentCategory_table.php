@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateIssueTable extends Migration
+class CreateEquipmentcategoryTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'Issue';
+    public $set_schema_table = 'EquipmentCategory';
     /**
      * Run the migrations.
-     * @table Issue
+     * @table equipmentCategory
      *
      * @return void
      */
@@ -19,16 +19,9 @@ class CreateIssueTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
-            $table->increments('issueId');
-            $table->integer('Issuable_id');
-
-            $table->index(["Issuable_id"], 'fk_Issue_Issuable1_idx');
-
-
-            $table->foreign('Issuable_id', 'fk_Issue_Issuable1_idx')
-                ->references('id')->on('Issuable')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+            $table->engine = 'InnoDB';
+            $table->increments('id');
+            $table->string('name', 45)->nullable();
         });
     }
 

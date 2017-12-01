@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateEquipmenteventTable extends Migration
+class CreateIssuableorderTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'EquipmentEvent';
+    public $set_schema_table = 'IssuableOrder';
     /**
      * Run the migrations.
-     * @table EquipmentEvent
+     * @table IssuableOrder
      *
      * @return void
      */
@@ -19,12 +19,17 @@ class CreateEquipmenteventTable extends Migration
     {
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('Equipment_id')->nullable();
-            $table->integer('calendarEvent_id')->nullable();
-            $table->integer('equipmentQty')->nullable();
-            $table->dateTime('fromDate')->nullable();
-            $table->dateTime('toDate')->nullable();
+            $table->integer('Issuable_id');
+
+            $table->index(["Issuable_id"], 'fk_IssuableOrder_Issuable1_idx');
+
+
+            $table->foreign('Issuable_id', 'fk_IssuableOrder_Issuable1_idx')
+                ->references('id')->on('Issuable')
+                ->onDelete('no action')
+                ->onUpdate('no action');
         });
     }
 
