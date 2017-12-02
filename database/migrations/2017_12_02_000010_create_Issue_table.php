@@ -21,8 +21,8 @@ class CreateIssueTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('Issuable_id');
-            $table->integer('User_id');
+            $table->integer('Issuable_id')->unsigned();
+            $table->integer('User_id')->unsigned();
             $table->dateTime('loanDate')->nullable();
             $table->dateTime('returnDate')->nullable();
             $table->string('Issuecol', 45)->nullable();
