@@ -36,7 +36,7 @@ class CreateSuppliernoteTable extends Migration
                 ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_SupplierNote_User1_idx')
-                ->references('id')->on('User')
+                ->references('id')->on('Users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

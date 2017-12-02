@@ -38,7 +38,7 @@ class CreateLocationTable extends Migration
                 ->onUpdate('cascade');
 
             $table->foreign('locationManager_id', 'fk_Location_User1_idx')
-                ->references('id')->on('User')
+                ->references('id')->on('Users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
