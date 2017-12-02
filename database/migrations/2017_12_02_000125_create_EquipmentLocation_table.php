@@ -21,7 +21,7 @@ class CreateEquipmentlocationTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('Equipment_id');
-            $table->integer('Location_id');
+            $table->integer('Location_id')->unsigned();
             $table->integer('quantity')->nullable();
 
             $table->index(["Location_id"], 'fk_EquipmentLocation_Location1_idx');
