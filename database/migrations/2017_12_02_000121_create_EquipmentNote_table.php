@@ -36,7 +36,7 @@ class CreateEquipmentnoteTable extends Migration
                 ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_EquipmentNote_User1_idx')
-                ->references('id')->on('Users')
+                ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
