@@ -48,11 +48,9 @@ Route::get('/', 'PagesController@index');
 Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
-Route::get('/lock', 'AuthController@lock');
 
 // Equipment Pages
 Route::get('/equipment', 'EquipmentController@list');
-Route::get('/equipment/groups', 'EquipmentController@groups');
 Route::get('/equipment/locations', 'EquipmentController@locations');
 Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
 
@@ -60,6 +58,9 @@ Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
 Route::get('/vehicles', 'FleetController@vehicles');
 Route::get('/vehicles/vel', 'FleetController@vel');
 Route::get('/vehicles/bookings', 'FleetController@bookings');
+
+//Locations
+Route::get('/locations/{filter?}', 'LocationsController@index');
 
 // Calendar
 Route::get('/calendar/{filter?}', 'CalendarController@index');
