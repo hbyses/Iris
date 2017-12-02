@@ -29,8 +29,8 @@ class CreateEquipmentlocationTable extends Migration
 
             $table->foreign('Location_id', 'fk_EquipmentLocation_Location1_idx')
                 ->references('id')->on('Location')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

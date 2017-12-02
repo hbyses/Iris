@@ -32,13 +32,13 @@ class CreateSuppliernoteTable extends Migration
 
             $table->foreign('Supplier_id', 'fk_SupplierNote_Supplier1_idx')
                 ->references('id')->on('Supplier')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_SupplierNote_User1_idx')
                 ->references('id')->on('User')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

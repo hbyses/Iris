@@ -32,13 +32,13 @@ class CreateEquipmentnoteTable extends Migration
 
             $table->foreign('Equipment_id', 'fk_EquipmentNote_Equipment1_idx')
                 ->references('id')->on('Equipment')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_EquipmentNote_User1_idx')
                 ->references('id')->on('User')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 
