@@ -21,7 +21,7 @@ class CreateIssuableorderTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('Issuable_id');
+            $table->integer('Issuable_id')->unsigned();
 
             $table->index(["Issuable_id"], 'fk_IssuableOrder_Issuable1_idx');
 
