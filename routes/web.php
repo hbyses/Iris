@@ -41,10 +41,35 @@ Route::get('/users/{id}/{name}', function ($id, $name) {
 });
 */
 
+// Root
 Route::get('/', 'PagesController@index');
-Route::get('/about', 'PagesController@about');
-Route::get('/services', 'PagesController@services');
+
+// Auth Pages
 Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
-Route::get('/lock', 'AuthController@lock');
+
+// Equipment Pages
+Route::get('/equipment', 'EquipmentController@list');
+Route::get('/equipment/locations', 'EquipmentController@locations');
+Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
+
+// Fleet Pages
+Route::get('/vehicles', 'FleetController@vehicles');
+Route::get('/vehicles/vel', 'FleetController@vel');
+Route::get('/vehicles/bookings', 'FleetController@bookings');
+
+//Locations
+Route::get('/locations/{filter?}', 'LocationsController@index');
+
+// Calendar
+Route::get('/calendar/{filter?}', 'CalendarController@index');
+
+// Dashboards
+Route::get('/dashboards/{area?}', 'DashboardController@index');
+
+// Auth / User Profile / Tasks
+Route::get('/tasks/{username?}', 'ProfileController@tasks');
+Route::get('/profile', 'ProfileController@profile');
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
