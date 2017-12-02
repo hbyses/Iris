@@ -34,13 +34,13 @@ class CreateIssueTable extends Migration
 
             $table->foreign('Issuable_id', 'fk_Issue_Issuable1_idx')
                 ->references('id')->on('Issuable')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_Issue_User1_idx')
                 ->references('id')->on('User')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

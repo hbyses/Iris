@@ -44,13 +44,13 @@ class CreateEquipmentTable extends Migration
 
             $table->foreign('Supplier_id', 'fk_Equipment_Supplier1_idx')
                 ->references('id')->on('Supplier')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->foreign('equipmentCategory_id', 'fk_Equipment_equipmentCategory1_idx')
                 ->references('id')->on('equipmentCategory')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

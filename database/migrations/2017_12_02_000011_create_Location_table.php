@@ -34,13 +34,13 @@ class CreateLocationTable extends Migration
 
             $table->foreign('parentLocation_id', 'fk_Location_Location1_idx')
                 ->references('id')->on('Location')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->foreign('locationManager_id', 'fk_Location_User1_idx')
                 ->references('id')->on('User')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 

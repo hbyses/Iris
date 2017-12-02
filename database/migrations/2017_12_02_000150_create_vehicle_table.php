@@ -39,13 +39,13 @@ class CreateVehicleTable extends Migration
 
             $table->foreign('id', 'fk_vehicle_Equipment1_idx')
                 ->references('id')->on('Equipment')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
 
             $table->foreign('Location_id', 'fk_vehicle_Location1_idx')
                 ->references('id')->on('Location')
-                ->onDelete('no action')
-                ->onUpdate('no action');
+                ->onDelete('cascade')
+                ->onUpdate('cascade');
         });
     }
 
