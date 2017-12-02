@@ -20,8 +20,8 @@ class CreateVehicleTable extends Migration
         if (Schema::hasTable($this->set_schema_table)) return;
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
-            $table->increments('id')->comment('Equipment_equipmentId');
-            $table->integer('Location_id');
+            $table->increments('id')->comment('Equipment_equipmentId')->unsigned();
+            $table->integer('Location_id')->unsigned();
             $table->string('name', 45)->nullable();
             $table->string('rego', 10)->nullable();
             $table->string('capacity', 45)->nullable();
