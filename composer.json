@@ -44,7 +44,8 @@
         "fzaninotto/faker": "~1.4",
         "mockery/mockery": "0.9.*",
         "owen-it/laravel-auditing": "^5.0",
-        "phpunit/phpunit": "~6.0"
+        "phpunit/phpunit": "~6.0",
+        "xethron/migrations-generator": "^2.0"
     },
     "autoload": {
         "classmap": [
