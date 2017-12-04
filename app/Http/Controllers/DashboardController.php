@@ -22,13 +22,10 @@ class DashboardController extends Controller
     public function ops_duty()
     {
         $title = 'Operational Dashboard - Current Duties';
-        //$ops_duty_dash = Dashboard::where('field', 'do')->first()
-;
         $duty_officer = DB::table('dashboards')->where('field', 'do')->value('value');
         $backup_duty_officer = DB::table('dashboards')->where('field', 'budo')->value('value');
         $team_leader = DB::table('dashboards')->where('field', 'tl')->value('value');
         $team = DB::table('dashboards')->where('field', 'team')->value('value');
-
 
         return view ('pages.dashboards.ops_duty', ['title' => $title, 'duty_officer' => $duty_officer, 'backup_duty_officer' => $backup_duty_officer, 'team_leader' => $team_leader, 'team' => $team]);
     }
