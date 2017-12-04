@@ -34,8 +34,8 @@ class CreateEquipmentTable extends Migration
             $table->date('endOfLife')->nullable();
             $table->date('datePurchased')->nullable();
             $table->integer('assetNumber')->nullable();
-            $table->integer('Supplier_id')->nullable();
-            $table->integer('equipmentCategory_id');
+            $table->integer('Supplier_id')->nullable()->unsigned();
+            $table->integer('equipmentCategory_id')->unsigned()->unsigned();
 
             $table->index(["equipmentCategory_id"], 'fk_Equipment_equipmentCategory1_idx');
 

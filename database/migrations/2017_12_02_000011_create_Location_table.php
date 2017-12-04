@@ -21,11 +21,11 @@ class CreateLocationTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('parentLocation_id')->nullable();
+            $table->integer('parentLocation_id')->nullable()->unsigned();
             $table->string('name', 100)->nullable();
             $table->string('description', 100)->nullable();
             $table->string('Locationcol', 45)->nullable();
-            $table->integer('locationManager_id');
+            $table->integer('locationManager_id')->unsigned();
 
             $table->index(["locationManager_id"], 'fk_Location_User1_idx');
 
@@ -38,7 +38,7 @@ class CreateLocationTable extends Migration
                 ->onUpdate('cascade');
 
             $table->foreign('locationManager_id', 'fk_Location_User1_idx')
-                ->references('id')->on('User')
+                ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

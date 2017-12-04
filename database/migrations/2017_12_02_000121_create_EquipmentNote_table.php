@@ -21,8 +21,8 @@ class CreateEquipmentnoteTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('Equipment_id');
-            $table->integer('User_id');
+            $table->integer('Equipment_id')->unsigned();
+            $table->integer('User_id')->unsigned();
             $table->string('note');
 
             $table->index(["Equipment_id"], 'fk_EquipmentNote_Equipment1_idx');
@@ -36,7 +36,7 @@ class CreateEquipmentnoteTable extends Migration
                 ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_EquipmentNote_User1_idx')
-                ->references('id')->on('User')
+                ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

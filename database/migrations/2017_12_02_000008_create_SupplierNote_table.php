@@ -21,8 +21,8 @@ class CreateSuppliernoteTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('Supplier_id');
-            $table->integer('User_id');
+            $table->integer('Supplier_id')->unsigned();
+            $table->integer('User_id')->unsigned();
             $table->string('note');
 
             $table->index(["Supplier_id"], 'fk_SupplierNote_Supplier1_idx');
@@ -36,7 +36,7 @@ class CreateSuppliernoteTable extends Migration
                 ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_SupplierNote_User1_idx')
-                ->references('id')->on('User')
+                ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });

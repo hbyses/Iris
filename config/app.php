@@ -168,6 +168,8 @@ return [
          * Package Service Providers...
          */
 
+        OwenIt\Auditing\AuditingServiceProvider::class,        
+
         /*
          * Application Service Providers...
          */
@@ -176,6 +178,7 @@ return [
         // Iris\Providers\BroadcastServiceProvider::class,
         Iris\Providers\EventServiceProvider::class,
         Iris\Providers\RouteServiceProvider::class,
+
 
     ],
 
