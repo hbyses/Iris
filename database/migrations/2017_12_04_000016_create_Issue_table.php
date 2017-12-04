@@ -21,26 +21,27 @@ class CreateIssueTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('Issuable_id')->unsigned();
-            $table->integer('User_id')->unsigned();
-            $table->dateTime('loanDate')->nullable();
-            $table->dateTime('returnDate')->nullable();
-            $table->string('Issuecol', 45)->nullable();
-
-            $table->index(["Issuable_id"], 'fk_Issue_Issuable1_idx');
+            $table->unsignedInteger('Issuable_id');
+            $table->unsignedInteger('User_id');
+            $table->dateTime('loanDate')->nullable()->default(null);
+            $table->dateTime('returnDate')->nullable()->default(null);
+            $table->string('Issuecol', 45)->nullable()->default(null);
+            $table->unsignedInteger('Equipment_id');
 
             $table->index(["User_id"], 'fk_Issue_User1_idx');
 
+            $table->index(["Equipment_id"], 'fk_Issue_Equipment1_idx');
 
-            $table->foreign('Issuable_id', 'fk_Issue_Issuable1_idx')
-                ->references('id')->on('Issuable')
-                ->onDelete('cascade')
-                ->onUpdate('cascade');
 
             $table->foreign('User_id', 'fk_Issue_User1_idx')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
+
+            $table->foreign('Equipment_id', 'fk_Issue_Equipment1_idx')
+                ->references('id')->on('Equipment')
+                ->onDelete('no action')
+                ->onUpdate('no action');
         });
     }
 

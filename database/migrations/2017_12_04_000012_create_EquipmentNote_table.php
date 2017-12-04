@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateSuppliernoteTable extends Migration
+class CreateEquipmentnoteTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'SupplierNote';
+    public $set_schema_table = 'EquipmentNote';
     /**
      * Run the migrations.
-     * @table SupplierNote
+     * @table EquipmentNote
      *
      * @return void
      */
@@ -21,21 +21,21 @@ class CreateSuppliernoteTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('Supplier_id')->unsigned();
-            $table->integer('User_id')->unsigned();
-            $table->string('note');
+            $table->unsignedInteger('Equipment_id');
+            $table->unsignedInteger('User_id');
+            $table->string('note', 191);
 
-            $table->index(["Supplier_id"], 'fk_SupplierNote_Supplier1_idx');
+            $table->index(["Equipment_id"], 'fk_EquipmentNote_Equipment1_idx');
 
-            $table->index(["User_id"], 'fk_SupplierNote_User1_idx');
+            $table->index(["User_id"], 'fk_EquipmentNote_User1_idx');
 
 
-            $table->foreign('Supplier_id', 'fk_SupplierNote_Supplier1_idx')
-                ->references('id')->on('Supplier')
+            $table->foreign('Equipment_id', 'fk_EquipmentNote_Equipment1_idx')
+                ->references('id')->on('Equipment')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
 
-            $table->foreign('User_id', 'fk_SupplierNote_User1_idx')
+            $table->foreign('User_id', 'fk_EquipmentNote_User1_idx')
                 ->references('id')->on('users')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');

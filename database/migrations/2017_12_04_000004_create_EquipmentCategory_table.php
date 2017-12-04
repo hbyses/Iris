@@ -2,16 +2,16 @@
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
-class CreateAuditlogTable extends Migration
+class CreateEquipmentcategoryTable extends Migration
 {
     /**
      * Schema table name to migrate
      * @var string
      */
-    public $set_schema_table = 'AuditLog';
+    public $set_schema_table = 'EquipmentCategory';
     /**
      * Run the migrations.
-     * @table AuditLog
+     * @table EquipmentCategory
      *
      * @return void
      */
@@ -21,12 +21,7 @@ class CreateAuditlogTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->string('action', 100)->nullable();
-            $table->integer('user')->nullable();
-            $table->string('auditDate', 45)->nullable();
-            $table->string('oldValue')->nullable();
-            $table->string('newValue')->nullable();
-            $table->string('sourceURL')->nullable();
+            $table->string('name', 45)->nullable()->default(null);
         });
     }
 

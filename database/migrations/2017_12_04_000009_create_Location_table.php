@@ -21,15 +21,15 @@ class CreateLocationTable extends Migration
         Schema::create($this->set_schema_table, function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
-            $table->integer('parentLocation_id')->nullable()->unsigned();
-            $table->string('name', 100)->nullable();
-            $table->string('description', 100)->nullable();
-            $table->string('Locationcol', 45)->nullable();
-            $table->integer('locationManager_id')->unsigned();
-
-            $table->index(["locationManager_id"], 'fk_Location_User1_idx');
+            $table->unsignedInteger('parentLocation_id')->nullable()->default(null);
+            $table->string('name', 100)->nullable()->default(null);
+            $table->string('description', 100)->nullable()->default(null);
+            $table->string('Locationcol', 45)->nullable()->default(null);
+            $table->unsignedInteger('locationManager_id');
 
             $table->index(["parentLocation_id"], 'fk_Location_Location1_idx');
+
+            $table->index(["locationManager_id"], 'fk_Location_User1_idx');
 
 
             $table->foreign('parentLocation_id', 'fk_Location_Location1_idx')
