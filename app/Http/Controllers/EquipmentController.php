@@ -85,21 +85,21 @@ class EquipmentController extends Controller
     
     public function list(){
         $title = 'Equipment';
-        return view('pages.types.datatable')->with('title', $title);
+        return view('pages.equipment.master-list')->with('title', $title);
     }
 
     public function groups(){
         $title = 'Equipment Groups';
-        return view('pages.types.datatable')->with('title', $title);
+        return view('pages.equipment.groups-list')->with('title', $title);
     }
 
     public function locations(){
         $title = 'Equipment Locations';
-        return view('pages.types.datatable')->with('title', $title);
+        return view('pages.equipment.master-locations-list')->with('title', $title);
     }
 
     public function suppliers(){
         $title = 'Equipment Suppliers';
-        return view('pages.types.datatable')->with('title', $title);
+        return view('pages.equipment.suppliers-list')->with('title', $title);
     }
 }
