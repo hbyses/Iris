@@ -14,8 +14,7 @@ class DashboardController extends Controller
         if (isset($area) /*&& $filter !== ''*/) {
             return "<h1>Dashboards related to $area coming soon!</h1>";
         } else {
-            
-            //return view('pages.types.datatable')->with('title', $title);
+            return view('pages.dashboards.index')->with('title', $title);
         }
     }
 
