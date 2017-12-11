@@ -3,6 +3,7 @@
 namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Iris\Dashboard;
 
 class DashboardsController extends Controller
 {
@@ -91,12 +92,13 @@ class DashboardsController extends Controller
     {
         $dashdata = Dashboard::all();
 
+        $title = 'Operational Dashboard - Current Duties';
+
         $ops_dash_data = array(
-            $title => 'Operational Dashboard - Current Duties',
-            $do = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'do')->value('value'),
-            $budo = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'budo')->value('value'),
-            $tl = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'tl')->value('value'),
-            $team = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'team')->value('value')
+            'do' => $dashdata->get('do')->where('dashcat', 'operations')->where('dashboard', 'duties'),
+            'budo' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
+            'tl' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
+            'team' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')
         );
 
         return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data]);

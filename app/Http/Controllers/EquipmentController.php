@@ -3,6 +3,7 @@
 namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Iris\Equipment;
 
 class EquipmentController extends Controller
 {
