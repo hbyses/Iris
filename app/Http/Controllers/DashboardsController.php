@@ -95,7 +95,7 @@ class DashboardsController extends Controller
         $title = 'Operational Dashboard - Current Duties';
 
         $ops_dash_data = array(
-            'do' => $dashdata->get('do')->where('dashcat', 'operations')->where('dashboard', 'duties'),
+            'do' => $dashdata->get('do')->where('dashcat', 'operations')->where('dashboard', 'duties')->where,
             'budo' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
             'tl' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
             'team' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')
