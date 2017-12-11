@@ -6,7 +6,7 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- STYLESHEETS -->
+        <!-- CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/4.2.2/css/default.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
@@ -21,22 +21,11 @@
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" />
         <link rel="stylesheet" href="{{asset('css/meteor.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
-        <!-- END STYLESHEETS -->
-
-        <!-- Old CSS Local Refs
-            <link rel="stylesheet" href="{{asset('css/pace.css')}}">
-            <link rel="stylesheet" href="{{asset('css/uniform.css')}}">
-            <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-            <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
-            <link rel="stylesheet" href="{{asset('css/line-icons.css')}}">
-            cornerbox-placeholder
-            <link rel="stylesheet" href="{{asset('css/waves.css')}}">
-            <link rel="stylesheet" href="{{asset('css/switchery.css')}}">
-            weather-icons-palceholder
-            toastr-placeholder
-        End old sheets -->
-
+        <!-- End CSS -->
+        
+        <!-- Header JS -->
         <script src="{{asset('js/3d-canvas/modernizr.js')}}"></script>
+        <!-- End Header JS -->
 
     </head>
     <body>
