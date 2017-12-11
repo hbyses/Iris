@@ -93,10 +93,10 @@ class DashboardsController extends Controller
 
         $ops_dash_data = array(
             $title => 'Operational Dashboard - Current Duties',
-            $do = $dashdata->where('dashcat', 'operations')->where('field', 'do')->value('value'),
-            $budo = $dashdata->where('field', 'budo')->value('value'),
-            $tl = $dashdata->where('field', 'tl')->value('value'),
-            $team = $dashdata->where('field', 'team')->value('value')
+            $do = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'do')->value('value'),
+            $budo = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'budo')->value('value'),
+            $tl = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'tl')->value('value'),
+            $team = $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'team')->value('value')
         );
 
         return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data]);
