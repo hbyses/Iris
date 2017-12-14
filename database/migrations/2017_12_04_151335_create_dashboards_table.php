@@ -15,6 +15,7 @@ class CreateDashboardsTable extends Migration {
 		Schema::create('dashboards', function(Blueprint $table)
 		{
 			$table->integer('id')->unique('id');
+			$table->string('dashcat');
 			$table->string('dashboard');
 			$table->string('field');
 			$table->string('value');

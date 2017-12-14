@@ -50,6 +50,7 @@ Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
 
 // Equipment Pages
+Route::resource('equipment', 'EquipmentController');
 Route::get('/equipment', 'EquipmentController@list');
 Route::get('/equipment/locations', 'EquipmentController@locations');
 Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
@@ -66,8 +67,11 @@ Route::get('/locations/{filter?}', 'LocationsController@index');
 Route::get('/calendar/{filter?}', 'CalendarController@index');
 
 // Dashboards
-Route::get('/dashboards/{area?}', 'DashboardController@index');
-Route::get('/dashboard/operations/duties', 'DashboardController@ops_duty');
+Route::resource('dashboard', 'DashboardsController');
+Route::get('/dashboards/{area?}', 'DashboardsController@index');
+Route::get('/dashboards/operations/duties', 'DashboardsController@operations_duties');
+Route::get('/dashboards/operations/capability', 'DashboardsController@capability');
+
 
 // Auth / User Profile / Tasks
 Route::get('/tasks/{username?}', 'ProfileController@tasks');

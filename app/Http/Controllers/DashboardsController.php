@@ -3,18 +3,23 @@
 namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Iris\Equipment;
+use Iris\Dashboard;
 
-class EquipmentController extends Controller
+class DashboardsController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        //
+
+    public function index($area = null){
+        $title = 'Dashboards';
+        if (isset($area) /*&& $filter !== ''*/) {
+            return "<h1>Dashboards related to $area coming soon!</h1>";
+        } else {
+            return view('pages.dashboards.index')->with('title', $title);
+        }
     }
 
     /**
@@ -46,8 +51,7 @@ class EquipmentController extends Controller
      */
     public function show($id)
     {
-        $title = 'Equipment';
-        return view('pages.equipment.view')->with('title', $title);
+        //
     }
 
     /**
@@ -84,24 +88,33 @@ class EquipmentController extends Controller
         //
     }
 
+    //
+    //
+    //Operations
+    //
+    //
     
-    public function list(){
-        $title = 'Equipment';
-        return view('pages.equipment.master-list')->with('title', $title);
+    //Current Duties
+    public function operations_duties()
+    {
+        $dashdata = Dashboard::all();
+
+        $title = 'Operational Dashboard - Current Duties';
+
+        $ops_dash_data = array(
+            'do' => $dashdata->get('do')->where('dashcat', 'operations')->where('dashboard', 'duties')->where,
+            'budo' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
+            'tl' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
+            'team' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')
+        );
+
+        return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data]);
     }
 
-    public function groups(){
-        $title = 'Equipment Groups';
-        return view('pages.equipment.groups-list')->with('title', $title);
-    }
-
-    public function locations(){
-        $title = 'Equipment Locations';
-        return view('pages.equipment.master-locations-list')->with('title', $title);
-    }
-
-    public function suppliers(){
-        $title = 'Equipment Suppliers';
-        return view('pages.equipment.suppliers-list')->with('title', $title);
+    //Unit Capability
+    public function capability()
+    {
+        $title = 'Operational Dashboard - Current Duties';
+        return view ('pages.dashboards.unit_capability')->with('title', $title);
     }
 }

@@ -14,19 +14,19 @@
                 <tbody>
                     <tr>
                         <th scope="row">Duty Officer</th>
-                        <td>{{$duty_officer}}</td>
+                        <td>{{$ops_dash_data['do']}}</td>
                     </tr>
                     <tr>
                         <th scope="row">Back Up Duty Officer</th>
-                        <td>{{$backup_duty_officer}}</td>
+                        <td>{{$ops_dash_data['budo']}}</td>
                     </tr>
                     <tr>
                         <th scope="row">Team Leader</th>
-                        <td>{{$team_leader}}</td>
+                        <td>{{$ops_dash_data['tl']}}</td>
                     </tr>
                     <tr>
                         <th scope="row">Duty Team</th>
-                        <td>{{$team}}</td>
+                        <td>{{$ops_dash_data['team']}}</td>
                     </tr>
                 </tbody>
             </table>
