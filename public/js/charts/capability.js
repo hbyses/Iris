@@ -46,10 +46,7 @@ var data4 = {
             65,
             3,
             14,
-            37,
-            65,
-            3,
-            14
+            65
         ],
         backgroundColor: [
             "#FF6384",
@@ -57,22 +54,16 @@ var data4 = {
             "#FFCE56",
             "#E7E9ED",
             "#36A2EB",
-            "#4BC0C0",
-            "#FFCE56",
-            "#E7E9ED",
-            "#36A2EB"
+            "#f48603"
         ],
         label: 'My dataset' // for legend
     }],
     labels: [
-        "Storm - Ground",
-        "Storm - Heights",
-        "Chainsaw - Ground",
-        "Chainsaw - Heights",
-        "Flood Rescue - L1",
-        "Flood Rescue - L2",
-        "Flood Rescue - L3",
-        "Map and Navigation",
+        "PIARO",
+        "Storm",
+        "Chainsaw",
+        "Flood Boat",
+        "Flood Rescue",
         "Land Search"
     ]
 };
@@ -81,16 +72,4 @@ var ctx4 = $("#skill-capability-dist");
 new Chart(ctx4, {
     data: data4,
     type: 'polarArea',
-    options: {
-        legend: {
-            display: false
-        },
-        scales: {
-            yAxes: [{
-                ticks: {
-                    beginAtZero: true
-                }
-            }]
-        }
-    }
 });
