@@ -38,8 +38,8 @@ return [
     'user' => [
         'primary_key' => 'id',
         'foreign_key' => 'user_id',
-        'model'       => App\User::class,
-        'resolver'    => App\User::class,
+        'model'       => Iris\User::class,
+        'resolver'    => Iris\User::class,
     ],
 
     /*
