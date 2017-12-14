@@ -14,8 +14,10 @@ class EquipmentController extends Controller
      */
     public function index()
     {
+        $equipment = Equipment::All();
+
         $title = 'Equipment';
-        return view('pages.equipment.master-list')->with('title', $title);
+        return view ('pages.equipment.master-list', ['title' => $title, 'equipment' => $equipment]);
     }
 
     /**
@@ -47,8 +49,9 @@ class EquipmentController extends Controller
      */
     public function show($id)
     {
+        $equipmentData = Equipment::find($id);
         $title = 'Equipment';
-        return view('pages.equipment.view')->with('title', $title);
+        return view('pages.equipment.view', ['equipmentData' => $equipmentData, 'title' => $title]);
     }
 
     /**

@@ -3,7 +3,7 @@
 @section('content')
 <div class="panel panel-white">
     <div class="panel-body">
-            <h2>{{$equipmentData->name}}</h2>
+            <h2>Chainsaw - 036 Stihl - 00005679</h2>
             <!--START DETAILS COLUMN-->
             <div class="col-md-6">
                 <div class="table-responsive">
@@ -18,27 +18,19 @@
                     <tbody>
                         <tr>
                             <td>ID</td>
-                            <td>{{$equipmentData->id}}</td>
+                            <td>00005679</td>
                         </tr>
                         <tr>
                             <td>Name</td>
-                            <td>{{$equipmentData->name}}</td>
+                            <td>Chainsaw</td>
                         </tr>
                         <tr>
                             <td>Brand</td>
-                            <td>{{$equipmentData->brand}}</td>
-                        </tr>
-                        <tr>
-                            <td>Model</td>
-                            <td>{{$equipmentData->model}}</td>
+                            <td>Stihl</td>
                         </tr>
                         <tr>
                             <td>Size</td>
-                            <td>{{$equipmentData->size}}</td>
-                        </tr>
-                        <tr>
-                            <td>Consumable</td>
-                            <td>{{$equipmentData->consumable}}</td>
+                            <td>036</td>
                         </tr>
                     </tbody>
                     </table>  
