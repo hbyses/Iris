@@ -9,8 +9,8 @@
     --other-black: #1a2229;
     /* Variabes */
     --bgcolor: var(--black);
-    --menucolor: #1f2833;
-    --topbarcolor: #2b2b2b;
+    --menucolor: #38434e;
+    --topbarcolor: #435360;
     --primary-button-color: var(--dark-blue);
     --primary-button-hover-color: var(--light-blue);
 }
