@@ -14,7 +14,8 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        //
+        $title = 'Equipment';
+        return view('pages.equipment.master-list')->with('title', $title);
     }
 
     /**
@@ -82,12 +83,6 @@ class EquipmentController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    
-    public function list(){
-        $title = 'Equipment';
-        return view('pages.equipment.master-list')->with('title', $title);
     }
 
     public function groups(){

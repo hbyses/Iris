@@ -51,7 +51,7 @@ Route::get('/forgotten', 'AuthController@resetpw');
 
 // Equipment Pages
 Route::resource('equipment', 'EquipmentController');
-Route::get('/equipment', 'EquipmentController@list');
+Route::get('/equipment', 'EquipmentController@index');
 Route::get('/equipment/locations', 'EquipmentController@locations');
 Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
 
