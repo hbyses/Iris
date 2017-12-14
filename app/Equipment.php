@@ -3,8 +3,9 @@
 namespace Iris;
 
 use Illuminate\Database\Eloquent\Model;
+use OwenIt\Auditing\Contracts\Auditable;
 
-class Equipment extends Model
+class Equipment extends Model implements Auditable
 {
     //
 }

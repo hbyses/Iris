@@ -126,7 +126,7 @@ class DashboardsController extends Controller
     //Unit Capability
     public function capability()
     {
-        $title = 'Operational Dashboard - Current Duties';
+        $title = 'Operational Dashboard - Unit Capability';
         return view ('pages.dashboards.unit_capability')->with('title', $title);
     }
 }
