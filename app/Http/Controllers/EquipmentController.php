@@ -27,7 +27,8 @@ class EquipmentController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'New Equipment Item';
+        return view ('pages.equipment.create')->with('title', $title);
     }
 
     /**
@@ -38,7 +39,21 @@ class EquipmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+                'name' => 'required',
+                'consumable' => 'required'
+        ]);
+
+        $equipment = new Equipment;
+        $equipment->id = $request->input('id');
+        $equipment->name = $request->input('name');
+        $equipment->description = $request->input('description');
+        $equipment->brand = $request->input('brand');
+        $equipment->size = $request->input('size');
+        $equipment->consumableFlag = $request->input('consumable');
+        $equipment->save();
+
+        return redirect('/equipment')->with('success', 'Equipment Created');
     }
 
     /**

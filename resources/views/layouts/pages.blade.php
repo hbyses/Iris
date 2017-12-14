@@ -169,6 +169,7 @@
             <div id="main-wrapper">
                 <div class="row">
                     <div class="col-md-12">
+                        @include('helpers.messages')
                         @yield('content')
                     </div>
                 </div>
