@@ -7,5 +7,5 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class Equipment extends Model implements Auditable
 {
-    //
+    use \OwenIt\Auditing\Auditable;
 }
