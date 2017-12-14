@@ -4,7 +4,7 @@ namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Iris\Dashboard;
-
+use Illuminate\Support\Facades\DB;
 class DashboardsController extends Controller
 {
     /**
@@ -97,18 +97,30 @@ class DashboardsController extends Controller
     //Current Duties
     public function operations_duties()
     {
-        $dashdata = Dashboard::all();
+        //$dashdata = Dashboard::all();
 
         $title = 'Operational Dashboard - Current Duties';
 
+        /*$ops_dash_data = array(
+            'do' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'do')->get('value'),
+            'budo' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'budo')->get('value'),
+            'tl' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'tl')->get('value'),
+            'team' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'team')->get('value')
+        );*/
+
         $ops_dash_data = array(
-            'do' => $dashdata->get('do')->where('dashcat', 'operations')->where('dashboard', 'duties')->where,
-            'budo' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
-            'tl' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties'),
-            'team' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')
+            'do' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'do'])->value('value'),
+            'budo' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'budo'])->value('value'),
+            'tl' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'tl'])->value('value'),
+            'team' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'team'])->value('value')
         );
 
+        
+
         return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data]);
+
+        //return $dashdata;
+        //return $ops_dash_data;
     }
 
     //Unit Capability
