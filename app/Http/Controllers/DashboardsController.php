@@ -88,6 +88,13 @@ class DashboardsController extends Controller
         //
     }
 
+    //
+    //
+    //Operations
+    //
+    //
+    
+    //Current Duties
     public function operations_duties()
     {
         $dashdata = Dashboard::all();
@@ -102,5 +109,12 @@ class DashboardsController extends Controller
         );
 
         return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data]);
+    }
+
+    //Unit Capability
+    public function capability()
+    {
+        $title = 'Operational Dashboard - Current Duties';
+        return view ('pages.dashboards.unit_capability')->with('title', $title);
     }
 }

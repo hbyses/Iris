@@ -70,6 +70,8 @@ Route::get('/calendar/{filter?}', 'CalendarController@index');
 Route::resource('dashboard', 'DashboardsController');
 Route::get('/dashboards/{area?}', 'DashboardsController@index');
 Route::get('/dashboards/operations/duties', 'DashboardsController@operations_duties');
+Route::get('/dashboards/operations/capability', 'DashboardsController@capability');
+
 
 // Auth / User Profile / Tasks
 Route::get('/tasks/{username?}', 'ProfileController@tasks');

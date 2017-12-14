@@ -8,16 +8,16 @@
         </div>
         <div class="panel-body">
             <div class="col-md-3">
-                <a class="btn btn-block btn-default" href="/dashboards/operations/duties">Duty Dashboard</a>
+                <a class="btn btn-block btn-default" href="operations/duties">Current Duties</a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-block btn-default" href="/dashboards/operations/#">Test 1 Dashboard</a>
+                <a class="btn btn-block btn-default" href="operations/#">Test 2 Dash</a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-block btn-default" href="/dashboards/operations/#">Test 2 Dashboard</a>
+                <a class="btn btn-block btn-default" href="operations/capability">Unit Capability</a>
             </div>
             <div class="col-md-3">
-                <a class="btn btn-block btn-default" href="/dashboards/operations/#">Test 3 Dashboard</a>
+                <a class="btn btn-block btn-default" href="operations/#">Test 3 Dashboard</a>
             </div>
         </div>
     </div>
