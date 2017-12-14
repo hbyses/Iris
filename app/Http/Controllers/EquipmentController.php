@@ -46,7 +46,8 @@ class EquipmentController extends Controller
      */
     public function show($id)
     {
-        //
+        $title = 'Equipment';
+        return view('pages.equipment.view')->with('title', $title);
     }
 
     /**
