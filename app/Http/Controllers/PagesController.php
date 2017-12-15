@@ -12,8 +12,13 @@ class PagesController extends Controller
     }
 
     public function index(){
-        $title = 'Iris';
-        //return view('pages.index', compact('title'));
-        return view('pages.main.index')->with('title', $title);
+        $title = 'IRIS';
+        $parentBreadcrumb = array(
+            'url' => 'test',
+            'name' => 'test'
+        );
+
+        return view ('pages.main.index', ['title' => $title, 'parentBreadcrumb' => $parentBreadcrumb]);
+        //return $parentBreadcrumb;
     }
 }
