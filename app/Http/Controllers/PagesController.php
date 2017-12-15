@@ -12,8 +12,13 @@ class PagesController extends Controller
     }
 
     public function index(){
-        $title = 'IRIS';
-        $parentBreadcrumbs = array(
+        
+        //Page Title
+        $title = 'Start';
+
+        //Breadcrumbs
+        $parentBreadcrumbs = array();
+        /*$parentBreadcrumbs = array(
             '1' => array(
                 'url' => 'test1',
                 'name' => 'test1'
@@ -26,8 +31,9 @@ class PagesController extends Controller
                 'url' => 'test3',
                 'name' => 'test3'
             )
-        );
+        );*/
 
+        //Render Section
         return view ('pages.main.index', ['title' => $title, 'parentBreadcrumbs' => $parentBreadcrumbs]);
         //return $parentBreadcrumb;
     }

@@ -12,86 +12,20 @@ class DashboardsController extends Controller
     {
         $this->middleware('auth');
     }
-    
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
 
-    public function index($area = null){
+
+    //
+    //
+    // Index Page
+    //
+    //
+    public function index(){
         $title = 'Dashboards';
-        if (isset($area) /*&& $filter !== ''*/) {
-            return "<h1>Dashboards related to $area coming soon!</h1>";
-        } else {
-            return view('pages.dashboards.index')->with('title', $title);
-        }
-    }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
+        //Breadcrumbs
+        $parentBreadcrumbs = array();
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
-    {
-        //
-    }
-
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        return view('pages.dashboards.index', ['title' => $title, 'parentBreadcrumbs' => $parentBreadcrumbs]);
     }
 
     //
@@ -103,16 +37,20 @@ class DashboardsController extends Controller
     //Current Duties
     public function operations_duties()
     {
-        //$dashdata = Dashboard::all();
+        $title = 'Current Duties';
 
-        $title = 'Operational Dashboard - Current Duties';
-
-        /*$ops_dash_data = array(
-            'do' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'do')->get('value'),
-            'budo' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'budo')->get('value'),
-            'tl' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'tl')->get('value'),
-            'team' => $dashdata->where('dashcat', 'operations')->where('dashboard', 'duties')->where('field', 'team')->get('value')
-        );*/
+        //Breadcrumbs
+        $parentBreadcrumbs = array();
+        $parentBreadcrumbs = array(
+            '1' => array(
+                'url' => '/dashboards',
+                'name' => 'Dashboards'
+            ),
+            '2' => array(
+                'url' => '#',
+                'name' => 'Operations'
+            )
+        );
 
         $ops_dash_data = array(
             'do' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'do'])->value('value'),
@@ -121,18 +59,27 @@ class DashboardsController extends Controller
             'team' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'team'])->value('value')
         );
 
-        
-
-        return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data]);
-
-        //return $dashdata;
-        //return $ops_dash_data;
+        return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data, 'parentBreadcrumbs' => $parentBreadcrumbs]);
     }
 
     //Unit Capability
     public function capability()
     {
-        $title = 'Operational Dashboard - Unit Capability';
-        return view ('pages.dashboards.unit_capability')->with('title', $title);
+        $title = 'Unit Capability';
+
+        //Breadcrumbs
+        $parentBreadcrumbs = array();
+        $parentBreadcrumbs = array(
+            '1' => array(
+                'url' => '/dashboards',
+                'name' => 'Dashboards'
+            ),
+            '2' => array(
+                'url' => '#',
+                'name' => 'Operations'
+            )
+        );
+
+        return view ('pages.dashboards.unit_capability', ['title'=> $title, 'parentBreadcrumbs' => $parentBreadcrumbs]);
     }
 }
