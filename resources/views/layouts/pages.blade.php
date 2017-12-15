@@ -152,7 +152,9 @@
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb breadcrumb-with-header">
                             <li><a href="/">Home</a></li>
-                            <li><a href="{{$parentBreadcrumb['url']}}">{{$parentBreadcrumb['name']}}</a></li>
+                            @foreach($parentBreadcrumbs as $breadcrumbItem)
+                                <li><a href="{{$breadcrumbItem['url']}}">{{$breadcrumbItem['name']}}</a></li>
+                            @endforeach
                             <li class="active">{{$title}}</li>
                         </ol>
                     </div>
