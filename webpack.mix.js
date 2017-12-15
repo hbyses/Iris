@@ -7,3 +7,4 @@ mix.styles('resources/assets/css/style.css', 'public/css/style.css');
 //JS Files
 mix.js('resources/assets/js/meteor.js', 'public/js');
 mix.js('resources/assets/js/pages/table-data.js', 'public/js/datatable-defs.js');
+mix.js('resources/assets/js/charts/capability.js', 'public/js/charts/capability.js');

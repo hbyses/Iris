@@ -151,7 +151,7 @@
                 <h3 class="breadcrumb-header">{{$title}}</h3>
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb breadcrumb-with-header">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="/">Iris</a></li>
                             <!--foreach non active breadcrumb item make an li endforeach-->
                             <li><a href="#">Tables</a></li>
                             <li class="active">{{$title}}</li>

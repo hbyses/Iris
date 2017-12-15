@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class CalendarController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function index($filter = null){
         $title = 'Calendar';
         if (isset($filter) /*&& $filter !== ''*/) {
