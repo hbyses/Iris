@@ -1,13 +1,16 @@
 :root {
     /* Primary Colors */
-    --darkest-blue: #15435B;
+    --dash-grey: #1e1f26;
+    --darkest-blue: #707478;
     --dark-blue: #0071BC;
     --light-blue: #29ABE2;
     --lightest-blue: #30C8FC;
     --black: #1d1d1d;
+    --other-black: #1a2229;
     /* Variabes */
     --bgcolor: var(--black);
-    --menucolor: var(--darkest-blue);
+    --menucolor: #38434e;
+    --topbarcolor: #435360;
     --primary-button-color: var(--dark-blue);
     --primary-button-hover-color: var(--light-blue);
 }
@@ -75,7 +78,7 @@ body {
 }
 
 .navbar .logo-box {
-    background: #435360;
+    background: var(--topbarcolor);
 }
 
 .navbar .logo-box a {
@@ -83,7 +86,7 @@ body {
 }
 
 .topmenu-outer {
-    background: #435360;
+    background: var(--topbarcolor);
 }
 
 .top-menu .navbar-nav>li>a {

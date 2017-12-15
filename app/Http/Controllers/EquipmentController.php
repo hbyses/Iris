@@ -3,9 +3,15 @@
 namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Iris\Equipment;
 
 class EquipmentController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -13,7 +19,10 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        //
+        $equipment = Equipment::All();
+
+        $title = 'Equipment';
+        return view ('pages.equipment.master-list', ['title' => $title, 'equipment' => $equipment]);
     }
 
     /**
@@ -23,7 +32,8 @@ class EquipmentController extends Controller
      */
     public function create()
     {
-        //
+        $title = 'New Equipment Item';
+        return view ('pages.equipment.create')->with('title', $title);
     }
 
     /**
@@ -34,7 +44,21 @@ class EquipmentController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $this->validate($request, [
+                'name' => 'required',
+                'consumable' => 'required'
+        ]);
+
+        $equipment = new Equipment;
+        $equipment->id = $request->input('id');
+        $equipment->name = $request->input('name');
+        $equipment->description = $request->input('description');
+        $equipment->brand = $request->input('brand');
+        $equipment->size = $request->input('size');
+        $equipment->consumableFlag = $request->input('consumable');
+        $equipment->save();
+
+        return redirect('/equipment')->with('success', 'Equipment Created');
     }
 
     /**
@@ -45,7 +69,9 @@ class EquipmentController extends Controller
      */
     public function show($id)
     {
-        //
+        $equipmentData = Equipment::find($id);
+        $title = 'Equipment';
+        return view('pages.equipment.view', ['equipmentData' => $equipmentData, 'title' => $title]);
     }
 
     /**
@@ -82,24 +108,18 @@ class EquipmentController extends Controller
         //
     }
 
-    
-    public function list(){
-        $title = 'Equipment';
-        return view('pages.types.datatable')->with('title', $title);
-    }
-
     public function groups(){
         $title = 'Equipment Groups';
-        return view('pages.types.datatable')->with('title', $title);
+        return view('pages.equipment.groups-list')->with('title', $title);
     }
 
     public function locations(){
         $title = 'Equipment Locations';
-        return view('pages.types.datatable')->with('title', $title);
+        return view('pages.equipment.master-locations-list')->with('title', $title);
     }
 
     public function suppliers(){
         $title = 'Equipment Suppliers';
-        return view('pages.types.datatable')->with('title', $title);
+        return view('pages.equipment.suppliers-list')->with('title', $title);
     }
 }

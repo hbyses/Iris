@@ -12,21 +12,28 @@ class PagesController extends Controller
     }
 
     public function index(){
-        $title = 'Welcome to Iris!';
-        //return view('pages.index', compact('title'));
-        return view('pages.main.index')->with('title', $title);
-    }
+        
+        //Page Title
+        $title = 'Start';
 
-    public function about(){
-        $title = 'About Iris';
-        return view('pages.about')->with('title', $title);
-    }
+        //Breadcrumbs
+        $parentBreadcrumbs = array();
+        /*$parentBreadcrumbs = array(
+            '1' => array(
+                'url' => 'test1',
+                'name' => 'test1'
+            ),
+            '2' => array(
+                'url' => 'test2',
+                'name' => 'test2'
+            ),
+            '3' => array(
+                'url' => 'test3',
+                'name' => 'test3'
+            )
+        );*/
 
-    public function services(){
-        $data = array(
-            'title' => 'Services',
-            'services' => ['Web Design', 'Programming', 'SEO']
-        );
-        return view('pages.services')->with($data);
+        //Render Section
+        return view ('pages.main.index', ['title' => $title, 'parentBreadcrumbs' => $parentBreadcrumbs]);
     }
 }
