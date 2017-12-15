@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class ProfileController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function tasks($username = null){
         $title = 'Dashboards';
         if (isset($username) /*&& $filter !== ''*/) {

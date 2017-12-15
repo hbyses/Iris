@@ -6,6 +6,11 @@ use Illuminate\Http\Request;
 
 class FleetController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     public function vehicles(){
         $title = 'Vehicles';
         return view('pages.types.datatable')->with('title', $title);

@@ -7,26 +7,18 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <!-- CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/blue/pace-theme-flash.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/4.2.2/css/default.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/simple-line-icons/2.4.1/css/simple-line-icons.css">
-        <link rel="stylesheet" href="{{asset('css/menu_cornerbox.css')}}">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.css">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.9/css/weather-icons.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.css">
         <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
         <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css" />
         <link rel="stylesheet" href="{{asset('css/meteor.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <!-- End CSS -->
         
         <!-- Header JS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <script src="{{asset('js/3d-canvas/modernizr.js')}}"></script>
         <!-- End Header JS -->
 
     </head>
@@ -37,7 +29,7 @@
         <div class="input-group">
             <input type="text" name="search" class="form-control search-input" placeholder="Type something...">
             <span class="input-group-btn">
-                <button class="btn btn-default close-search" type="button"><i class="icon-close"></i></button>
+                <button class="btn btn-default close-search" type="button"><i class="fa fa-close"></i></button>
             </span>
         </div><!-- Input Group -->
     </form><!-- Search Form -->
@@ -53,16 +45,16 @@
                     <a href="/" class="logo-text"><span>IRIS</span></a>
                 </div><!-- Logo Box -->
                 <div class="search-button">
-                    <a href="javascript:void(0);" class="show-search"><i class="icon-magnifier"></i></a>
+                    <a href="javascript:void(0);" class="show-search"><i class="fa fa-search"></i></a>
                 </div>
                 <div class="topmenu-outer">
                     <div class="top-menu">
                         <ul class="nav navbar-nav navbar-right">
                             <li>	
-                                <a href="javascript:void(0);" class="show-search"><i class="icon-magnifier"></i></a>
+                                <a href="javascript:void(0);" class="show-search"><i class="fa fa-search"></i></a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="icon-bell"></i><span class="badge badge-danger pull-right">3</span></a>
+                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-danger pull-right">3</span></a>
                                 <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
                                     <li><p class="drop-title">You have 3 outstanding tasks</p></li>
                                     <li class="dropdown-menu-list slimscroll tasks">
@@ -98,12 +90,11 @@
                                     <span class="user-name">{{ Auth::user()->name }}<i class="fa fa-angle-down"></i></span>
                                 </a>
                                 <ul class="dropdown-menu dropdown-list" role="menu">
-                                    <li role="presentation"><a href="/profile"><i class="icon-user"></i>Profile</a></li>
-                                    <li role="presentation"><a href="/calendar"><i class="icon-calendar"></i>Calendar</a></li>
-                                    <li role="presentation"><a href="/tasks"><i class="icon-calendar"></i>My Tasks</a></li>
+                                    <li role="presentation"><a href="/profile"><i class="fa fa-user"></i>Profile</a></li>
+                                    <li role="presentation"><a href="/calendar"><i class="fa fa-calendar"></i>Calendar</a></li>
+                                    <li role="presentation"><a href="/tasks"><i class="fa fa-tasks"></i>My Tasks</a></li>
                                     <li role="presentation" class="divider"></li>
-                                    <li role="presentation"><a href="/lock"><i class="icon-lock"></i>Lock screen</a></li>
-                                    <li role="presentation"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="icon-key m-r-xs"></i>Log out</a>
+                                    <li role="presentation"><a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();"><i class="fa fa-key m-r-xs"></i>Log out</a>
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                             {{ csrf_field() }}
                                     </form>
@@ -160,9 +151,10 @@
                 <h3 class="breadcrumb-header">{{$title}}</h3>
                     <div class="page-breadcrumb">
                         <ol class="breadcrumb breadcrumb-with-header">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="/">Iris</a></li>
+                            <!--foreach non active breadcrumb item make an li endforeach-->
                             <li><a href="#">Tables</a></li>
-                            <li class="active">Datatables</li>
+                            <li class="active">{{$title}}</li>
                         </ol>
                     </div>
             </div>
@@ -182,32 +174,16 @@
     <div class="cd-overlay"></div>
 
     <!-- JS -->
-    <!--<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/switchery/0.8.2/switchery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/4.2.2/js/jquery.uniform.standalone.js"></script>
-    <script src="{{asset('js/classie.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.js"></script>
-    <script src="{{asset('js/3d-canvas/main.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.3/toastr.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.time.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.symbol.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot/0.8.3/jquery.flot.resize.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/flot.tooltip/0.9.0/jquery.flot.tooltip.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/flot.curvedlines@1.1.1/curvedLines.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
     <script src="{{asset('js/meteor.js')}}"></script>
-    <!--<script src="{{asset('js/resources.js')}}"></script>-->
     <script src="{{asset('js/datatable-defs.js')}}"></script>
       <script> 
         $(document).ready(function () { 
