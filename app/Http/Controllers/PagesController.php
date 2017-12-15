@@ -35,6 +35,5 @@ class PagesController extends Controller
 
         //Render Section
         return view ('pages.main.index', ['title' => $title, 'parentBreadcrumbs' => $parentBreadcrumbs]);
-        //return $parentBreadcrumb;
     }
 }
