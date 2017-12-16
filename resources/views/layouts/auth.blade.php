@@ -5,7 +5,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="csrf-token" content="{{ csrf_token() }}">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>IRIS | {{$title}}</title>
+        <title>IRIS</title>
         <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
         <link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
         <link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
@@ -23,20 +23,16 @@
         <meta name="msapplication-TileColor" content="#ffffff">
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
-        <!--<link rel="stylesheet" href="{{asset('css/style.css')}}"> Use this if you are using the condenser mix in the webpack.mix file.-->
-        <!--Use these below stylesheets if you need to identify where a particular style is coming from-->
-        <!-- STYLESHEETS -->
-        <link rel="stylesheet" href="{{asset('css/pace.css')}}">
-        <link rel="stylesheet" href="{{asset('css/uniform.css')}}">
-        <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-        <link rel="stylesheet" href="{{asset('css/font-awesome.css')}}">
-        <link rel="stylesheet" href="{{asset('css/line-icons.css')}}">
-        <link rel="stylesheet" href="{{asset('css/menu_cornerbox.css')}}">
-        <link rel="stylesheet" href="{{asset('css/waves.css')}}">
-        <link rel="stylesheet" href="{{asset('css/switchery.css')}}">
+        <!-- CSS -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/4.2.2/css/default.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.css">
+        <link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+        <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" />
         <link rel="stylesheet" href="{{asset('css/meteor.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
-        <!-- ENDSTYLESHEETS -->
+        <!-- End CSS -->
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     </head>
     <body>
@@ -44,7 +40,18 @@
             @yield('content')
         </div>
 
-    <script src="{{asset('js/app-auth.js')}}"></script>
+    <!-- JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.blockUI/2.70/jquery.blockUI.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jQuery-slimScroll/1.3.8/jquery.slimscroll.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/4.2.2/js/jquery.uniform.standalone.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/node-waves/0.7.5/waves.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
+    <script src="{{asset('js/meteor.js')}}"></script>
+    <script src="{{asset('js/datatable-defs.js')}}"></script>
     <script>$(window).on('load', function(){this.$ = jQuery;});</script>
     </body>
     

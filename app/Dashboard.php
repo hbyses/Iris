@@ -8,6 +8,8 @@ use OwenIt\Auditing\Contracts\Auditable;
 
 class Dashboard extends Model implements Auditable
 {
+    use \OwenIt\Auditing\Auditable;
+    
     // Options
     protected $table = "dashboards";
     public $timestamps = false;
