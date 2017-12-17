@@ -16,9 +16,9 @@ class WeeklyDuties extends Model implements Auditable
     {
         $query = DB::table('weeklyDuties')
             ->join('users as tl', 'weeklyDuties.teamLeader', '=', 'tl.memberNumber')
-            ->join('users as dtl', 'weeklyDuties.teamLeader', '=', 'dtl.memberNumber')
-            ->join('users as do', 'weeklyDuties.teamLeader', '=', 'do.memberNumber')
-            ->join('users as budo', 'weeklyDuties.teamLeader', '=', 'budo.memberNumber')
+            ->join('users as dtl', 'weeklyDuties.deputyTeamLeader', '=', 'dtl.memberNumber')
+            ->join('users as do', 'weeklyDuties.dutyOfficer', '=', 'do.memberNumber')
+            ->join('users as budo', 'weeklyDuties.backupDutyOfficer', '=', 'budo.memberNumber')
             ->select('weeklyDuties.*' , 'tl.name as tlName', 'dtl.name as dtlName', 'do.name as doName', 'budo.name as budoName')
             ->get();
 
