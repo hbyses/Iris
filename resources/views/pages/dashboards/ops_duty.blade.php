@@ -27,6 +27,25 @@
                     </tr>
                 </tbody>
             </table>
+            <div id="dutiesEditor">
+                <form action="#" method="POST">
+                    <div class="form-group">
+                        <label for="team">Duty Team</label>
+                        <input type="text" name="team" value="{{currentDutyTeam['team']}}" class="form-control m-t-xxs" id="team">
+                    </div>
+                    <div class="form-group">
+                        <label for="do">Duty Officer</label>
+                        <input type="text" name="do" value="{{currentDutyTeam['do']}}" class="form-control m-t-xxs" id="do">
+                    </div>
+                    <div class="form-group">
+                        <label for="budo">Backup Duty Officer</label>
+                        <input type="text" name="budo" value="{{currentDutyTeam['budo']}}" class="form-control m-t-xxs" id="budo">
+                    </div>
+                    <div class="form-group">
+                        <label for="tl">Team Leader</label>
+                        <input type="text" name="tl" value="{{currentDutyTeam['tl']}}" class="form-control m-t-xxs" id="do">
+                    </div>
+                </form>
         </div>
     </div>
 </div>
