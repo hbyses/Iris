@@ -56,7 +56,7 @@ Route::get('/vehicles/bookings', 'FleetController@bookings');
 Route::get('/locations/{filter?}', 'LocationsController@index');
 
 // Calendar
-Route::get('/calendar}', 'CalendarController@index');
+Route::get('/calendar', 'CalendarController@index');
 
 // Dashboards
 Route::resource('dashboard', 'DashboardsController');

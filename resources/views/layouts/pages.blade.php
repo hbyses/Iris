@@ -210,14 +210,16 @@
     <script src="{{asset('js/meteor.js')}}"></script>
     <script src="{{asset('js/datatable-defs.js')}}"></script>
       <script> 
-        $(document).ready(function () { 
+        $(document).ready(function (){this.$ = jQuery;}) { 
             // Override the default menu scroll height of 250px from slimscroll.js 
             $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto');
             // Set active and open classes on sidebar menu items
             $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active open');
             $('body > main > div.page-sidebar.sidebar > div > div.page-sidebar-inner.slimscroll > ul > li.droplink.active.open > ul').css("display", "");
+            $('#calendar').fullCalendar({
+                // put your options and callbacks here
+            })
         }); 
     </script> 
-    <script>$(window).on('load', function(){this.$ = jQuery;});</script>
     </body>
 </html>
