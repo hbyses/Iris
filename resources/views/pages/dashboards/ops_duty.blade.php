@@ -82,11 +82,12 @@
                         <tr>
                             <td>{{$weeklyDuty['date']}}</td>
                             <td>{{$weeklyDuty['team']}}</td>
-                            <td>{{$weeklyDuty['tlName']}}</td>
-                            <td>{{$weeklyDuty['dtlName']}}</td>
                             <td>{{$weeklyDuty['doName']}}</td>
                             <td>{{$weeklyDuty['budoName']}}</td>
+                            <td>{{$weeklyDuty['tlName']}}</td>
+                            <td>{{$weeklyDuty['dtlName']}}</td>
                             <td><a href="edit/{{$weeklyDuty['id']}}" class="btn btn-xs btn-warning">Edit</a></td>
+                        </tr>
                     @endforeach
                 </tbody>
             </table>
@@ -113,6 +114,11 @@
                         <label for="tl">Team Leader</label>
                         <input type="text" name="tl" class="form-control m-t-xxs" id="do" placeholder="" />
                     </div>
+                    <div class="form-group">
+                        <label for="dtl">Team Leader</label>
+                        <input type="text" name="dtl" class="form-control m-t-xxs" id="dtl" placeholder="" />
+                    </div>
+                    <button type="button">
                 </form>
             </div>
         </div>
