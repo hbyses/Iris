@@ -24,6 +24,10 @@
         <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
         <meta name="theme-color" content="#ffffff">
 
+        <!-- Header JS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <!-- End Header JS -->
+
         <!-- CSS -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Uniform.js/4.2.2/css/default.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" />
@@ -36,11 +40,6 @@
         <link rel="stylesheet" href="{{asset('css/meteor.css')}}">
         <link rel="stylesheet" href="{{asset('css/style.css')}}">
         <!-- End CSS -->
-        
-        <!-- Header JS -->
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-        <!-- End Header JS -->
-
     </head>
     <body class="compact-menu page-sidebar-fixed page-header-fixed">
     <div class="overlay"></div>
@@ -206,19 +205,20 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.bundle.min.js"></script>
     <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
     <script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.20.1/moment-with-locales.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.8.0/fullcalendar.min.js"></script>
     <script src="{{asset('js/meteor.js')}}"></script>
     <script src="{{asset('js/datatable-defs.js')}}"></script>
       <script> 
-        $(document).ready(function (){this.$ = jQuery;}) { 
+        $(document).ready(function () { 
             // Override the default menu scroll height of 250px from slimscroll.js 
             $('body > main > div.page-sidebar.sidebar > div').css('height', 'auto');
             // Set active and open classes on sidebar menu items
             $('a[href="' + this.location.pathname + '"]').parents('li,ul').addClass('active open');
             $('body > main > div.page-sidebar.sidebar > div > div.page-sidebar-inner.slimscroll > ul > li.droplink.active.open > ul').css("display", "");
             $('#calendar').fullCalendar({
-                // put your options and callbacks here
-            })
+                themeSystem: 'bootstrap3'
+            });
         }); 
     </script> 
     </body>
