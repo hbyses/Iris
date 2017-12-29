@@ -56,7 +56,7 @@ Route::get('/vehicles/bookings', 'FleetController@bookings');
 Route::get('/locations/{filter?}', 'LocationsController@index');
 
 // Calendar
-Route::get('/calendar/{filter?}', 'CalendarController@index');
+Route::get('/calendar', 'CalendarController@index');
 
 // Dashboards
 Route::resource('dashboard', 'DashboardsController');
@@ -70,3 +70,4 @@ Route::get('/tasks/{username?}', 'ProfileController@tasks');
 Route::get('/profile', 'ProfileController@profile');
 Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/admin/users', 'UsersController@index');

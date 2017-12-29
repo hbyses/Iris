@@ -4,6 +4,7 @@ namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Iris\Dashboard;
+use Iris\WeeklyDuties;
 use Illuminate\Support\Facades\DB;
 class DashboardsController extends Controller
 {
@@ -52,14 +53,17 @@ class DashboardsController extends Controller
             )
         );
 
-        $ops_dash_data = array(
+        $currentDutyTeam = array(
             'do' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'do'])->value('value'),
             'budo' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'budo'])->value('value'),
             'tl' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'tl'])->value('value'),
             'team' => DB::table('dashboards')->where(['dashcat' => 'operations', 'dashboard' => 'duties', 'field' => 'team'])->value('value')
         );
 
-        return view ('pages.dashboards.ops_duty', ['title' => $title, 'ops_dash_data' => $ops_dash_data, 'parentBreadcrumbs' => $parentBreadcrumbs]);
+        $weeklyDuties = WeeklyDuties::getWeeklyDuties();
+
+        return view ('pages.dashboards.ops_duty', ['title' => $title, 'weeklyDuties' => $weeklyDuties, 'currentDutyTeam' => $currentDutyTeam, 'parentBreadcrumbs' => $parentBreadcrumbs]);
+        //return $weeklyDuties;
     }
 
     //Unit Capability

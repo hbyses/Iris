@@ -21,8 +21,16 @@ class EquipmentController extends Controller
     {
         $equipment = Equipment::All();
 
+        $parentBreadcrumbs = array();
+        $parentBreadcrumbs = array(
+            '1' => array(
+                'url' => '/equipment',
+                'name' => 'Equipment'
+            ),
+        );
+
         $title = 'Equipment';
-        return view ('pages.equipment.master-list', ['title' => $title, 'equipment' => $equipment]);
+        return view ('pages.equipment.master-list', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title, 'equipment' => $equipment]);
     }
 
     /**
@@ -69,9 +77,17 @@ class EquipmentController extends Controller
      */
     public function show($id)
     {
+        $parentBreadcrumbs = array();
+        $parentBreadcrumbs = array(
+            '1' => array(
+                'url' => '/equipment',
+                'name' => 'Equipment'
+            ),
+        );
+        
         $equipmentData = Equipment::find($id);
         $title = 'Equipment';
-        return view('pages.equipment.view', ['equipmentData' => $equipmentData, 'title' => $title]);
+        return view('pages.equipment.view', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 
     /**

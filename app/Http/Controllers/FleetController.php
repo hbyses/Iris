@@ -3,6 +3,7 @@
 namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Iris\Equipment;
 
 class FleetController extends Controller
 {
@@ -13,7 +14,8 @@ class FleetController extends Controller
     
     public function vehicles(){
         $title = 'Vehicles';
-        return view('pages.types.datatable')->with('title', $title);
+        $parentBreadcrumbs = array();
+        return view ('pages.fleet.index', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title]);
     }
 
     public function vel(){

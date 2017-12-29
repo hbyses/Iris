@@ -2,34 +2,125 @@
 
 @section('content')
 <div class="col-md-4">
-    <div class="panel panel-white">
-        <div class="panel-body">
-            <table class="table">
+    <div class="panel">
+    <div class="panel-heading panel-red">
+        <h1 style="color: white;" class="panel-title">Current Operational Team</h1>
+    </div>
+    <div class="panel-body panel-white">
+        <h2 style="text-transform: uppercase; text-align: center;">Duty Team - {{$currentDutyTeam['team']}}</h2>
+        <table class="table table-striped">
+            <tbody>
+                <tr>
+                    <th style="border-top: none;" scope="row">Duty Officer</th>
+                    <td style="border-top: none;">{{$currentDutyTeam['do']}}</td>
+                    <td style="border-top: none;">{{$currentDutyTeam['doPhone']}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Back Up Duty Officer</th>
+                    <td>{{$currentDutyTeam['budo']}}</td>
+                    <td>{{$currentDutyTeam['budoPhone']}}</td>
+                </tr>
+                <tr>
+                    <th scope="row">Team Leader</th>
+                    <td>{{$currentDutyTeam['tl']}}</td>
+                    <td>{{$currentDutyTeam['tlPhone']}}</td>                        
+                </tr>
+                <tr>
+                    <th scope="row">Deputy Team Leader</th>
+                    <td>{{$currentDutyTeam['dtl']}}</td>
+                    <td>{{$currentDutyTeam['dtlPhone']}}</td>                        
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="show the duties editor div">
+        <div id="dutiesEditor">
+            <form action="/dashboards/currentduties" method="POST">
+                <div class="form-group">
+                    <label for="team">Duty Team</label>
+                    <input type="text" name="team" value="{{currentDutyTeam['team']}}" class="form-control m-t-xxs" id="team">
+                </div>
+                <div class="form-group">
+                    <label for="do">Duty Officer</label>
+                    <input type="text" name="do" value="{{currentDutyTeam['do']}}" class="form-control m-t-xxs" id="do">
+                </div>
+                <div class="form-group">
+                    <label for="budo">Backup Duty Officer</label>
+                    <input type="text" name="budo" value="{{currentDutyTeam['budo']}}" class="form-control m-t-xxs" id="budo">
+                </div>
+                <div class="form-group">
+                    <label for="tl">Team Leader</label>
+                    <input type="text" name="tl" value="{{currentDutyTeam['tl']}}" class="form-control m-t-xxs" id="tl">
+                </div>
+                <div class="form-group">
+                    <label for="dtl">Deputy Team Leader</label>
+                    <input type="text" name="dtl" value="{{currentDutyTeam['dtl']}}" class="form-control m-t-xxs" id="dtl">
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="col-md-8">
+    <div class="panel">
+    <div class="panel-heading panel-blue">
+                <h1 style="color: white;" class="panel-title">Current Operational Roster</h1>
+            </div>
+        <div class="panel-body panel-white">
+            <table class="table table-striped">
                 <thead>
                     <tr>
-                        <th scope="row">ROLE</td>
-                        <th scope="row">MEMBER</td>
+                        <th scope="row">Week</td>
+                        <th scope="row">Duty Team</td>
+                        <th scope="row">Team Leader</td>
+                        <th scope="row">Deputy Team Leader</td>
+                        <th scope="row">Duty Officer</td>
+                        <th scope="row">Backup Duty Officer</td>
+                        <th scope="row">Actions</td>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row">Duty Officer</th>
-                        <td>{{$ops_dash_data['do']}}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Back Up Duty Officer</th>
-                        <td>{{$ops_dash_data['budo']}}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Team Leader</th>
-                        <td>{{$ops_dash_data['tl']}}</td>
-                    </tr>
-                    <tr>
-                        <th scope="row">Duty Team</th>
-                        <td>{{$ops_dash_data['team']}}</td>
-                    </tr>
+                    @foreach($weeklyDuties as $weeklyDuty)
+                        <tr>
+                            <td>{{$weeklyDuty['date']}}</td>
+                            <td>{{$weeklyDuty['team']}}</td>
+                            <td>{{$weeklyDuty['doName']}}</td>
+                            <td>{{$weeklyDuty['budoName']}}</td>
+                            <td>{{$weeklyDuty['tlName']}}</td>
+                            <td>{{$weeklyDuty['dtlName']}}</td>
+                            <td><a href="edit/{{$weeklyDuty['id']}}" class="btn btn-xs btn-warning">Edit</a></td>
+                        </tr>
+                    @endforeach
                 </tbody>
             </table>
+            <button onclick="show the duties editor div">
+            <div>
+                <form action="/#" method="POST">
+                    <div class="form-group">
+                        <label for="team">Week</label>
+                        <input type="text" name="team" class="form-control m-t-xxs" id="team" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="team">Duty Team</label>
+                        <input type="text" name="team" class="form-control m-t-xxs" id="team" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="do">Duty Officer</label>
+                        <input type="text" name="do" class="form-control m-t-xxs" id="do" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="budo">Backup Duty Officer</label>
+                        <input type="text" name="budo" class="form-control m-t-xxs" id="budo" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="tl">Team Leader</label>
+                        <input type="text" name="tl" class="form-control m-t-xxs" id="do" placeholder="" />
+                    </div>
+                    <div class="form-group">
+                        <label for="dtl">Team Leader</label>
+                        <input type="text" name="dtl" class="form-control m-t-xxs" id="dtl" placeholder="" />
+                    </div>
+                    <button type="button">
+                </form>
+            </div>
         </div>
     </div>
 </div>

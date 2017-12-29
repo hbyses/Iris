@@ -11,13 +11,9 @@ class CalendarController extends Controller
         $this->middleware('auth');
     }
     
-    public function index($filter = null){
+    public function index(){
         $title = 'Calendar';
-        if (isset($filter) /*&& $filter !== ''*/) {
-            return "<h1>Calendar filtered by $filter coming soon!</h1>";
-        } else {
-            return "<h1>Calendar coming soon!</h1>";
-            //return view('pages.types.datatable')->with('title', $title);
-        }
+        $parentBreadcrumbs = array();
+        return view('pages.calendar.index', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title]);
     }
 }
