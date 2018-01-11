@@ -52,6 +52,38 @@
                     <li><a href="#">Delete</a></li>
                 </ul>
             </div>
+            <!--Attachments-->
+            <h2>Attachments</h2>
+            <table class="display table table-condensed table-striped" style="width: 100%;">
+                <thead>
+                    <tr>
+                        <th>Filename</th>
+                        <th>Size</th>
+                        <th>Description</th>
+                        <th>Date Uploaded</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>User Guide.pdf</td>
+                        <td>0.3mb</td>
+                        <td>User Gude</td>
+                        <td>01/03/2017</td>
+                        <td><div class="btn-group m-b-sm">
+                                <a class="btn btn-xs btn-success" href="#">Download</a>&nbsp;
+                                <button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    Actions <span class="caret"></span>
+                                </button>
+                                <ul class="dropdown-menu" role="menu">
+                                    <li><a href="#">Rename</a></li>
+                                    <li><a href="#">Delete</a></li>
+                                </ul>
+                            </div>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
         </div>
         <!--END DETAILS COLUMN-->
         <!--START DETAILS COLUMN-->
@@ -80,17 +112,34 @@
                 <thead>
                     <tr>
                         <th>Group Name</th>
-                        <th>Action</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
                         <td>General Search Kit 1</td>
-                        <td><a class="btn btn-xs btn-success" href="#">View Group</a>&nbsp;<a class="btn btn-xs btn-danger" href="#">Remove from Group</a></td>
+                        <td><div class="btn-group m-b-sm">
+                                <a class="btn btn-xs btn-success" href="#">View</a>&nbsp;<button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        Actions <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Remove from Group</a></li>
+                                    </ul>
+                            </div>
+                        </td>
+
                     </tr>
                     <tr>
                         <td>Mobile Search Kit 1</td>
-                        <td><a class="btn btn-xs btn-success" href="#">View Group</a>&nbsp;<a class="btn btn-xs btn-danger" href="#">Remove from Group</a></td>
+                        <td><div class="btn-group m-b-sm">
+                                <a class="btn btn-xs btn-success" href="#">View</a>&nbsp;<button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                        Actions <span class="caret"></span>
+                                    </button>
+                                    <ul class="dropdown-menu" role="menu">
+                                        <li><a href="#">Remove from Group</a></li>
+                                    </ul>
+                            </div>    
+                        </td>
                     </tr>
                 </tbody>
             </table>     
