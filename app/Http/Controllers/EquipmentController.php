@@ -22,12 +22,6 @@ class EquipmentController extends Controller
         $equipment = Equipment::All();
 
         $parentBreadcrumbs = array();
-        $parentBreadcrumbs = array(
-            '1' => array(
-                'url' => '/equipment',
-                'name' => 'Equipment'
-            ),
-        );
 
         $title = 'Equipment';
         return view ('pages.equipment.master-list', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title, 'equipment' => $equipment]);

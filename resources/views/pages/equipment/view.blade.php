@@ -67,7 +67,7 @@
                 <tbody>
                     <tr>
                         <td>User Guide.pdf</td>
-                        <td>0.3mb</td>
+                        <td>1.3mb</td>
                         <td>User Gude</td>
                         <td>01/03/2017</td>
                         <td><div class="btn-group m-b-sm">
