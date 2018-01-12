@@ -21,6 +21,10 @@
                             <td>{{$equipmentData->id}}</td>
                         </tr>
                         <tr>
+                            <td>Equipment Type</td>
+                            <td>{{$equipmentData->consumable}}</td>
+                        </tr>
+                        <tr>
                             <td>Name</td>
                             <td>{{$equipmentData->name}}</td>
                         </tr>
@@ -35,10 +39,6 @@
                         <tr>
                             <td>Size</td>
                             <td>{{$equipmentData->size}}</td>
-                        </tr>
-                        <tr>
-                            <td>Consumable</td>
-                            <td>{{$equipmentData->consumable}}</td>
                         </tr>
                     </tbody>
                     </table>  
