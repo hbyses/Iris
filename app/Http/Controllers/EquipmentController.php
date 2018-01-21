@@ -22,12 +22,6 @@ class EquipmentController extends Controller
         $equipment = Equipment::All();
 
         $parentBreadcrumbs = array();
-        $parentBreadcrumbs = array(
-            '1' => array(
-                'url' => '/equipment',
-                'name' => 'Equipment'
-            ),
-        );
 
         $title = 'Equipment';
         return view ('pages.equipment.master-list', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title, 'equipment' => $equipment]);
@@ -125,8 +119,19 @@ class EquipmentController extends Controller
     }
 
     public function groups(){
+        $parentBreadcrumbs = array();
+        $parentBreadcrumbs = array(
+            '1' => array(
+                'url' => '/equipment',
+                'name' => 'Equipment'
+            ),
+        );
+        
+        //$groups = Equipment::find($id);
+        $groups = null;
         $title = 'Equipment Groups';
-        return view('pages.equipment.groups-list')->with('title', $title);
+        
+        return view('pages.equipment.groups', ['parentBreadcrumbs' => $parentBreadcrumbs, 'groups' => $groups, 'title' => $title]);
     }
 
     public function locations(){
