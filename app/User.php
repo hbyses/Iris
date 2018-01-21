@@ -6,6 +6,7 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use OwenIt\Auditing\Contracts\Auditable;
 use OwenIt\Auditing\Contracts\UserResolver;
+use Auth;
 
 class User extends Authenticatable implements Auditable, UserResolver
 {

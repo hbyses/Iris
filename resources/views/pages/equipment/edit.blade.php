@@ -21,7 +21,7 @@
                     <tbody>
                         <tr>
                             <td>ID</td>
-                            <td><input type="text" class="form-control" name="id" value="{{$equipmentData->id}}"></td>
+                            <td>"{{$equipmentData->id}}</td>
                         </tr>
                         <tr>
                             <td>Equipment Type</td>

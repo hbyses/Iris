@@ -5,6 +5,7 @@ namespace Iris\Http\Controllers;
 use Illuminate\Http\Request;
 use Iris\Equipment;
 use Iris\Auth;
+use Iris\User;
 
 class EquipmentController extends Controller
 {
@@ -117,13 +118,11 @@ class EquipmentController extends Controller
     {
             $equipment = Equipment::find($id);
             $this->validate(request(), [
-              'id' => 'required',
               'name' => 'required'
             ]);
-            $equipment->id = $request->get('id');
             $equipment->name = $request->get('name');
             $equipment->save();
-            return redirect('equipment/' . $equipment->id)->with('success','Product has been updated');
+            return redirect('equipment/' . $equipment->id)->with('success','Equipment has been updated');
     }
 
     /**
