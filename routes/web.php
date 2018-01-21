@@ -70,5 +70,5 @@ Route::get('/dashboards/operations/capability', 'DashboardsController@capability
 Route::get('/tasks/{username?}', 'ProfileController@tasks');
 Route::get('/profile', 'ProfileController@profile');
 Auth::routes();
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/admin/users', 'UsersController@index');

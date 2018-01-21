@@ -15,10 +15,13 @@
                             <th>Value</th>
                         </tr>
                     </thead>
+                    <form method="post" action="{{action('EquipmentController@update', $equipmentData->id)}}">
+                    {{csrf_field()}}
+                    <input name="_method" type="hidden" value="PATCH">
                     <tbody>
                         <tr>
                             <td>ID</td>
-                            <td>{{$equipmentData->id}}</td>
+                            <td><input type="text" class="form-control" name="id" value="{{$equipmentData->id}}"></td>
                         </tr>
                         <tr>
                             <td>Equipment Type</td>
@@ -26,7 +29,7 @@
                         </tr>
                         <tr>
                             <td>Name</td>
-                            <td>{{$equipmentData->name}}</td>
+                            <td><input type="text" class="form-control" name="name" value="{{$equipmentData->name}}"></td>
                         </tr>
                         <tr>
                             <td>Brand</td>
@@ -41,14 +44,15 @@
                             <td>{{$equipmentData->size}}</td>
                         </tr>
                     </tbody>
-                    </table>  
+                    </table>
+                    <button type="submit" class="btn btn-success" style="margin-left:38px">Update Equipment</button>
             </div>
             <div class="btn-group m-b-sm">
                 <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     Actions <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="{{$equipmentData->id}}/edit">Edit</a></li>
+                    <li><a href="#">Edit</a></li>
                     <li><a href="#">Delete</a></li>
                 </ul>
             </div>
