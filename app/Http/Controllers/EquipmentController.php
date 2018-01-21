@@ -4,6 +4,8 @@ namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Iris\Equipment;
+use Iris\Auth;
+use Iris\User;
 
 class EquipmentController extends Controller
 {
@@ -92,7 +94,17 @@ class EquipmentController extends Controller
      */
     public function edit($id)
     {
-        //
+        $parentBreadcrumbs = array();
+        $parentBreadcrumbs = array(
+            '1' => array(
+                'url' => '/equipment',
+                'name' => 'Equipment'
+            ),
+        );
+        
+        $equipmentData = Equipment::find($id);
+        $title = 'Equipment';
+        return view('pages.equipment.edit', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 
     /**
@@ -104,7 +116,21 @@ class EquipmentController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+            $equipment = Equipment::find($id);
+            $this->validate(request(), [
+              'name' => 'required'
+            ]);
+
+            //Fields
+            $equipment->name = $request->get('name');
+            $equipment->equipmentType = $request->get('equipmentType');
+            $equipment->brand = $request->get('brand');
+            $equipment->model = $request->get('model');
+            $equipment->size = $request->get('size');
+
+
+            $equipment->save();
+            return redirect('equipment/' . $equipment->id)->with('success','Equipment has been updated');
     }
 
     /**
