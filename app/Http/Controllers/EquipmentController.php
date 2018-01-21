@@ -120,7 +120,15 @@ class EquipmentController extends Controller
             $this->validate(request(), [
               'name' => 'required'
             ]);
+
+            //Fields
             $equipment->name = $request->get('name');
+            $equipment->name = $request->get('consumable');
+            $equipment->name = $request->get('brand');
+            $equipment->name = $request->get('model');
+            $equipment->name = $request->get('size');
+
+
             $equipment->save();
             return redirect('equipment/' . $equipment->id)->with('success','Equipment has been updated');
     }
