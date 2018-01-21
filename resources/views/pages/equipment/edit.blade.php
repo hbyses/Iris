@@ -21,11 +21,11 @@
                     <tbody>
                         <tr>
                             <td>ID</td>
-                            <td>"{{$equipmentData->id}}</td>
+                            <td>{{$equipmentData->id}}</td>
                         </tr>
                         <tr>
                             <td>Equipment Type</td>
-                            <td>{{$equipmentData->consumable}}</td>
+                            <td><input type="text" class="form-control" name="consumable" value="{{$equipmentData->consumable}}"></td>
                         </tr>
                         <tr>
                             <td>Name</td>
@@ -33,26 +33,26 @@
                         </tr>
                         <tr>
                             <td>Brand</td>
-                            <td>{{$equipmentData->brand}}</td>
+                            <td><input type="text" class="form-control" name="brand" value="{{$equipmentData->brand}}"></td>
                         </tr>
                         <tr>
                             <td>Model</td>
-                            <td>{{$equipmentData->model}}</td>
+                            <td><input type="text" class="form-control" name="model" value="{{$equipmentData->model}}"></td>
                         </tr>
                         <tr>
                             <td>Size</td>
-                            <td>{{$equipmentData->size}}</td>
+                            <td><input type="text" class="form-control" name="size" value="{{$equipmentData->size}}"></td>
                         </tr>
                     </tbody>
                     </table>
-                    <button type="submit" class="btn btn-success" style="margin-left:38px">Update Equipment</button>
             </div>
             <div class="btn-group m-b-sm">
+                <button type="submit" class="btn btn-sm btn-success">Update Equipment</button>
                 <button type="button" class="btn btn-warning btn-sm dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                     Actions <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="#">Edit</a></li>
+                    <li><a href="{{$equipmentData->id}}">Cancel Edit</a></li>
                     <li><a href="#">Delete</a></li>
                 </ul>
             </div>
