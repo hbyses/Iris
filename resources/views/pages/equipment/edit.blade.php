@@ -25,7 +25,7 @@
                         </tr>
                         <tr>
                             <td>Equipment Type</td>
-                            <td><input type="text" class="form-control" name="consumable" value="{{$equipmentData->consumable}}"></td>
+                            <td><input type="text" class="form-control" name="equipmentType" value="{{$equipmentData->equipmentType}}"></td>
                         </tr>
                         <tr>
                             <td>Name</td>
@@ -52,7 +52,7 @@
                     Actions <span class="caret"></span>
                 </button>
                 <ul class="dropdown-menu" role="menu">
-                    <li><a href="{{$equipmentData->id}}">Cancel Edit</a></li>
+                    <li><a href="/equipment/{{$equipmentData->id}}">Cancel Edit</a></li>
                     <li><a href="#">Delete</a></li>
                 </ul>
             </div>

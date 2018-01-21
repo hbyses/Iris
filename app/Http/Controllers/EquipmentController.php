@@ -123,10 +123,10 @@ class EquipmentController extends Controller
 
             //Fields
             $equipment->name = $request->get('name');
-            $equipment->name = $request->get('consumable');
-            $equipment->name = $request->get('brand');
-            $equipment->name = $request->get('model');
-            $equipment->name = $request->get('size');
+            $equipment->equipmentType = $request->get('equipmentType');
+            $equipment->brand = $request->get('brand');
+            $equipment->model = $request->get('model');
+            $equipment->size = $request->get('size');
 
 
             $equipment->save();

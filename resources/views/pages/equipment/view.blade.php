@@ -22,7 +22,7 @@
                         </tr>
                         <tr>
                             <td>Equipment Type</td>
-                            <td>{{$equipmentData->consumable}}</td>
+                            <td>{{$equipmentData->equipmentType}}</td>
                         </tr>
                         <tr>
                             <td>Name</td>
