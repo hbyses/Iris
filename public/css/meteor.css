@@ -2717,8 +2717,18 @@ ol.linenums {
 .table>thead>tr>td,
 .table>thead>tr>th,
 .table td {
-    padding: 18px!important;
+    padding: 18px; /* Used to have !important */
     border-top: 1px solid #E2E2E2;
+}
+
+.table-condensed>tbody>tr>td,
+.table-condensed>tbody>tr>th,
+.table-condensed>tfoot>tr>td,
+.table-condensed>tfoot>tr>th,
+.table-condensed>thead>tr>td,
+.table-condensed>thead>tr>th,
+.table-condensed td {
+    padding: 9px !important; /* Used to have !important */
 }
 
 .table-bordered>tbody>tr>td,
