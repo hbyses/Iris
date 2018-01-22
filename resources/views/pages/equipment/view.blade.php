@@ -34,7 +34,7 @@
                             </tr>
                             <tr>
                                 <td>Equipment Category</td>
-                                <td>{{$equipmentData->equipmentCategory}}</td>
+                                <td>{{$equipmentData->equipmentCategory["name"]}}</td>
                             </tr>
                             <tr>
                                 <td>Description</td>

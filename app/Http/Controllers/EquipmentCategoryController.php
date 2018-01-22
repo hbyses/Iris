@@ -4,6 +4,7 @@ namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Iris\EquipmentCategory;
+use Iris\Equipment;
 
 class EquipmentCategoryController extends Controller
 {
