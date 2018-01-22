@@ -21,7 +21,7 @@ class LocationController extends Controller
     {
         //$locations = Location::All();
         //$locations = $this->location->with('user')->get();
-        $locations = Location::with('user')->get();
+        $locations = Location::with('user')->with('parentLocation')->get();
        
         $parentBreadcrumbs = array();
         $parentBreadcrumbs = array(

@@ -21,7 +21,7 @@
                         <td>{{$location->name}}</td>
                         <td>{{$location->description}}</td>
                         <td>{{$location->user["name"]}}</td>
-                        <td>{{$location->parentLocation_id}}</td>
+                        <td>{{$location->parentLocation["name"]}}</td>
                         <td><a class="btn btn-xs btn-primary" href="/location/{{$location->id}}">View</a>&nbsp;<a class="btn btn-xs btn-warning" href="#">Edit</a></td>
                     </tr>
                 @endforeach
