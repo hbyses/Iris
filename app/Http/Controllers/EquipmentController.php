@@ -82,7 +82,7 @@ class EquipmentController extends Controller
         );
         
         $equipmentData = Equipment::find($id);
-        $title = 'Equipment';
+        $title = $equipmentData->name . " (ID:" . $equipmentData->id . ")";
         return view('pages.equipment.view', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 
@@ -103,7 +103,7 @@ class EquipmentController extends Controller
         );
         
         $equipmentData = Equipment::find($id);
-        $title = 'Equipment';
+        $title = $equipmentData->name . " (ID:" . $equipmentData->id . ")";
         return view('pages.equipment.edit', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 

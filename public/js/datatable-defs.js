@@ -84,8 +84,8 @@ $(document).ready(function () {
     $('#equipment-list').DataTable({
         "displayLength": 16,
         "responsive": true,
-        "paging": false,
-        "scrollY": "70vh" //70% of viewport height
+        "paging": true,
+        "scrollY": "62vh" //61% of viewport height
     });
 
     //Main User List
@@ -93,7 +93,7 @@ $(document).ready(function () {
         "displayLength": 16,
         "responsive": true,
         "paging": false,
-        "scrollY": "70vh" //70% of viewport height
+        "scrollY": "62vh" //70% of viewport height
     });
 
     //Not sure why this is here tbh

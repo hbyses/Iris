@@ -251,3 +251,6 @@ body:not(fixed-sidebar) .small-sidebar .horizontal-bar .accordion-menu>li>ul {
 i.fa-padding {
     padding-right: 1.5em;
 }
+.m-b-sm {
+    margin-bottom: 0px;
+}
