@@ -134,7 +134,7 @@
                         <ul class="sub-menu">
                             <li><a href="/equipment">Equipment List</a></li>
                             <li><a href="/equipment/groups">Groups</a></li>
-                            <li><a href="/equipment/locations">Locations</a></li>
+                            <li><a href="/location">Locations</a></li>
                             <li><a href="/equipment/suppliers">Suppliers</a></li>
                             <li><a href="/reports/equipment">Reports</a></li>
                             <li><a href="/dashboards/equipment">Dashboard</a></li>
