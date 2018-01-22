@@ -10,4 +10,8 @@ class Location extends Model implements Auditable
     use \OwenIt\Auditing\Auditable;
 
     protected $table = "location";
+
+    public function user() {
+        return $this->belongsTo('Iris\User','locationManager_id');
+    }
 }

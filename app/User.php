@@ -36,4 +36,8 @@ class User extends Authenticatable implements Auditable, UserResolver
     {
         return Auth::check() ? Auth::user()->getAuthIdentifier() : null;
     }
+
+    public function locations() {
+        return $this->hasMany('Iris\Location','locationManager_id');
+    }
 }

@@ -19,8 +19,10 @@ class LocationController extends Controller
      */
     public function index()
     {
-        $location = Location::All();
-
+        //$locations = Location::All();
+        //$locations = $this->location->with('user')->get();
+        $locations = Location::with('user')->get();
+       
         $parentBreadcrumbs = array();
         $parentBreadcrumbs = array(
             '1' => array(
@@ -30,7 +32,7 @@ class LocationController extends Controller
         );
 
         $title = 'Location';
-        return view ('pages.location.master-list', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title, 'location' => $location]);
+        return view ('pages.location.master-list', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title, 'locations' => $locations]);
     }
 
     /**
