@@ -8,4 +8,8 @@ use OwenIt\Auditing\Contracts\Auditable;
 class Equipment extends Model implements Auditable
 {
     use \OwenIt\Auditing\Auditable;
+    
+    public function equipmentCategory() {
+        return $this->belongsTo('Iris\EquipmentCategory');
+    }
 }
