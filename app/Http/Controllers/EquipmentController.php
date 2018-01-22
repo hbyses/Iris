@@ -22,7 +22,7 @@ class EquipmentController extends Controller
      */
     public function index()
     {
-        $equipment = Equipment::All();
+        $equipment = Equipment::with('equipmentCategory')->get();
 
         $parentBreadcrumbs = array();
 

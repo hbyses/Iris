@@ -11,6 +11,7 @@
                     <th>Name</th>
                     <th>Status</th>
                     <th>Type</td>
+                    <th>Category</td>
                     <th>Serial Num</th>
                     <th>Asset Num</th>
                     <th>Brand</th>
@@ -26,6 +27,7 @@
                         <td>{{$equipmentItem->name}}</td>
                         <td>{{$equipmentItem->status}}</td>
                         <td>{{$equipmentItem->equipmentType}}</td>
+                        <td>{{$equipmentItem->equipmentCategory["name"]}}</td>
                         <td>{{$equipmentItem->serialNumber}}</td>
                         <td>{{$equipmentItem->assetNumber}}</td>
                         <td>{{$equipmentItem->brand}}</td>
