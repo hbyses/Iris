@@ -11,6 +11,6 @@ class Equipment extends Model implements Auditable
     use \OwenIt\Auditing\Auditable;
     
     public function equipmentCategory() {
-        return $this->belongsTo('Iris\EquipmentCategory');
+        return $this->belongsTo('Iris\EquipmentCategory','equipmentCategory_id');
     }
 }
