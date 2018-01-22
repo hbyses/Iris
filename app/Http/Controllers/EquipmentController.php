@@ -4,6 +4,7 @@ namespace Iris\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Iris\Equipment;
+use Iris\EquipmentCategory;
 use Iris\Auth;
 use Iris\User;
 
@@ -60,6 +61,7 @@ class EquipmentController extends Controller
         $equipment->brand = $request->input('brand');
         $equipment->size = $request->input('size');
         $equipment->consumableFlag = $request->input('consumable');
+        //Add remaining fields here
         $equipment->save();
 
         return redirect('/equipment')->with('success', 'Equipment Created');
@@ -82,7 +84,7 @@ class EquipmentController extends Controller
         );
         
         $equipmentData = Equipment::find($id);
-        $title = 'Equipment';
+        $title = $equipmentData->name . " (ID:" . $equipmentData->id . ")";
         return view('pages.equipment.view', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 
@@ -94,16 +96,22 @@ class EquipmentController extends Controller
      */
     public function edit($id)
     {
+        $equipmentData = Equipment::with('equipmentCategory')->find($id); 
+
         $parentBreadcrumbs = array();
         $parentBreadcrumbs = array(
             '1' => array(
                 'url' => '/equipment',
                 'name' => 'Equipment'
             ),
+            '2' => array(
+                'url' => '/equipment/' . $equipmentData->id,
+                'name' =>  $equipmentData->name . ' (ID:' . $equipmentData->id . ')'
+            ),
         );
         
-        $equipmentData = Equipment::find($id);
-        $title = 'Equipment';
+        
+        $title = "Edit" . " - " . $equipmentData->name . " (ID: " . $equipmentData->id . ")";
         return view('pages.equipment.edit', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 

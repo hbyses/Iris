@@ -48,6 +48,9 @@ Route::get('/equipment', 'EquipmentController@index');
 Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
 Route::get('/equipment/groups', 'EquipmentController@groups');
 
+// Equipment Category
+Route::resource('equipmentcategory', 'EquipmentCategoryController');
+
 // Location Pages 
 Route::resource('location', 'LocationController');
 Route::get('/location', 'LocationController@index');

@@ -9,10 +9,13 @@
                 <tr>
                     <th>ID</th>
                     <th>Name</th>
+                    <th>Status</th>
+                    <th>Type</td>
+                    <th>Serial Num</th>
+                    <th>Asset Num</th>
                     <th>Brand</th>
                     <th>Model</th>
                     <th>Size</th>
-                    <th>Consumable</th>
                     <th>Actions</th>
                 </tr>
             </thead>
@@ -21,11 +24,18 @@
                     <tr>
                         <td>{{$equipmentItem->id}}</td>
                         <td>{{$equipmentItem->name}}</td>
+                        <td>{{$equipmentItem->status}}</td>
+                        <td>{{$equipmentItem->equipmentType}}</td>
+                        <td>{{$equipmentItem->serialNumber}}</td>
+                        <td>{{$equipmentItem->assetNumber}}</td>
                         <td>{{$equipmentItem->brand}}</td>
                         <td>{{$equipmentItem->model}}</td>
                         <td>{{$equipmentItem->size}}</td>
-                        <td>{{$equipmentItem->consumable}}</td>
-                        <td><a class="btn btn-xs btn-primary" href="/equipment/{{$equipmentItem->id}}">View</a>&nbsp;<a class="btn btn-xs btn-warning" href="#">Edit</a></td>
+                        <td><div class="btn-group m-b-sm">
+                                <a class="btn btn-xs btn-success" href="/equipment/{{$equipmentItem->id}}">View</a>
+                                <a class="btn btn-xs btn-warning" href="/equipment/{{$equipmentItem->id}}/edit">Edit</a>
+                            </div>
+                        </td>
                     </tr>
                 @endforeach
             </tbody>
