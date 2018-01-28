@@ -13,4 +13,7 @@ class Equipment extends Model implements Auditable
     public function equipmentCategory() {
         return $this->belongsTo('Iris\EquipmentCategory','equipmentCategory_id');
     }
+    public function locations() {
+        return $this->belongsToMany('Iris\Location','equipment_location')->withPivot('quantity')->as('store')->withTimestamps();
+    }
 }
