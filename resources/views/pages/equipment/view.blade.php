@@ -80,6 +80,14 @@
                                 <td>Last Modified</td>
                                 <td>{{$equipmentData->updated_at}}</td>
                             </tr>
+                            <tr>
+                                <td>Barcode</td>
+                                <td><?php echo DNS1D::getBarcodeSVG($equipmentData->id, "C39"); ?></td>
+                            </tr>
+                            <tr>
+                                <td>Barcode</td>
+                                <td><?php echo DNS2D::getBarcodeSVG("http://staging.iris.hronsbyses.org/equipment/view/" . $equipmentData->id, "QRCODE"); ?></td>
+                            </tr>
                         </tbody>
                         </table>  
                 </div>
