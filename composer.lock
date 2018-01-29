@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "127686cdacf90b78d2687c9ed42196ba",
+    "content-hash": "b1bc44c74aab24f8796987e54e7a65d7",
     "packages": [
         {
             "name": "barryvdh/laravel-debugbar",
@@ -865,16 +865,16 @@
         },
         {
             "name": "fullcalendar/fullcalendar",
-            "version": "v3.8.0",
+            "version": "v3.8.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/fullcalendar/fullcalendar.git",
-                "reference": "2765b9fded569c5861d28251569e1e642723210b"
+                "reference": "18299fc0a83dfcde645ace09ee2f55eed9b1b53e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/fullcalendar/fullcalendar/zipball/2765b9fded569c5861d28251569e1e642723210b",
-                "reference": "2765b9fded569c5861d28251569e1e642723210b",
+                "url": "https://api.github.com/repos/fullcalendar/fullcalendar/zipball/18299fc0a83dfcde645ace09ee2f55eed9b1b53e",
+                "reference": "18299fc0a83dfcde645ace09ee2f55eed9b1b53e",
                 "shasum": ""
             },
             "require": {
@@ -922,7 +922,7 @@
                 "full-sized",
                 "jquery-plugin"
             ],
-            "time": "2017-12-18T05:19:16+00:00"
+            "time": "2018-01-29T03:56:41+00:00"
         },
         {
             "name": "grimmlink/curved-lines",
@@ -1456,16 +1456,16 @@
         },
         {
             "name": "laravel/scout",
-            "version": "v3.0.12",
+            "version": "v3.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/laravel/scout.git",
-                "reference": "0d97152e9006481e1608ad4286e53acf20a3c110"
+                "reference": "154beb9255cef7e341c5838824ed1234e71e194d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/laravel/scout/zipball/0d97152e9006481e1608ad4286e53acf20a3c110",
-                "reference": "0d97152e9006481e1608ad4286e53acf20a3c110",
+                "url": "https://api.github.com/repos/laravel/scout/zipball/154beb9255cef7e341c5838824ed1234e71e194d",
+                "reference": "154beb9255cef7e341c5838824ed1234e71e194d",
                 "shasum": ""
             },
             "require": {
@@ -1517,7 +1517,7 @@
                 "laravel",
                 "search"
             ],
-            "time": "2017-12-07T22:15:01+00:00"
+            "time": "2018-01-26T22:15:03+00:00"
         },
         {
             "name": "laravel/tinker",
@@ -1584,16 +1584,16 @@
         },
         {
             "name": "league/flysystem",
-            "version": "1.0.41",
+            "version": "1.0.42",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thephpleague/flysystem.git",
-                "reference": "f400aa98912c561ba625ea4065031b7a41e5a155"
+                "reference": "09eabc54e199950041aef258a85847676496fe8e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/f400aa98912c561ba625ea4065031b7a41e5a155",
-                "reference": "f400aa98912c561ba625ea4065031b7a41e5a155",
+                "url": "https://api.github.com/repos/thephpleague/flysystem/zipball/09eabc54e199950041aef258a85847676496fe8e",
+                "reference": "09eabc54e199950041aef258a85847676496fe8e",
                 "shasum": ""
             },
             "require": {
@@ -1604,12 +1604,13 @@
             },
             "require-dev": {
                 "ext-fileinfo": "*",
-                "mockery/mockery": "~0.9",
-                "phpspec/phpspec": "^2.2",
-                "phpunit/phpunit": "~4.8"
+                "phpspec/phpspec": "^3.4",
+                "phpunit/phpunit": "^5.7"
             },
             "suggest": {
                 "ext-fileinfo": "Required for MimeType",
+                "ext-ftp": "Allows you to use FTP server storage",
+                "ext-openssl": "Allows you to use FTPS server storage",
                 "league/flysystem-aws-s3-v2": "Allows you to use S3 storage with AWS SDK v2",
                 "league/flysystem-aws-s3-v3": "Allows you to use S3 storage with AWS SDK v3",
                 "league/flysystem-azure": "Allows you to use Windows Azure Blob storage",
@@ -1663,7 +1664,7 @@
                 "sftp",
                 "storage"
             ],
-            "time": "2017-08-06T17:41:04+00:00"
+            "time": "2018-01-27T16:03:56+00:00"
         },
         {
             "name": "maximebf/debugbar",
@@ -1762,6 +1763,55 @@
                 "visualization"
             ],
             "time": "2016-05-05T00:29:22+00:00"
+        },
+        {
+            "name": "milon/barcode",
+            "version": "5.3.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/milon/barcode.git",
+                "reference": "ca2f3efbf46142ff7f7afe3b0f3660ea4a067576"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/milon/barcode/zipball/ca2f3efbf46142ff7f7afe3b0f3660ea4a067576",
+                "reference": "ca2f3efbf46142ff7f7afe3b0f3660ea4a067576",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/support": "5.*",
+                "php": ">=5.6.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "Milon\\Barcode": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "LGPL-3.0"
+            ],
+            "authors": [
+                {
+                    "name": "Nuruzzaman Milon",
+                    "email": "contact@milon.im"
+                }
+            ],
+            "description": "Barcode generator like Qr Code , PDF417,C39, C39+,C39E,C39E+,C93,S25,S25+,I25,I25+,C128,C128A,C128B,C128C,2-Digits UPC-Based Extention,5-Digits UPC-Based Extention,EAN 8,EAN 13,UPC-A,UPC-E,MSI (Variation of Plessey code) ",
+            "keywords": [
+                "CODABAR",
+                "CODE 128",
+                "CODE 39",
+                "barcode",
+                "datamatrix",
+                "ean",
+                "laravel",
+                "pdf417",
+                "qr code",
+                "qrcode"
+            ],
+            "time": "2017-07-28T00:33:38+00:00"
         },
         {
             "name": "moment/moment",
@@ -2072,16 +2122,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v3.1.3",
+            "version": "v3.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda"
+                "reference": "e57b3a09784f846411aa7ed664eedb73e3399078"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/579f4ce846734a1cf55d6a531d00ca07a43e3cda",
-                "reference": "579f4ce846734a1cf55d6a531d00ca07a43e3cda",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/e57b3a09784f846411aa7ed664eedb73e3399078",
+                "reference": "e57b3a09784f846411aa7ed664eedb73e3399078",
                 "shasum": ""
             },
             "require": {
@@ -2119,7 +2169,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2017-12-26T14:43:21+00:00"
+            "time": "2018-01-25T21:31:33+00:00"
         },
         {
             "name": "nnnick/chartjs",
@@ -2628,16 +2678,16 @@
         },
         {
             "name": "spatie/laravel-permission",
-            "version": "2.7.8",
+            "version": "2.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/spatie/laravel-permission.git",
-                "reference": "e63427e4c364061f05f03fc893727198669c43c7"
+                "reference": "94940d81c2436b4f211990236c8f0ab1b7de9f37"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/e63427e4c364061f05f03fc893727198669c43c7",
-                "reference": "e63427e4c364061f05f03fc893727198669c43c7",
+                "url": "https://api.github.com/repos/spatie/laravel-permission/zipball/94940d81c2436b4f211990236c8f0ab1b7de9f37",
+                "reference": "94940d81c2436b4f211990236c8f0ab1b7de9f37",
                 "shasum": ""
             },
             "require": {
@@ -2689,7 +2739,7 @@
                 "security",
                 "spatie"
             ],
-            "time": "2018-01-02T16:39:56+00:00"
+            "time": "2018-01-25T15:17:15+00:00"
         },
         {
             "name": "summernote/summernote",
@@ -4756,16 +4806,16 @@
         },
         {
             "name": "phpdocumentor/reflection-docblock",
-            "version": "4.2.0",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpDocumentor/ReflectionDocBlock.git",
-                "reference": "66465776cfc249844bde6d117abff1d22e06c2da"
+                "reference": "94fd0001232e47129dd3504189fa1c7225010d08"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/66465776cfc249844bde6d117abff1d22e06c2da",
-                "reference": "66465776cfc249844bde6d117abff1d22e06c2da",
+                "url": "https://api.github.com/repos/phpDocumentor/ReflectionDocBlock/zipball/94fd0001232e47129dd3504189fa1c7225010d08",
+                "reference": "94fd0001232e47129dd3504189fa1c7225010d08",
                 "shasum": ""
             },
             "require": {
@@ -4803,7 +4853,7 @@
                 }
             ],
             "description": "With this component, a library can provide support for annotations via DocBlocks or otherwise retrieve information that is embedded in a DocBlock.",
-            "time": "2017-11-27T17:38:31+00:00"
+            "time": "2017-11-30T07:14:17+00:00"
         },
         {
             "name": "phpdocumentor/type-resolver",
