@@ -28,6 +28,7 @@
         "laravel/scout": "^3.0",
         "laravel/tinker": "~1.0",
         "mbostock/d3": "^3.5",
+        "milon/barcode": "^5.3",
         "morrisjs/morris.js": "dev-master",
         "moxiecode/plupload": "^3.1",
         "nnnick/chartjs": "^2.7",
