@@ -14,4 +14,13 @@ class Location extends Model implements Auditable
     public function user() {
         return $this->belongsTo('Iris\User','locationManager_id');
     }
+    public function parentLocation() {
+        return $this->belongsTo(self::class,'parentLocation_id');
+    }
+    public function childLocations(){
+        return $this->hasMany(self::class,'parentLocation_id');
+    }
+    public function equipment() {
+        return $this->belongstoMany('Iris\Equipment','equipment_location')->withPivot('quantity')->withTimestamps();
+    }
 }
