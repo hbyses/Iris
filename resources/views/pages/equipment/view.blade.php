@@ -85,7 +85,7 @@
                                 <td><?php echo DNS1D::getBarcodeSVG($equipmentData->id, "C39"); ?></td>
                             </tr>
                             <tr>
-                                <td>Barcode</td>
+                                <td>QR Code</td>
                                 <td><?php echo DNS2D::getBarcodeSVG("http://staging.iris.hronsbyses.org/equipment/view/" . $equipmentData->id, "QRCODE"); ?></td>
                             </tr>
                         </tbody>
