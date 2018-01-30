@@ -52,4 +52,26 @@ class PagesController extends Controller
         //Render Section
         return view ('pages.settings.index', ['title' => $title, 'parentBreadcrumbs' => $parentBreadcrumbs]);
     }
+
+    public function modeqactcat(){ //Modify equipment activitiy categories
+        //Page Title
+        $title = 'Modify Activity Categories';
+
+        //Breadcrumbs
+        $parentBreadcrumbs = array(
+            '1' => array(
+                'url' => '/admin',
+                'name' => 'Admin'
+            ),
+            '2' => array(
+                'url' => '/admin/settings',
+                'name' => 'Settings'
+            ),
+        );
+
+        //Render Section
+        return view ('pages.settings.act-cats', ['title' => $title, 'parentBreadcrumbs' => $parentBreadcrumbs]);
+    }
+
+
 }
