@@ -41,6 +41,10 @@ Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
 
+//Admin Pages
+Route::get('/admin/settings', 'PagesController@settings');
+Route::get('/admin/users', 'UsersController@index');
+
 // Equipment Pages
 Route::resource('equipment', 'EquipmentController');
 Route::get('/equipment', 'EquipmentController@index');
@@ -78,4 +82,4 @@ Route::get('/tasks/{username?}', 'ProfileController@tasks');
 Route::get('/profile', 'ProfileController@profile');
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/users', 'UsersController@index');
+
