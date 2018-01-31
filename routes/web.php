@@ -41,12 +41,18 @@ Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
 
+//Admin Pages
+Route::get('/admin/settings', 'PagesController@settings');
+Route::get('/admin/users', 'UsersController@index');
+Route::resource('/admin/settings/activity-category/','ActivityCategoryController');
+
 // Equipment Pages
 Route::resource('equipment', 'EquipmentController');
-Route::get('/equipment', 'EquipmentController@index');
+//Route::get('/equipment', 'EquipmentController@index');
 //Route::get('/equipment/locations', 'EquipmentController@locations');
 Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
 Route::get('/equipment/groups', 'EquipmentController@groups');
+Route::resource('/equipment/activities', 'ActivityController');
 
 // Equipment Category
 Route::resource('equipmentcategory', 'EquipmentCategoryController');
@@ -78,4 +84,4 @@ Route::get('/tasks/{username?}', 'ProfileController@tasks');
 Route::get('/profile', 'ProfileController@profile');
 Auth::routes();
 //Route::get('/home', 'HomeController@index')->name('home');
-Route::get('/admin/users', 'UsersController@index');
+
