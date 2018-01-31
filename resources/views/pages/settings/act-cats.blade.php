@@ -19,14 +19,10 @@
                             <td>{{$actcatItem->name}}</td>
                             <td>{{$actcatItem->created_at}}</td>
                             <td>{{$actcatItem->updated_at}}</td>
-                            <td><div class="btn-group m-b-sm">
-                                    <a class="btn btn-xs btn-success" href="activity-category/{{$actcatItem->id}}/edit">Edit</a>&nbsp;<button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                            Actions <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="remove/{{$actcatItem->id}}">Delete</a></li>
-                                        </ul>
-                                </div>
+                            <td><a class="btn btn-xs btn-success" href="{{$actcatItem->id}}/edit">Edit</a><form method="DELETE" action="{{action('ActivityCategoryController@destroy', $actcatItem->id)}}">
+                                            {{csrf_field()}}
+                                            <button type="submit" class="btn btn-xs btn-danger">Delete</button>
+                                        </form>
                             </td>
                         </tr>
                     @endforeach
