@@ -137,7 +137,7 @@
                 </tbody>
             </table>
         </div>
-    </div>   {{$equipmentActivities}}
+    </div>   
     <div class="panel panel-default">
             <div class="panel-heading">
                 <h1 style="color: rgb(95, 95, 95); font-size: large;" class="panel-title">Activities</h1>
@@ -148,17 +148,17 @@
                         <tr>
                             <th>Type</th>
                             <th>Description</th>
-                            <th>User</th>
+                            <th>Owner</th>
                             <th>Date</th>
                             <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($equipmentActivities as $equipmentActivity)
+                        @foreach ($equipmentData["equipmentActivities"] as $equipmentActivity)
                         <tr>
-                            <td>{{$equipmentActivity["Equipmentactivitycategory_id"]}}</td>
+                            <td>{{$equipmentActivity["category"]["name"]}}</td>
                             <td>{{$equipmentActivity["description"]}}</td>
-                            <td>{{$equipmentActivity["Owner_User_id"]}}</td>
+                            <td>{{$equipmentActivity["Owner"]["name"]}}</td>
                             <td>{{$equipmentActivity["updated_at"]}}</td>
                             <td><a class="btn btn-xs btn-success" href="#">View</a></td>
                         </tr>

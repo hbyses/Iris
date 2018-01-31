@@ -13,10 +13,16 @@ class EquipmentActivity extends Model implements Auditable
 
     protected $table = "equipmentactivity";
 
-    public function equipmentActivityCategory() {
-        return $this->belongsTo('Iris\EquipmentActivityCategory','equipmentActivityCategory_id');
+    public function category() {
+        return $this->belongsTo('Iris\EquipmentActivityCategory','Equipmentactivitycategory_id');
     }
     public function equipment() {
         return $this->belongsTo('Iris\Equipment','equipment_id');
+    }
+    public function creator() {
+        return $this->belongsTo('Iris\User','Creator_User_id');
+    }
+    public function owner() {
+        return $this->belongsTo('Iris\User','Owner_User_id');
     }
 }

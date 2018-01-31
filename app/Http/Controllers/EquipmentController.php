@@ -87,10 +87,8 @@ class EquipmentController extends Controller
         //$equipmentData = Equipment::find($id);
         //$equipmentData = Equipment::with('equipmentActivities.equipmentActivityCategory')->find($id);
         $equipmentData = Equipment::find($id);
-        $equipmentActivities = EquipmentActivity::where('Equipment_id',$id)->with('equipmentActivityCategory')->get();
-        
         $title = $equipmentData->name . " (ID:" . $equipmentData->id . ")";
-        return view('pages.equipment.view', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'equipmentActivities' => $equipmentActivities, 'title' => $title]);
+        return view('pages.equipment.view', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 
     /**
