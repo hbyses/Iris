@@ -13,7 +13,7 @@ class EquipmentActivityCategory extends Model implements Auditable
 
     protected $table = "equipmentactivitycategory";
 
-    public function equipmentActivity() {
+    public function equipmentActivities() {
         return $this->hasMany('Iris\EquipmentActivity','equipmentActivityCategory_id');
     }
 }

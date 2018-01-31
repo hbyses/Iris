@@ -17,6 +17,6 @@ class EquipmentActivity extends Model implements Auditable
         return $this->belongsTo('Iris\EquipmentActivityCategory','equipmentActivityCategory_id');
     }
     public function equipment() {
-        return $this->belongstoMany('Iris\Equipment','equipmentActvity_id');
+        return $this->belongsTo('Iris\Equipment','equipmentActvity_id');
     }
 }
