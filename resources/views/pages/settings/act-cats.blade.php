@@ -19,7 +19,7 @@
                             <td>{{$actcatItem->name}}</td>
                             <td>{{$actcatItem->created_at}}</td>
                             <td>{{$actcatItem->updated_at}}</td>
-                            <td><a class="btn btn-xs btn-success" href="{{$actcatItem->id}}/edit">Edit</a><form method="DELETE" action="{{action('ActivityCategoryController@destroy', $actcatItem->id)}}">
+                            <td><a class="btn btn-xs btn-success" href="/admin/settings/activity-category/{{$actcatItem->id}}/edit">Edit</a><form method="DELETE" action="{{action('ActivityCategoryController@destroy', $actcatItem->id)}}">
                                             {{csrf_field()}}
                                             <button type="submit" class="btn btn-xs btn-danger">Delete</button>
                                         </form>
