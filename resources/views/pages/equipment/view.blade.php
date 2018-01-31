@@ -137,49 +137,7 @@
                 </tbody>
             </table>
         </div>
-    </div>
-    <div class="panel panel-default">
-            <div class="panel-heading">
-                <h1 style="color: rgb(95, 95, 95); font-size: large;" class="panel-title">Equipment Groups</h1>
-            </div>
-            <div class="panel-body">
-                <table class="display table table-condensed table-striped" style="width: 100%;">
-                    <thead>
-                        <tr>
-                            <th>Group Name</th>
-                            <th>Actions</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>General Search Kit 1</td>
-                            <td><div class="btn-group m-b-sm">
-                                    <a class="btn btn-xs btn-success" href="#">View</a>&nbsp;<button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                            Actions <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Remove from Group</a></li>
-                                        </ul>
-                                </div>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td>Mobile Search Kit 1</td>
-                            <td><div class="btn-group m-b-sm">
-                                    <a class="btn btn-xs btn-success" href="#">View</a>&nbsp;<button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                                            Actions <span class="caret"></span>
-                                        </button>
-                                        <ul class="dropdown-menu" role="menu">
-                                            <li><a href="#">Remove from Group</a></li>
-                                        </ul>
-                                </div>    
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>  
-            </div>
-    </div>   
+    </div>   {{$equipmentActivities}}
     <div class="panel panel-default">
             <div class="panel-heading">
                 <h1 style="color: rgb(95, 95, 95); font-size: large;" class="panel-title">Activities</h1>
@@ -196,20 +154,15 @@
                         </tr>
                     </thead>
                     <tbody>
+                        @foreach ($equipmentActivities as $equipmentActivity)
                         <tr>
-                            <td>Repair</td>
-                            <td>Replaced powerhead</td>
-                            <td>Ross Wallace</td>
-                            <td>03/07/2017</td>
+                            <td>{{$equipmentActivity["Equipmentactivitycategory_id"]}}</td>
+                            <td>{{$equipmentActivity["description"]}}</td>
+                            <td>{{$equipmentActivity["Owner_User_id"]}}</td>
+                            <td>{{$equipmentActivity["updated_at"]}}</td>
                             <td><a class="btn btn-xs btn-success" href="#">View</a></td>
                         </tr>
-                        <tr>
-                            <td>Service</td>
-                            <td>General service</td>
-                            <td>Harrison Johnson</td>
-                            <td>19/12/2017</td>
-                            <td><a class="btn btn-xs btn-success" href="#">View</a></td>
-                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

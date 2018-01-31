@@ -42,7 +42,7 @@ class Equipment extends Model implements Auditable
     public function locations() {
         return $this->belongsToMany('Iris\Location','equipment_location')->withPivot('quantity')->as('store')->withTimestamps();
     }
-    public function equipmentActivity() {
-        return $this->hasMany('Iris\EquipmentActivity','equipmentActivity_id');
+    public function equipmentActivities() {
+        return $this->hasMany('Iris\EquipmentActivity','Equipment_id');
     }
 }
