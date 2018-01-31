@@ -5,6 +5,7 @@ namespace Iris;
 use Illuminate\Database\Eloquent\Model;
 use OwenIt\Auditing\Contracts\Auditable;
 use Iris\EquipmentCategory;
+use Iris\EquipmentActivity;
 
 class Equipment extends Model implements Auditable
 {
@@ -40,5 +41,8 @@ class Equipment extends Model implements Auditable
     }
     public function locations() {
         return $this->belongsToMany('Iris\Location','equipment_location')->withPivot('quantity')->as('store')->withTimestamps();
+    }
+    public function equipmentActivity() {
+        return $this->belongsToMany('Iris\EquipmentActivity','equipmentActivity_id');
     }
 }

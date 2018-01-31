@@ -14,13 +14,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($actcat as $actcatItem)
+                    @foreach($actcats as $actcatItem)
                         <tr>
                             <td>{{$actcatItem->name}}</td>
                             <td>{{$actcatItem->created_at}}</td>
                             <td>{{$actcatItem->updated_at}}</td>
                             <td><div class="btn-group m-b-sm">
-                                    <a class="btn btn-xs btn-success" href="edit/{{$actcatItem->id}}">Edit</a>&nbsp;<button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                                    <a class="btn btn-xs btn-success" href="{{$actcatItem->id}}/edit">Edit</a>&nbsp;<button type="button" class="btn btn-warning btn-xs dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
                                             Actions <span class="caret"></span>
                                         </button>
                                         <ul class="dropdown-menu" role="menu">

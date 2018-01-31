@@ -44,6 +44,7 @@ Route::get('/forgotten', 'AuthController@resetpw');
 //Admin Pages
 Route::get('/admin/settings', 'PagesController@settings');
 Route::get('/admin/users', 'UsersController@index');
+Route::resource('/admin/settings/activity-category/','ActivityCategoryController');
 
 // Equipment Pages
 Route::resource('equipment', 'EquipmentController');

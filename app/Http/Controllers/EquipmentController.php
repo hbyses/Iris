@@ -5,6 +5,7 @@ namespace Iris\Http\Controllers;
 use Illuminate\Http\Request;
 use Iris\Equipment;
 use Iris\EquipmentCategory;
+use Iris\EquipmentActivity;
 use Iris\Auth;
 use Iris\User;
 
