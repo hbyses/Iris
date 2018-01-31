@@ -48,10 +48,11 @@ Route::resource('/admin/settings/activity-category/','ActivityCategoryController
 
 // Equipment Pages
 Route::resource('equipment', 'EquipmentController');
-Route::get('/equipment', 'EquipmentController@index');
+//Route::get('/equipment', 'EquipmentController@index');
 //Route::get('/equipment/locations', 'EquipmentController@locations');
 Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
 Route::get('/equipment/groups', 'EquipmentController@groups');
+Route::resource('/equipment/activities', 'ActivityController');
 
 // Equipment Category
 Route::resource('equipmentcategory', 'EquipmentCategoryController');
