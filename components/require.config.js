@@ -25,10 +25,6 @@ var components = {
             "main": "moment-built.js"
         },
         {
-            "name": "morris.js",
-            "main": "morris.js-built.js"
-        },
-        {
             "name": "select2",
             "main": "select2-built.js"
         },

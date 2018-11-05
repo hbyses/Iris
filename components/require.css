@@ -418,9 +418,9 @@
 }
 
 /*!
- * FullCalendar v3.8.1
+ * FullCalendar v3.9.0
  * Docs & License: https://fullcalendar.io/
- * (c) 2017 Adam Shaw
+ * (c) 2018 Adam Shaw
  */
 .fc {
   direction: ltr;
@@ -1172,12 +1172,40 @@ NOTE: use percentage font sizes or else old IE chokes
 /* Popover
 --------------------------------------------------------------------------------------------------*/
 .fc-bootstrap3 .fc-popover .panel-body {
-  padding: 0;
-  /* undo built-in padding */ }
+  padding: 0; }
 
 /* TimeGrid Slats (lines that run horizontally)
 --------------------------------------------------------------------------------------------------*/
 .fc-bootstrap3 .fc-time-grid .fc-slats table {
+  /* some themes have background color. see through to slats */
+  background: none; }
+
+.fc.fc-bootstrap4 a {
+  text-decoration: none; }
+
+.fc.fc-bootstrap4 a[data-goto]:hover {
+  text-decoration: underline; }
+
+.fc-bootstrap4 hr.fc-divider {
+  border-color: inherit; }
+
+.fc-bootstrap4 .fc-today.alert {
+  border-radius: 0; }
+
+.fc-bootstrap4 a.fc-event:not([href]):not([tabindex]) {
+  color: #fff; }
+
+.fc-bootstrap4 .fc-popover.card {
+  position: absolute; }
+
+/* Popover
+--------------------------------------------------------------------------------------------------*/
+.fc-bootstrap4 .fc-popover .card-body {
+  padding: 0; }
+
+/* TimeGrid Slats (lines that run horizontally)
+--------------------------------------------------------------------------------------------------*/
+.fc-bootstrap4 .fc-time-grid .fc-slats table {
   /* some themes have background color. see through to slats */
   background: none; }
 
@@ -2724,9 +2752,6 @@ be a descendant of the grid when it is being dragged.
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.jstree-default .jstree-ellipsis.jstree-no-icons .jstree-anchor {
-  width: calc(100% - 5px);
-}
 .jstree-default.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAACAQMAAAB49I5GAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMOBgAAGAAJMwQHdQAAAABJRU5ErkJggg==");
 }
@@ -2907,9 +2932,6 @@ be a descendant of the grid when it is being dragged.
   width: calc(100% - 23px);
   text-overflow: ellipsis;
   overflow: hidden;
-}
-.jstree-default-small .jstree-ellipsis.jstree-no-icons .jstree-anchor {
-  width: calc(100% - 5px);
 }
 .jstree-default-small.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAACAQMAAABv1h6PAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjAAMHBgAAiABBI4gz9AAAAABJRU5ErkJggg==");
@@ -3092,9 +3114,6 @@ be a descendant of the grid when it is being dragged.
   text-overflow: ellipsis;
   overflow: hidden;
 }
-.jstree-default-large .jstree-ellipsis.jstree-no-icons .jstree-anchor {
-  width: calc(100% - 5px);
-}
 .jstree-default-large.jstree-rtl .jstree-node {
   background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAACAQMAAAAD0EyKAAAABlBMVEUAAAAdHRvEkCwcAAAAAXRSTlMAQObYZgAAAAxJREFUCNdjgIIGBgABCgCBvVLXcAAAAABJRU5ErkJggg==");
 }
@@ -3182,13 +3201,13 @@ be a descendant of the grid when it is being dragged.
     background: transparent;
   }
   .jstree-default-responsive .jstree-open > .jstree-ocl {
-    background-position: 0 0px !important;
+    background-position: 0 0 !important;
   }
   .jstree-default-responsive .jstree-closed > .jstree-ocl {
     background-position: 0 -40px !important;
   }
   .jstree-default-responsive.jstree-rtl .jstree-closed > .jstree-ocl {
-    background-position: -40px 0px !important;
+    background-position: -40px 0 !important;
   }
   .jstree-default-responsive .jstree-themeicon {
     background-position: -40px -40px;
