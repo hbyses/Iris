@@ -4,10 +4,10 @@
 /public/css
 /public/mix-manifest.json
 /storage/*.key
-/vendor
+/vendor/
 /.idea
 /.vagrant
-/components
+/components/
 Homestead.json
 Homestead.yaml
 npm-debug.log
