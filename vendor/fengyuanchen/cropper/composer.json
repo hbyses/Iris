@@ -1,0 +1,25 @@
+{
+    "name": "fengyuanchen/cropper",
+    "type": "component",
+    "description": "A simple jQuery image cropping plugin",
+    "keywords": [
+        "cropper",
+        "jquery",
+        "image"
+    ],
+    "homepage": "http://fengyuanchen.github.io/cropper/",
+    "license": "MIT",
+    "support": {
+        "issues": "https://github.com/fengyuanchen/cropper/issues",
+        "source": "https://github.com/fengyuanchen/cropper"
+    },
+    "authors": [
+        {
+            "name":     "fengyuanchen ",
+            "homepage": "http://fengyuanchen.github.io"
+        }
+    ],
+    "require": {
+        "components/jquery": ">=1.9.0"
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "etdsolutions/waypoints",
+  "description": "Shim repository for Waypoints",
+  "homepage": "http://imakewebthings.com/waypoints/",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "I Make Web Things"
+    }
+  ],
+  "suggest": {
+    "etdsolutions/jquery": "To use Waypoints as a jQuery plugin."
+  }
+}

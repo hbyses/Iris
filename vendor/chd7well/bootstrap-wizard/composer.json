@@ -1,0 +1,25 @@
+{
+"name": "chd7well/bootstrap-wizard",
+"description": "Bootstrap Wizard - Builds a wizard using a tabbalbe structure",
+"keywords": ["bootstrap", "wizard", "extended", "modal", "modal-popover", "jquery"],
+"homepage": "https://github.com/chd7well/bootstrap-wizard",
+"license": "MIT",
+"authors": [
+{
+"name": "Vincent Gabriel & Jason Gill",
+"email": "vadimg88@gmail.com",
+"homepage": "http://vadimg.com/"
+},
+{
+"name": "Christian Dumhart",
+"email": "christian.dumhart@chd.at",
+"homepage": "http://www.chd.at/"
+}
+],
+"minimum-stability": "dev",
+"autoload": {
+"psr-4": {
+"chd7well\\plugins\\wizard\\": ""
+}
+}
+}
