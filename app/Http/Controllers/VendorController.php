@@ -107,14 +107,14 @@ class VendorController extends Controller
                 'name' => 'Vendor'
             ),
             '2' => array(
-                'url' => '/vendor/' . $vendor->id,
-                'name' =>  $vendor->name
+                'url' => '/vendor/' . $vendorData->id,
+                'name' =>  $vendorData->name
             ),
         );
         
         
-        $title = "Edit" . " - " . $vendor->name;
-        return view('pages.vendor.edit', ['parentBreadcrumbs' => $parentBreadcrumbs, 'vendor' => $vendor, 'title' => $title]);
+        $title = "Edit Vendor";
+        return view('pages.vendor.edit', ['parentBreadcrumbs' => $parentBreadcrumbs, 'vendorData' => $vendorData, 'title' => $title]);
     }
 
     /**
@@ -126,20 +126,18 @@ class VendorController extends Controller
      */
     public function update(Request $request, $id)
     {
-            $equipment = Vendor::find($id);
+            $vendorData = Vendor::find($id);
             $this->validate(request(), [
               'name' => 'required'
             ]);
 
             //Fields
-            $vendor->name = $request->get('name');
-            $vendor->brand = $request->get('brand');
-            $vendor->model = $request->get('model');
-            $vendor->size = $request->get('size');
+            $vendorData->name = $request->get('name');
+            $vendorData->description = $request->get('description');
+            $vendorData->phone1 = $request->get('phone1');
 
-
-            $vendor->save();
-            return redirect('vendor/' . $vendor->id)->with('success','Vendor has been updated');
+            $vendorData->save();
+            return redirect('vendor/' . $vendorData->id)->with('success','Vendor has been updated');
     }
 
     /**

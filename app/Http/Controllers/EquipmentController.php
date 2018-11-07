@@ -113,7 +113,7 @@ class EquipmentController extends Controller
         );
         
         
-        $title = "Edit" . " - " . $equipmentData->name . " (ID: " . $equipmentData->id . ")";
+        $title = "Edit Equipment";
         return view('pages.equipment.edit', ['parentBreadcrumbs' => $parentBreadcrumbs, 'equipmentData' => $equipmentData, 'title' => $title]);
     }
 
