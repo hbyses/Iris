@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Iris\Equipment;
 use Iris\EquipmentCategory;
 use Iris\EquipmentActivity;
+use Iris\Supplier;
 use Iris\Auth;
 use Iris\User;
 
@@ -176,6 +177,8 @@ class EquipmentController extends Controller
 
     public function suppliers(){
         $title = 'Equipment Suppliers';
-        return view('pages.equipment.suppliers-list')->with('title', $title);
+        $suppliers = Supplier::get();
+        $parentBreadcrumbs = array();
+        return view ('pages.equipment.suppliers-list', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title, 'suppliers' => $suppliers]);
     }
 }

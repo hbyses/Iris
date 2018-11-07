@@ -50,12 +50,13 @@ Route::patch('/admin/settings/activity-category/{id}','ActivityCategoryControlle
 Route::delete('/admin/settings/activity-category/{id}','ActivityCategoryController@destroy');
 
 // Equipment Pages
-Route::resource('equipment', 'EquipmentController');
-//Route::get('/equipment', 'EquipmentController@index');
-//Route::get('/equipment/locations', 'EquipmentController@locations');
 Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
 Route::get('/equipment/groups', 'EquipmentController@groups');
 Route::resource('/equipment/activities', 'ActivityController');
+Route::resource('equipment', 'EquipmentController');
+//Route::get('/equipment', 'EquipmentController@index');
+//Route::get('/equipment/locations', 'EquipmentController@locations');
+
 
 // Equipment Category
 Route::resource('equipmentcategory', 'EquipmentCategoryController');
