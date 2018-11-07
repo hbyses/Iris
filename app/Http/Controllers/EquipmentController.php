@@ -175,10 +175,4 @@ class EquipmentController extends Controller
         return view('pages.equipment.master-locations-list')->with('title', $title);
     }
 
-    public function suppliers(){
-        $title = 'Equipment Suppliers';
-        $suppliers = Supplier::get();
-        $parentBreadcrumbs = array();
-        return view ('pages.equipment.suppliers-list', ['parentBreadcrumbs' => $parentBreadcrumbs, 'title' => $title, 'suppliers' => $suppliers]);
-    }
 }

@@ -33,15 +33,15 @@ Route::get('/users/{id}/{name}', function ($id, $name) {
 });
 */
 
-// Root
+// ======== Root ========
 Route::get('/', 'PagesController@index');
 
-// Auth Pages
+// ======== Auth Pages ========
 Route::get('/login', 'AuthController@login');
 Route::get('/register', 'AuthController@register');
 Route::get('/forgotten', 'AuthController@resetpw');
 
-//Admin Pages
+// ======== Admin Pages ========
 Route::get('/admin/settings', 'PagesController@settings');
 Route::get('/admin/users', 'UsersController@index');
 Route::get('/admin/settings/activity-category/','ActivityCategoryController@index');
@@ -49,41 +49,44 @@ Route::get('/admin/settings/activity-category/{id}/edit','ActivityCategoryContro
 Route::patch('/admin/settings/activity-category/{id}','ActivityCategoryController@update');
 Route::delete('/admin/settings/activity-category/{id}','ActivityCategoryController@destroy');
 
-// Equipment Pages
-Route::get('/equipment/suppliers', 'EquipmentController@suppliers');
+// ======== Equipment Pages ========
+
 Route::get('/equipment/groups', 'EquipmentController@groups');
 Route::resource('/equipment/activities', 'ActivityController');
 Route::resource('equipment', 'EquipmentController');
 //Route::get('/equipment', 'EquipmentController@index');
 //Route::get('/equipment/locations', 'EquipmentController@locations');
 
+// ======== Vendor Routes ========
+Route::resource('vendor', 'VendorController');
+//Route::get('/vendor', 'VendorController@index');
 
-// Equipment Category
+// ======== Equipment Category ========
 Route::resource('equipmentcategory', 'EquipmentCategoryController');
 
-// Location Pages 
+// ======== Location Pages ========
 Route::resource('location', 'LocationController');
 Route::get('/location', 'LocationController@index');
 
-// Fleet Pages
+// ======== Fleet Pages ========
 Route::get('/vehicles', 'FleetController@vehicles');
 Route::get('/vehicles/vel', 'FleetController@vel');
 Route::get('/vehicles/bookings', 'FleetController@bookings');
 
-//Locations
+// ======== Locations ========
 //Route::get('/locations/{filter?}', 'LocationsController@index');
 
-// Calendar
+// ======== Calendar ========
 Route::get('/calendar', 'CalendarController@index');
 
-// Dashboards
+// ======== Dashboards ========
 Route::resource('dashboard', 'DashboardsController');
 Route::get('/dashboards/{area?}', 'DashboardsController@index');
 Route::get('/dashboards/operations/duties', 'DashboardsController@operations_duties');
 Route::get('/dashboards/operations/capability', 'DashboardsController@capability');
 
 
-// Auth / User Profile / Tasks
+// ========  Auth / User Profile / Tasks ========
 Route::get('/tasks/{username?}', 'ProfileController@tasks');
 Route::get('/profile', 'ProfileController@profile');
 Auth::routes();

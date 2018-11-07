@@ -29,17 +29,17 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($suppliers as $supplier)
+                @foreach($vendors as $vendor)
                     <tr>
-                        <td>{{$supplier->id}}</td>
-                        <td>{{$supplier->name}}</td>
-                        <td>{{$supplier->description}}</td>
-                        <td>{{$supplier->phone1}}</td>
-                        <td>{{$supplier->email}}</td>
-                        <td>{{$supplier->addressSuburb}}</td>
+                        <td>{{$vendor->id}}</td>
+                        <td>{{$vendor->name}}</td>
+                        <td>{{$vendor->description}}</td>
+                        <td>{{$vendor->phone1}}</td>
+                        <td>{{$vendor->email}}</td>
+                        <td>{{$vendor->addressSuburb}}</td>
                         <td><div class="btn-group m-b-sm">
-                                <a class="btn btn-xs btn-success" href="/equipment/{{$supplier->id}}">View</a>
-                                <a class="btn btn-xs btn-warning" href="/equipment/{{$supplier->id}}/edit">Edit</a>
+                                <a class="btn btn-xs btn-success" href="/vendor/{{$vendor->id}}">View</a>
+                                <a class="btn btn-xs btn-warning" href="/vendor/{{$vendor->id}}/edit">Edit</a>
                             </div>
                         </td>
                     </tr>

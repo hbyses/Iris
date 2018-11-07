@@ -11,7 +11,7 @@
                     <table class="table table-striped table-condensed" style="width: 100%;">
                         <thead>
                             <tr>
-                                <th>Property</th>
+                                <th>Attribute</th>
                                 <th>Value</th>
                             </tr>
                         </thead>
