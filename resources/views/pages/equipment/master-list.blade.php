@@ -1,4 +1,16 @@
-@extends('layouts.pages')
+@extends('layouts.framework')
+
+@section('css-extra')
+<link rel="stylesheet" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.min.css" />
+<link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.0/css/responsive.dataTables.min.css" />
+@endsection
+
+@section('extjs-extra')
+<script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+<script src="https://cdn.datatables.net/responsive/2.2.0/js/dataTables.responsive.min.js"></script>
+<script src="{{asset('js/datatable-defs.js')}}"></script>
+@endsection
+
 
 @section('content')
 <div class="panel panel-white">

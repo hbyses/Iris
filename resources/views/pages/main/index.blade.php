@@ -1,4 +1,4 @@
-@extends('layouts.pages')
+@extends('layouts.framework')
 
 @section('content')
 <div class="panel panel-white">

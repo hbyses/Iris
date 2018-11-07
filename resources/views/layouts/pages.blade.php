@@ -72,38 +72,6 @@
                                 <a href="javascript:void(0);" class="show-search"><i class="fa fa-search"></i></a>
                             </li>
                             <li class="dropdown">
-                                <a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-bell"></i><span class="badge badge-danger pull-right">3</span></a>
-                                <ul class="dropdown-menu title-caret dropdown-lg" role="menu">
-                                    <li><p class="drop-title">You have 3 outstanding tasks</p></li>
-                                    <li class="dropdown-menu-list slimscroll tasks">
-                                        <ul class="list-unstyled">
-                                            <li>
-                                                <a href="#">
-                                                    <div class="task-icon badge badge-success"><i class="fa fa-user"></i></div>
-                                                    <span class="badge badge-roundless badge-default pull-right">1m</span>
-                                                    <p class="task-details">Monthly Reconciliation</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="task-icon badge badge-primary"><i class="fa fa-refresh"></i></div>
-                                                    <span class="badge badge-roundless badge-default pull-right">24m</span>
-                                                    <p class="task-details">Check Height Kit</p>
-                                                </a>
-                                            </li>
-                                            <li>
-                                                <a href="#">
-                                                    <div class="task-icon badge badge-danger"><i class="fa fa-phone"></i></div>
-                                                    <span class="badge badge-roundless badge-default pull-right">24m</span>
-                                                    <p class="task-details">Service HBY37</p>
-                                                </a>
-                                            </li>
-                                        </ul>
-                                    </li>
-                                    <li class="drop-all"><a href="#" class="text-center">All Tasks</a></li>
-                                </ul>
-                            </li>
-                            <li class="dropdown">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <span class="user-name">{{ Auth::user()->name }}<i class="fa fa-angle-down"></i></span>
                                 </a>
