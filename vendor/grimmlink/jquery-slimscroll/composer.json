@@ -1,6 +1,0 @@
-{
-    "name": "grimmlink/jquery-slimscroll",
-    "description": "Shim repository for https://github.com/rochal/jQuery-slimScroll",
-    "license": "MIT",
-    "keywords"    : ["scrollbar", "scroll", "slimscroll", "scrollable", "scrolling", "scroller", "ui", "jquery-plugin"]
-}
