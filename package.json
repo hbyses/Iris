@@ -15,7 +15,7 @@
         "lodash": "^4.17.4"
     },
     "dependencies": {
-        "axios": "^0.17.1",
+        "axios": "^0.21.1",
         "eslint": "^4.13.1",
         "jshint": "^2.9.5"
     }
